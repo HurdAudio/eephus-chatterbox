@@ -1,0 +1,25 @@
+{
+  "name": "eephus-chatterbox",
+  "version": "1.0.0",
+  "description": "A conversational baseball application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HurdAudio/eephus-chatterbox.git"
+  },
+  "author": "Devin Hurd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HurdAudio/eephus-chatterbox/issues"
+  },
+  "homepage": "https://github.com/HurdAudio/eephus-chatterbox#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "express": "^4.14.1",
+    "knex": "^0.12.7",
+    "mocha": "^3.2.0"
+  }
+}
