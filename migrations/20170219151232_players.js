@@ -15,7 +15,7 @@ exports.up = function(knex, Promise) {
     table.string('throws_LR').notNullable().defaultTo('R');
     table.integer('salary').notNullable().defaultTo(100000);
     table.decimal('wpa_2016', 2, 2).notNullable().defaultTo(0.00);
-    table.boolean('eligible_catcher').notNullable().defaultTo(false);
+    table.boolean('eligible_C').notNullable().defaultTo(false);
     table.boolean('eligible_1B').notNullable().defaultTo(false);
     table.boolean('eligible_2B').notNullable().defaultTo(false);
     table.boolean('eligible_3B').notNullable().defaultTo(false);
