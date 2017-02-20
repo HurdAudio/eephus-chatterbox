@@ -53,6 +53,7 @@ exports.up = function(knex, Promise) {
     table.integer('projected_2017_G').defaultTo(null);
     table.integer('projected_2017_GS').defaultTo(null);
     table.integer('projected_2017_CG').defaultTo(null);
+    table.integer('projected_2017_SV').defaultTo(null);
     table.timestamps(true, true);
   });
 };
