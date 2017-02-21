@@ -36,7 +36,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.571,
           projected_2017_OPS: 0.975,
           created_at: new Date('2017-02-19 16:09:16 UTC'),
-          updated_at: new Date('2016-02-19 16:09:16 UTC')
+          updated_at: new Date('2017-02-19 16:09:16 UTC')
         },
         {
           id: 2,
@@ -68,7 +68,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.514,
           projected_2017_OPS: 0.868,
           created_at: new Date('2017-02-19 16:22:16 UTC'),
-          updated_at: new Date('2016-02-19 16:22:16 UTC')
+          updated_at: new Date('2017-02-19 16:22:16 UTC')
         },
         {
           id: 3,
@@ -102,7 +102,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.529,
           projected_2017_OPS: 0.897,
           created_at: new Date('2017-02-19 16:29:16 UTC'),
-          updated_at: new Date('2016-02-19 16:29:16 UTC')
+          updated_at: new Date('2017-02-19 16:29:16 UTC')
         },
         {
           id: 4,
@@ -134,7 +134,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.568,
           projected_2017_OPS: 0.912,
           created_at: new Date('2017-02-19 16:35:16 UTC'),
-          updated_at: new Date('2016-02-19 16:35:16 UTC')
+          updated_at: new Date('2017-02-19 16:35:16 UTC')
         },
         {
           id: 5,
@@ -166,7 +166,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 16:44:16 UTC'),
-          updated_at: new Date('2016-02-19 16:44:16 UTC')
+          updated_at: new Date('2017-02-19 16:44:16 UTC')
         },
         {
           id: 6,
@@ -199,7 +199,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.523,
           projected_2017_OPS: 0.925,
           created_at: new Date('2017-02-19 16:49:16 UTC'),
-          updated_at: new Date('2016-02-19 16:49:16 UTC')
+          updated_at: new Date('2017-02-19 16:49:16 UTC')
         },
         {
           id: 7,
@@ -232,7 +232,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.481,
           projected_2017_OPS: 0.847,
           created_at: new Date('2017-02-19 16:53:16 UTC'),
-          updated_at: new Date('2016-02-19 16:53:16 UTC')
+          updated_at: new Date('2017-02-19 16:53:16 UTC')
         },
         {
           id: 8,
@@ -266,7 +266,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.516,
           projected_2017_OPS: 0.861,
           created_at: new Date('2017-02-19 16:57:16 UTC'),
-          updated_at: new Date('2016-02-19 16:57:16 UTC')
+          updated_at: new Date('2017-02-19 16:57:16 UTC')
         },
         {
           id: 9,
@@ -299,7 +299,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.538,
           projected_2017_OPS: 0.909,
           created_at: new Date('2017-02-19 17:01:16 UTC'),
-          updated_at: new Date('2016-02-19 17:01:16 UTC')
+          updated_at: new Date('2017-02-19 17:01:16 UTC')
         },
         {
           id: 10,
@@ -332,7 +332,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.542,
           projected_2017_OPS: 0.943,
           created_at: new Date('2017-02-19 17:06:16 UTC'),
-          updated_at: new Date('2016-02-19 17:06:16 UTC')
+          updated_at: new Date('2017-02-19 17:06:16 UTC')
         },
         {
           id: 11,
@@ -364,7 +364,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.525,
           projected_2017_OPS: 0.898,
           created_at: new Date('2017-02-19 17:09:16 UTC'),
-          updated_at: new Date('2016-02-19 17:09:16 UTC')
+          updated_at: new Date('2017-02-19 17:09:16 UTC')
         },
         {
           id: 12,
@@ -396,7 +396,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.502,
           projected_2017_OPS: 0.861,
           created_at: new Date('2017-02-19 17:13:16 UTC'),
-          updated_at: new Date('2016-02-19 17:13:16 UTC')
+          updated_at: new Date('2017-02-19 17:13:16 UTC')
         },
         {
           id: 13,
@@ -429,7 +429,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.548,
           projected_2017_OPS: 0.943,
           created_at: new Date('2017-02-19 17:25:16 UTC'),
-          updated_at: new Date('2016-02-19 17:25:16 UTC')
+          updated_at: new Date('2017-02-19 17:25:16 UTC')
         },
         {
           id: 14,
@@ -460,7 +460,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 17:31:16 UTC'),
-          updated_at: new Date('2016-02-19 17:31:16 UTC')
+          updated_at: new Date('2017-02-19 17:31:16 UTC')
         },
         {
           id: 15,
@@ -492,7 +492,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.473,
           projected_2017_OPS: 0.815,
           created_at: new Date('2017-02-19 17:35:16 UTC'),
-          updated_at: new Date('2016-02-19 17:35:16 UTC')
+          updated_at: new Date('2017-02-19 17:35:16 UTC')
         },
         {
           id: 16,
@@ -523,7 +523,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.582,
           projected_2017_OPS: 0.890,
           created_at: new Date('2017-02-19 17:40:16 UTC'),
-          updated_at: new Date('2016-02-19 17:40:16 UTC')
+          updated_at: new Date('2017-02-19 17:40:16 UTC')
         },
         {
           id: 17,
@@ -554,7 +554,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 17:46:16 UTC'),
-          updated_at: new Date('2016-02-19 17:46:16 UTC')
+          updated_at: new Date('2017-02-19 17:46:16 UTC')
         },
         {
           id: 18,
@@ -587,7 +587,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.535,
           projected_2017_OPS: 0.956,
           created_at: new Date('2017-02-19 17:50:16 UTC'),
-          updated_at: new Date('2016-02-19 17:50:16 UTC')
+          updated_at: new Date('2017-02-19 17:50:16 UTC')
         },
         {
           id: 19,
@@ -619,7 +619,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 17:55:16 UTC'),
-          updated_at: new Date('2016-02-19 17:55:16 UTC')
+          updated_at: new Date('2017-02-19 17:55:16 UTC')
         },
         {
           id: 20,
@@ -651,7 +651,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.469,
           projected_2017_OPS: 0.816,
           created_at: new Date('2017-02-19 17:59:16 UTC'),
-          updated_at: new Date('2016-02-19 17:59:16 UTC')
+          updated_at: new Date('2017-02-19 17:59:16 UTC')
         },
         {
           id: 21,
@@ -683,7 +683,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.448,
           projected_2017_OPS: 0.795,
           created_at: new Date('2017-02-19 18:06:16 UTC'),
-          updated_at: new Date('2016-02-19 18:06:16 UTC')
+          updated_at: new Date('2017-02-19 18:06:16 UTC')
         },
         {
           id: 22,
@@ -716,7 +716,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.503,
           projected_2017_OPS: 0.852,
           created_at: new Date('2017-02-19 19:26:16 UTC'),
-          updated_at: new Date('2016-02-19 19:26:16 UTC')
+          updated_at: new Date('2017-02-19 19:26:16 UTC')
         },
         {
           id: 23,
@@ -748,7 +748,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 18:15:16 UTC'),
-          updated_at: new Date('2016-02-19 18:15:16 UTC')
+          updated_at: new Date('2017-02-19 18:15:16 UTC')
         },
         {
           id: 24,
@@ -780,7 +780,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.424,
           projected_2017_OPS: 0.768,
           created_at: new Date('2017-02-19 19:31:16 UTC'),
-          updated_at: new Date('2016-02-19 19:31:16 UTC')
+          updated_at: new Date('2017-02-19 19:31:16 UTC')
         },
         {
           id: 25,
@@ -813,7 +813,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.490,
           projected_2017_OPS: 0.837,
           created_at: new Date('2017-02-19 19:36:16 UTC'),
-          updated_at: new Date('2016-02-19 19:36:16 UTC')
+          updated_at: new Date('2017-02-19 19:36:16 UTC')
         },
         {
           id: 26,
@@ -845,7 +845,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 19:43:16 UTC'),
-          updated_at: new Date('2016-02-19 19:43:16 UTC')
+          updated_at: new Date('2017-02-19 19:43:16 UTC')
         },
         {
           id: 27,
@@ -876,7 +876,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.448,
           projected_2017_OPS: 0.800,
           created_at: new Date('2017-02-19 19:48:16 UTC'),
-          updated_at: new Date('2016-02-19 19:48:16 UTC')
+          updated_at: new Date('2017-02-19 19:48:16 UTC')
         },
         {
           id: 28,
@@ -908,7 +908,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.460,
           projected_2017_OPS: 0.808,
           created_at: new Date('2017-02-19 19:53:16 UTC'),
-          updated_at: new Date('2016-02-19 19:53:16 UTC')
+          updated_at: new Date('2017-02-19 19:53:16 UTC')
         },
         {
           id: 29,
@@ -941,7 +941,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.542,
           projected_2017_OPS: 0.893,
           created_at: new Date('2017-02-19 19:57:16 UTC'),
-          updated_at: new Date('2016-02-19 19:57:16 UTC')
+          updated_at: new Date('2017-02-19 19:57:16 UTC')
         },
         {
           id: 30,
@@ -974,7 +974,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.556,
           projected_2017_OPS: 0.909,
           created_at: new Date('2017-02-19 20:01:16 UTC'),
-          updated_at: new Date('2016-02-19 20:01:16 UTC')
+          updated_at: new Date('2017-02-19 20:01:16 UTC')
         },
         {
           id: 31,
@@ -1006,7 +1006,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.526,
           projected_2017_OPS: 0.905,
           created_at: new Date('2017-02-19 20:06:16 UTC'),
-          updated_at: new Date('2016-02-19 20:06:16 UTC')
+          updated_at: new Date('2017-02-19 20:06:16 UTC')
         },
         {
           id: 32,
@@ -1038,7 +1038,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.495,
           projected_2017_OPS: 0.819,
           created_at: new Date('2017-02-19 20:09:16 UTC'),
-          updated_at: new Date('2016-02-19 20:09:16 UTC')
+          updated_at: new Date('2017-02-19 20:09:16 UTC')
         },
         {
           id: 33,
@@ -1070,7 +1070,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.476,
           projected_2017_OPS: 0.828,
           created_at: new Date('2017-02-19 20:14:16 UTC'),
-          updated_at: new Date('2016-02-19 20:14:16 UTC')
+          updated_at: new Date('2017-02-19 20:14:16 UTC')
         },
         {
           id: 34,
@@ -1103,7 +1103,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.526,
           projected_2017_OPS: 0.861,
           created_at: new Date('2017-02-19 20:17:16 UTC'),
-          updated_at: new Date('2016-02-19 20:17:16 UTC')
+          updated_at: new Date('2017-02-19 20:17:16 UTC')
         },
         {
           id: 35,
@@ -1136,7 +1136,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.513,
           projected_2017_OPS: 0.847,
           created_at: new Date('2017-02-19 20:22:16 UTC'),
-          updated_at: new Date('2016-02-19 20:22:16 UTC')
+          updated_at: new Date('2017-02-19 20:22:16 UTC')
         },
         {
           id: 36,
@@ -1167,7 +1167,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 20:26:16 UTC'),
-          updated_at: new Date('2016-02-19 20:26:16 UTC')
+          updated_at: new Date('2017-02-19 20:26:16 UTC')
         },
         {
           id: 37,
@@ -1199,7 +1199,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.533,
           projected_2017_OPS: 0.887,
           created_at: new Date('2017-02-19 20:30:16 UTC'),
-          updated_at: new Date('2016-02-19 20:30:16 UTC')
+          updated_at: new Date('2017-02-19 20:30:16 UTC')
         },
         {
           id: 38,
@@ -1230,7 +1230,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 20:35:16 UTC'),
-          updated_at: new Date('2016-02-19 20:35:16 UTC')
+          updated_at: new Date('2017-02-19 20:35:16 UTC')
         },
         {
           id: 39,
@@ -1264,7 +1264,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.510,
           projected_2017_OPS: 0.866,
           created_at: new Date('2017-02-19 20:41:16 UTC'),
-          updated_at: new Date('2016-02-19 20:41:16 UTC')
+          updated_at: new Date('2017-02-19 20:41:16 UTC')
         },
         {
           id: 40,
@@ -1295,7 +1295,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 20:46:16 UTC'),
-          updated_at: new Date('2016-02-19 20:46:16 UTC')
+          updated_at: new Date('2017-02-19 20:46:16 UTC')
         },
         {
           id: 41,
@@ -1326,7 +1326,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.553,
           projected_2017_OPS: 0.886,
           created_at: new Date('2017-02-19 20:51:16 UTC'),
-          updated_at: new Date('2016-02-19 20:51:16 UTC')
+          updated_at: new Date('2017-02-19 20:51:16 UTC')
         },
         {
           id: 42,
@@ -1359,7 +1359,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.481,
           projected_2017_OPS: 0.784,
           created_at: new Date('2017-02-19 20:55:16 UTC'),
-          updated_at: new Date('2016-02-19 20:55:16 UTC')
+          updated_at: new Date('2017-02-19 20:55:16 UTC')
         },
         {
           id: 43,
@@ -1392,7 +1392,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.498,
           projected_2017_OPS: 0.849,
           created_at: new Date('2017-02-19 21:01:16 UTC'),
-          updated_at: new Date('2016-02-19 21:01:16 UTC')
+          updated_at: new Date('2017-02-19 21:01:16 UTC')
         },
         {
           id: 44,
@@ -1424,7 +1424,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.475,
           projected_2017_OPS: 0.814,
           created_at: new Date('2017-02-19 21:05:16 UTC'),
-          updated_at: new Date('2016-02-19 21:05:16 UTC')
+          updated_at: new Date('2017-02-19 21:05:16 UTC')
         },
         {
           id: 45,
@@ -1457,7 +1457,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.474,
           projected_2017_OPS: 0.803,
           created_at: new Date('2017-02-19 21:09:16 UTC'),
-          updated_at: new Date('2016-02-19 21:09:16 UTC')
+          updated_at: new Date('2017-02-19 21:09:16 UTC')
         },
         {
           id: 46,
@@ -1489,7 +1489,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 21:13:16 UTC'),
-          updated_at: new Date('2016-02-19 21:13:16 UTC')
+          updated_at: new Date('2017-02-19 21:13:16 UTC')
         },
         {
           id: 47,
@@ -1521,7 +1521,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.499,
           projected_2017_OPS: 0.852,
           created_at: new Date('2017-02-19 21:17:16 UTC'),
-          updated_at: new Date('2016-02-19 21:17:16 UTC')
+          updated_at: new Date('2017-02-19 21:17:16 UTC')
         },
         {
           id: 48,
@@ -1556,7 +1556,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.434,
           projected_2017_OPS: 0.788,
           created_at: new Date('2017-02-19 21:22:16 UTC'),
-          updated_at: new Date('2016-02-19 21:22:16 UTC')
+          updated_at: new Date('2017-02-19 21:22:16 UTC')
         },
         {
           id: 49,
@@ -1588,7 +1588,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 21:26:16 UTC'),
-          updated_at: new Date('2016-02-19 21:26:16 UTC')
+          updated_at: new Date('2017-02-19 21:26:16 UTC')
         },
         {
           id: 50,
@@ -1619,7 +1619,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-19 21:30:16 UTC'),
-          updated_at: new Date('2016-02-19 21:30:16 UTC')
+          updated_at: new Date('2017-02-19 21:30:16 UTC')
         },
         {
           id: 51,
@@ -1650,7 +1650,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 6:03:16 UTC'),
-          updated_at: new Date('2016-02-20 6:03:16 UTC')
+          updated_at: new Date('2017-02-20 6:03:16 UTC')
         },
         {
           id: 52,
@@ -1682,7 +1682,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.443,
           projected_2017_OPS: 0.805,
           created_at: new Date('2017-02-20 6:09:16 UTC'),
-          updated_at: new Date('2016-02-20 6:09:16 UTC')
+          updated_at: new Date('2017-02-20 6:09:16 UTC')
         },
         {
           id: 53,
@@ -1715,7 +1715,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.534,
           projected_2017_OPS: 0.905,
           created_at: new Date('2017-02-20 6:15:16 UTC'),
-          updated_at: new Date('2016-02-20 6:15:16 UTC')
+          updated_at: new Date('2017-02-20 6:15:16 UTC')
         },
         {
           id: 54,
@@ -1748,7 +1748,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.458,
           projected_2017_OPS: 0.780,
           created_at: new Date('2017-02-20 6:21:16 UTC'),
-          updated_at: new Date('2016-02-20 6:21:16 UTC')
+          updated_at: new Date('2017-02-20 6:21:16 UTC')
         },
         {
           id: 55,
@@ -1781,7 +1781,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.419,
           projected_2017_OPS: 0.732,
           created_at: new Date('2017-02-20 6:33:16 UTC'),
-          updated_at: new Date('2016-02-20 6:33:16 UTC')
+          updated_at: new Date('2017-02-20 6:33:16 UTC')
         },
         {
           id: 56,
@@ -1814,7 +1814,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.525,
           projected_2017_OPS: 0.859,
           created_at: new Date('2017-02-20 6:41:16 UTC'),
-          updated_at: new Date('2016-02-20 6:41:16 UTC')
+          updated_at: new Date('2017-02-20 6:41:16 UTC')
         },
         {
           id: 57,
@@ -1845,7 +1845,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 6:46:16 UTC'),
-          updated_at: new Date('2016-02-20 6:46:16 UTC')
+          updated_at: new Date('2017-02-20 6:46:16 UTC')
         },
         {
           id: 58,
@@ -1878,7 +1878,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.458,
           projected_2017_OPS: 0.823,
           created_at: new Date('2017-02-20 6:52:16 UTC'),
-          updated_at: new Date('2016-02-20 6:52:16 UTC')
+          updated_at: new Date('2017-02-20 6:52:16 UTC')
         },
         {
           id: 59,
@@ -1910,7 +1910,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.463,
           projected_2017_OPS: 0.823,
           created_at: new Date('2017-02-20 6:56:16 UTC'),
-          updated_at: new Date('2016-02-20 6:56:16 UTC')
+          updated_at: new Date('2017-02-20 6:56:16 UTC')
         },
         {
           id: 60,
@@ -1943,7 +1943,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.485,
           projected_2017_OPS: 0.810,
           created_at: new Date('2017-02-20 7:00:16 UTC'),
-          updated_at: new Date('2016-02-20 7:00:16 UTC')
+          updated_at: new Date('2017-02-20 7:00:16 UTC')
         },
         {
           id: 61,
@@ -1975,7 +1975,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.462,
           projected_2017_OPS: 0.779,
           created_at: new Date('2017-02-20 7:06:16 UTC'),
-          updated_at: new Date('2016-02-20 7:06:16 UTC')
+          updated_at: new Date('2017-02-20 7:06:16 UTC')
         },
         {
           id: 62,
@@ -2007,7 +2007,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.496,
           projected_2017_OPS: 0.826,
           created_at: new Date('2017-02-20 7:24:16 UTC'),
-          updated_at: new Date('2016-02-20 7:24:16 UTC')
+          updated_at: new Date('2017-02-20 7:24:16 UTC')
         },
         {
           id: 63,
@@ -2040,7 +2040,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.478,
           projected_2017_OPS: 0.784,
           created_at: new Date('2017-02-20 7:32:16 UTC'),
-          updated_at: new Date('2016-02-20 7:32:16 UTC')
+          updated_at: new Date('2017-02-20 7:32:16 UTC')
         },
         {
           id: 64,
@@ -2071,7 +2071,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 7:42:16 UTC'),
-          updated_at: new Date('2016-02-20 7:42:16 UTC')
+          updated_at: new Date('2017-02-20 7:42:16 UTC')
         },
         {
           id: 65,
@@ -2104,7 +2104,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.478,
           projected_2017_OPS: 0.818,
           created_at: new Date('2017-02-20 8:22:16 UTC'),
-          updated_at: new Date('2016-02-20 8:22:16 UTC')
+          updated_at: new Date('2017-02-20 8:22:16 UTC')
         },
         {
           id: 66,
@@ -2136,7 +2136,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 8:27:16 UTC'),
-          updated_at: new Date('2016-02-20 8:27:16 UTC')
+          updated_at: new Date('2017-02-20 8:27:16 UTC')
         },
         {
           id: 67,
@@ -2169,7 +2169,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.506,
           projected_2017_OPS: 0.810,
           created_at: new Date('2017-02-20 8:30:16 UTC'),
-          updated_at: new Date('2016-02-20 8:30:16 UTC')
+          updated_at: new Date('2017-02-20 8:30:16 UTC')
         },
         {
           id: 68,
@@ -2200,7 +2200,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_W: 3,
           projected_2017_L: 3,
           created_at: new Date('2017-02-20 8:36:16 UTC'),
-          updated_at: new Date('2016-02-20 8:36:16 UTC')
+          updated_at: new Date('2017-02-20 8:36:16 UTC')
         },
         {
           id: 69,
@@ -2232,7 +2232,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.455,
           projected_2017_OPS: 0.791,
           created_at: new Date('2017-02-20 8:40:16 UTC'),
-          updated_at: new Date('2016-02-20 8:40:16 UTC')
+          updated_at: new Date('2017-02-20 8:40:16 UTC')
         },
         {
           id: 70,
@@ -2264,7 +2264,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 9:16:16 UTC'),
-          updated_at: new Date('2016-02-20 9:16:16 UTC')
+          updated_at: new Date('2017-02-20 9:16:16 UTC')
         },
         {
           id: 71,
@@ -2296,7 +2296,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.360,
           projected_2017_OPS: 0.671,
           created_at: new Date('2017-02-20 9:21:16 UTC'),
-          updated_at: new Date('2016-02-20 9:21:16 UTC')
+          updated_at: new Date('2017-02-20 9:21:16 UTC')
         },
         {
           id: 72,
@@ -2329,7 +2329,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.476,
           projected_2017_OPS: 0.786,
           created_at: new Date('2017-02-20 9:25:16 UTC'),
-          updated_at: new Date('2016-02-20 9:25:16 UTC')
+          updated_at: new Date('2017-02-20 9:25:16 UTC')
         },
         {
           id: 73,
@@ -2361,7 +2361,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.453,
           projected_2017_OPS: 0.759,
           created_at: new Date('2017-02-20 9:28:16 UTC'),
-          updated_at: new Date('2016-02-20 9:28:16 UTC')
+          updated_at: new Date('2017-02-20 9:28:16 UTC')
         },
         {
           id: 74,
@@ -2395,7 +2395,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.476,
           projected_2017_OPS: 0.835,
           created_at: new Date('2017-02-20 10:01:16 UTC'),
-          updated_at: new Date('2016-02-20 10:01:16 UTC')
+          updated_at: new Date('2017-02-20 10:01:16 UTC')
         },
         {
           id: 75,
@@ -2426,7 +2426,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 10:07:16 UTC'),
-          updated_at: new Date('2016-02-20 10:07:16 UTC')
+          updated_at: new Date('2017-02-20 10:07:16 UTC')
         },
         {
           id: 76,
@@ -2458,7 +2458,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.487,
           projected_2017_OPS: 0.828,
           created_at: new Date('2017-02-20 10:12:16 UTC'),
-          updated_at: new Date('2016-02-20 10:12:16 UTC')
+          updated_at: new Date('2017-02-20 10:12:16 UTC')
         },
         {
           id: 77,
@@ -2491,7 +2491,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.401,
           projected_2017_OPS: 0.737,
           created_at: new Date('2017-02-20 10:16:16 UTC'),
-          updated_at: new Date('2016-02-20 10:16:16 UTC')
+          updated_at: new Date('2017-02-20 10:16:16 UTC')
         },
         {
           id: 78,
@@ -2521,7 +2521,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_W: 3,
           projected_2017_L: 3,
           created_at: new Date('2017-02-20 10:21:16 UTC'),
-          updated_at: new Date('2016-02-20 10:21:16 UTC')
+          updated_at: new Date('2017-02-20 10:21:16 UTC')
         },
         {
           id: 79,
@@ -2554,7 +2554,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.470,
           projected_2017_OPS: 0.788,
           created_at: new Date('2017-02-20 10:25:16 UTC'),
-          updated_at: new Date('2016-02-20 10:25:16 UTC')
+          updated_at: new Date('2017-02-20 10:25:16 UTC')
         },
         {
           id: 80,
@@ -2586,7 +2586,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.433,
           projected_2017_OPS: 0.767,
           created_at: new Date('2017-02-20 10:29:16 UTC'),
-          updated_at: new Date('2016-02-20 10:29:16 UTC')
+          updated_at: new Date('2017-02-20 10:29:16 UTC')
         },
         {
           id: 81,
@@ -2618,7 +2618,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.330,
           projected_2017_OPS: 0.628,
           created_at: new Date('2017-02-20 10:33:16 UTC'),
-          updated_at: new Date('2016-02-20 10:33:16 UTC')
+          updated_at: new Date('2017-02-20 10:33:16 UTC')
         },
         {
           id: 82,
@@ -2651,7 +2651,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.463,
           projected_2017_OPS: 0.809,
           created_at: new Date('2017-02-20 10:38:16 UTC'),
-          updated_at: new Date('2016-02-20 10:38:16 UTC')
+          updated_at: new Date('2017-02-20 10:38:16 UTC')
         },
         {
           id: 83,
@@ -2683,7 +2683,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.432,
           projected_2017_OPS: 0.771,
           created_at: new Date('2017-02-20 10:42:16 UTC'),
-          updated_at: new Date('2016-02-20 10:42:16 UTC')
+          updated_at: new Date('2017-02-20 10:42:16 UTC')
         },
         {
           id: 84,
@@ -2713,7 +2713,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_W: 4,
           projected_2017_L: 4,
           created_at: new Date('2017-02-20 10:48:16 UTC'),
-          updated_at: new Date('2016-02-20 10:48:16 UTC')
+          updated_at: new Date('2017-02-20 10:48:16 UTC')
         },
         {
           id: 85,
@@ -2745,7 +2745,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 10:53:16 UTC'),
-          updated_at: new Date('2016-02-20 10:53:16 UTC')
+          updated_at: new Date('2017-02-20 10:53:16 UTC')
         },
         {
           id: 86,
@@ -2778,7 +2778,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.407,
           projected_2017_OPS: 0.730,
           created_at: new Date('2017-02-20 10:57:16 UTC'),
-          updated_at: new Date('2016-02-20 10:57:16 UTC')
+          updated_at: new Date('2017-02-20 10:57:16 UTC')
         },
         {
           id: 87,
@@ -2810,7 +2810,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 11:02:16 UTC'),
-          updated_at: new Date('2016-02-20 11:02:16 UTC')
+          updated_at: new Date('2017-02-20 11:02:16 UTC')
         },
         {
           id: 88,
@@ -2842,7 +2842,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 11:08:16 UTC'),
-          updated_at: new Date('2016-02-20 11:08:16 UTC')
+          updated_at: new Date('2017-02-20 11:08:16 UTC')
         },
         {
           id: 89,
@@ -2874,7 +2874,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.482,
           projected_2017_OPS: 0.818,
           created_at: new Date('2017-02-20 11:12:16 UTC'),
-          updated_at: new Date('2016-02-20 11:12:16 UTC')
+          updated_at: new Date('2017-02-20 11:12:16 UTC')
         },
         {
           id: 90,
@@ -2905,7 +2905,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 11:16:16 UTC'),
-          updated_at: new Date('2016-02-20 11:16:16 UTC')
+          updated_at: new Date('2017-02-20 11:16:16 UTC')
         },
         {
           id: 91,
@@ -2937,7 +2937,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.495,
           projected_2017_OPS: 0.804,
           created_at: new Date('2017-02-20 11:24:16 UTC'),
-          updated_at: new Date('2016-02-20 11:24:16 UTC')
+          updated_at: new Date('2017-02-20 11:24:16 UTC')
         },
         {
           id: 92,
@@ -2969,7 +2969,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.406,
           projected_2017_OPS: 0.758,
           created_at: new Date('2017-02-20 11:27:16 UTC'),
-          updated_at: new Date('2016-02-20 11:27:16 UTC')
+          updated_at: new Date('2017-02-20 11:27:16 UTC')
         },
         {
           id: 93,
@@ -3001,7 +3001,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 11:31:16 UTC'),
-          updated_at: new Date('2016-02-20 11:31:16 UTC')
+          updated_at: new Date('2017-02-20 11:31:16 UTC')
         },
         {
           id: 94,
@@ -3032,7 +3032,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 11:35:16 UTC'),
-          updated_at: new Date('2016-02-20 11:35:16 UTC')
+          updated_at: new Date('2017-02-20 11:35:16 UTC')
         },
         {
           id: 95,
@@ -3065,7 +3065,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.454,
           projected_2017_OPS: 0.780,
           created_at: new Date('2017-02-20 11:38:16 UTC'),
-          updated_at: new Date('2016-02-20 11:38:16 UTC')
+          updated_at: new Date('2017-02-20 11:38:16 UTC')
         },
         {
           id: 96,
@@ -3097,7 +3097,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.463,
           projected_2017_OPS: 0.807,
           created_at: new Date('2017-02-20 11:42:16 UTC'),
-          updated_at: new Date('2016-02-20 11:42:16 UTC')
+          updated_at: new Date('2017-02-20 11:42:16 UTC')
         },
         {
           id: 97,
@@ -3130,7 +3130,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.465,
           projected_2017_OPS: 0.780,
           created_at: new Date('2017-02-20 11:45:16 UTC'),
-          updated_at: new Date('2016-02-20 11:45:16 UTC')
+          updated_at: new Date('2017-02-20 11:45:16 UTC')
         },
         {
           id: 98,
@@ -3160,7 +3160,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_W: 3,
           projected_2017_L: 3,
           created_at: new Date('2017-02-20 11:50:16 UTC'),
-          updated_at: new Date('2016-02-20 11:50:16 UTC')
+          updated_at: new Date('2017-02-20 11:50:16 UTC')
         },
         {
           id: 99,
@@ -3188,7 +3188,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_W: 3,
           projected_2017_L: 3,
           created_at: new Date('2017-02-20 11:55:16 UTC'),
-          updated_at: new Date('2016-02-20 11:55:16 UTC')
+          updated_at: new Date('2017-02-20 11:55:16 UTC')
         },
         {
           id: 100,
@@ -3221,7 +3221,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.428,
           projected_2017_OPS: 0.783,
           created_at: new Date('2017-02-20 11:59:16 UTC'),
-          updated_at: new Date('2016-02-20 11:59:16 UTC')
+          updated_at: new Date('2017-02-20 11:59:16 UTC')
         },
         {
           id: 101,
@@ -3253,7 +3253,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 15:05:16 UTC'),
-          updated_at: new Date('2016-02-20 15:06:16 UTC')
+          updated_at: new Date('2017-02-20 15:06:16 UTC')
         },
         {
           id: 102,
@@ -3284,7 +3284,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 16:02:16 UTC'),
-          updated_at: new Date('2016-02-20 16:02:16 UTC')
+          updated_at: new Date('2017-02-20 16:02:16 UTC')
         },
         {
           id: 103,
@@ -3314,7 +3314,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_W: 4,
           projected_2017_L: 4,
           created_at: new Date('2017-02-20 16:08:16 UTC'),
-          updated_at: new Date('2016-02-20 16:08:16 UTC')
+          updated_at: new Date('2017-02-20 16:08:16 UTC')
         },
         {
           id: 104,
@@ -3347,7 +3347,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.450,
           projected_2017_OPS: 0.797,
           created_at: new Date('2017-02-20 16:15:16 UTC'),
-          updated_at: new Date('2016-02-20 16:15:16 UTC')
+          updated_at: new Date('2017-02-20 16:15:16 UTC')
         },
         {
           id: 105,
@@ -3380,7 +3380,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.500,
           projected_2017_OPS: 0.859,
           created_at: new Date('2017-02-20 16:19:16 UTC'),
-          updated_at: new Date('2016-02-20 16:19:16 UTC')
+          updated_at: new Date('2017-02-20 16:19:16 UTC')
         },
         {
           id: 106,
@@ -3411,7 +3411,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 16:23:16 UTC'),
-          updated_at: new Date('2016-02-20 16:23:16 UTC')
+          updated_at: new Date('2017-02-20 16:23:16 UTC')
         },
         {
           id: 107,
@@ -3441,7 +3441,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_W: 4,
           projected_2017_L: 4,
           created_at: new Date('2017-02-20 16:28:16 UTC'),
-          updated_at: new Date('2016-02-20 16:28:16 UTC')
+          updated_at: new Date('2017-02-20 16:28:16 UTC')
         },
         {
           id: 108,
@@ -3473,7 +3473,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.419,
           projected_2017_OPS: 0.768,
           created_at: new Date('2017-02-20 16:32:16 UTC'),
-          updated_at: new Date('2016-02-20 16:32:16 UTC')
+          updated_at: new Date('2017-02-20 16:32:16 UTC')
         },
         {
           id: 109,
@@ -3506,7 +3506,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.432,
           projected_2017_OPS: 0.791,
           created_at: new Date('2017-02-20 16:36:16 UTC'),
-          updated_at: new Date('2016-02-20 16:36:16 UTC')
+          updated_at: new Date('2017-02-20 16:36:16 UTC')
         },
         {
           id: 110,
@@ -3536,7 +3536,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 16:42:16 UTC'),
-          updated_at: new Date('2016-02-20 16:42:16 UTC')
+          updated_at: new Date('2017-02-20 16:42:16 UTC')
         },
         {
           id: 111,
@@ -3568,7 +3568,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.500,
           projected_2017_OPS: 0.862,
           created_at: new Date('2017-02-20 17:01:16 UTC'),
-          updated_at: new Date('2016-02-20 17:01:16 UTC')
+          updated_at: new Date('2017-02-20 17:01:16 UTC')
         },
         {
           id: 112,
@@ -3600,7 +3600,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.490,
           projected_2017_OPS: 0.839,
           created_at: new Date('2017-02-20 17:08:16 UTC'),
-          updated_at: new Date('2016-02-20 17:08:16 UTC')
+          updated_at: new Date('2017-02-20 17:08:16 UTC')
         },
         {
           id: 113,
@@ -3630,7 +3630,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_W: 3,
           projected_2017_L: 3,
           created_at: new Date('2017-02-20 17:13:16 UTC'),
-          updated_at: new Date('2016-02-20 17:13:16 UTC')
+          updated_at: new Date('2017-02-20 17:13:16 UTC')
         },
         {
           id: 114,
@@ -3662,7 +3662,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 17:18:16 UTC'),
-          updated_at: new Date('2016-02-20 17:18:16 UTC')
+          updated_at: new Date('2017-02-20 17:18:16 UTC')
         },
         {
           id: 115,
@@ -3695,7 +3695,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.432,
           projected_2017_OPS: 0.775,
           created_at: new Date('2017-02-20 17:22:16 UTC'),
-          updated_at: new Date('2016-02-20 17:22:16 UTC')
+          updated_at: new Date('2017-02-20 17:22:16 UTC')
         },
         {
           id: 116,
@@ -3727,7 +3727,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 17:26:16 UTC'),
-          updated_at: new Date('2016-02-20 17:26:16 UTC')
+          updated_at: new Date('2017-02-20 17:26:16 UTC')
         },
         {
           id: 117,
@@ -3758,7 +3758,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.484,
           projected_2017_OPS: 0.825,
           created_at: new Date('2017-02-20 17:39:16 UTC'),
-          updated_at: new Date('2016-02-20 17:39:16 UTC')
+          updated_at: new Date('2017-02-20 17:39:16 UTC')
         },
         {
           id: 118,
@@ -3789,7 +3789,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 17:47:16 UTC'),
-          updated_at: new Date('2016-02-20 17:47:16 UTC')
+          updated_at: new Date('2017-02-20 17:47:16 UTC')
         },
         {
           id: 119,
@@ -3822,7 +3822,7 @@ exports.seed = function(knex, Promise) {
           projected_2017_SLG: 0.473,
           projected_2017_OPS: 0.835,
           created_at: new Date('2017-02-20 17:51:16 UTC'),
-          updated_at: new Date('2016-02-20 17:51:16 UTC')
+          updated_at: new Date('2017-02-20 17:51:16 UTC')
         },
         {
           id: 120,
@@ -3854,43 +3854,323 @@ exports.seed = function(knex, Promise) {
           projected_2017_GS: 0,
           projected_2017_CG: 0,
           created_at: new Date('2017-02-20 17:55:16 UTC'),
-          updated_at: new Date('2016-02-20 17:55:16 UTC')
+          updated_at: new Date('2017-02-20 17:55:16 UTC')
         },
         {
           id: 121,
-          first_name: '',
-          last_name: '',
-          nickname: '',
-          jersey_number: '',
-          headshot_url: '',
-          date_of_birth: '-08-07',
-          place_of_birth: '',
-          team_id: '',
-          bats_LR: '',
-          throws_LR: '',
-          salary: '',
-          wpa_2016: '',
+          first_name: 'Stephen',
+          last_name: 'Piscotty',
+          jersey_number: 55,
+          headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/e/ef024252_mlbam.jpg',
+          date_of_birth: '1991-01-14',
+          place_of_birth: 'Pleasanton, California',
+          team_id: 20,
+          bats_LR: 'R',
+          throws_LR: 'R',
+          wpa_2016: 1.91,
           eligible_OF: true,
           eligible_util: true,
-          projected_2017_AB: '',
-          projected_2017_R: '',
-          projected_2017_HR: '',
-          projected_2017_RBI: '',
-          projected_2017_SB: '',
-          projected_2017_AVG: '',
-          projected_2017_OBP: '',
-          projected_2017_H: '',
-          projected_2017_2B: '',
-          projected_2017_3B: '',
-          projected_2017_walk: '',
-          projected_2017_SO: '',
-          projected_2017_SLG: '',
-          projected_2017_OPS: '',
-          created_at: new Date('2017-02-20 18:41:16 UTC'),
-          updated_at: new Date('2016-02-20 18:41:16 UTC')
+          projected_2017_AB: 565,
+          projected_2017_R: 81,
+          projected_2017_HR: 20,
+          projected_2017_RBI: 85,
+          projected_2017_SB: 6,
+          projected_2017_AVG: 0.278,
+          projected_2017_OBP: 0.339,
+          projected_2017_H: 157,
+          projected_2017_2B: 0,
+          projected_2017_3B: 0,
+          projected_2017_walk: 44,
+          projected_2017_SO: 117,
+          projected_2017_SLG: 0.458,
+          projected_2017_OPS: 0.784,
+          created_at: new Date('2017-02-20 18:06:16 UTC'),
+          updated_at: new Date('2017-02-20 18:06:16 UTC')
         },
         {
           id: 122,
+          first_name: 'Dallas',
+          last_name: 'Keuchel',
+          nickname: 'Kid Keuky',
+          jersey_number: 60,
+          headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/2/21046554_mlbam.jpg',
+          date_of_birth: '1988-01-01',
+          place_of_birth: 'Tulsa, Oklahoma',
+          team_id: 11,
+          bats_LR: 'L',
+          throws_LR: 'L',
+          salary: 524500,
+          wpa_2016: -0.31,
+          eligible_SP: true,
+          eligible_P: true,
+          projected_2017_IP: 212,
+          projected_2017_K: 183,
+          projected_2017_W: 13,
+          projected_2017_L: 11,
+          projected_2017_ERA: 3.35,
+          projected_2017_WHIP: 1.16,
+          projected_2017_ER: 79,
+          projected_2017_HAllowed: 193,
+          projected_2017_BB: 53,
+          projected_2017_HRAllowed: 0,
+          projected_2017_G: 0,
+          projected_2017_GS: 0,
+          projected_2017_CG: 0,
+          created_at: new Date('2017-02-20 18:41:16 UTC'),
+          updated_at: new Date('2017-02-20 18:41:16 UTC')
+        },
+        {
+          id: 123,
+          first_name: 'Jameson',
+          last_name: 'Taillon',
+          nickname: 'Jamo',
+          jersey_number: 50,
+          date_of_birth: '1991-11-18',
+          place_of_birth: 'Lakeland, Florida',
+          team_id: 19,
+          bats_LR: 'R',
+          throws_LR: 'R',
+          wpa_2016: 0.79,
+          eligible_SP: true,
+          eligible_P: true,
+          projected_2017_IP: 177,
+          projected_2017_K: 148,
+          projected_2017_W: 12,
+          projected_2017_L: 8,
+          projected_2017_ERA: 3.05,
+          projected_2017_WHIP: 1.03,
+          projected_2017_ER: 60,
+          projected_2017_HAllowed: 157,
+          projected_2017_BB: 25,
+          projected_2017_HRAllowed: 0,
+          projected_2017_G: 0,
+          projected_2017_GS: 0,
+          projected_2017_CG: 0,
+          created_at: new Date('2017-02-20 18:50:16 UTC'),
+          updated_at: new Date('2017-02-20 18:50:16 UTC')
+        },
+        {
+          id: 124,
+          first_name: 'Lance',
+          last_name: 'McCullers',
+          jersey_number: 43,
+          headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/4/4d714500_mlbam.jpg',
+          date_of_birth: '1993-10-02',
+          place_of_birth: 'Tampa, Florida',
+          team_id: 11,
+          bats_LR: 'L',
+          throws_LR: 'R',
+          wpa_2016: 0.76,
+          eligible_SP: true,
+          eligible_P: true,
+          projected_2017_IP: 184,
+          projected_2017_K: 215,
+          projected_2017_W: 12,
+          projected_2017_L: 8,
+          projected_2017_ERA: 3.13,
+          projected_2017_WHIP: 1.35,
+          projected_2017_ER: 64,
+          projected_2017_HAllowed: 167,
+          projected_2017_BB: 81,
+          projected_2017_HRAllowed: 0,
+          projected_2017_G: 0,
+          projected_2017_GS: 0,
+          projected_2017_CG: 0,
+          created_at: new Date('2017-02-20 19:00:16 UTC'),
+          updated_at: new Date('2017-02-20 19:00:16 UTC')
+        },
+        {
+          id: 125,
+          first_name: 'David',
+          last_name: 'Robertson',
+          nickname: 'Houdini',
+          jersey_number: 30,
+          headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/f/f05e6679_mlbam.jpg',
+          date_of_birth: '1985-04-09',
+          place_of_birth: 'Birmingham, Alabama',
+          team_id: 1,
+          bats_LR: 'R',
+          throws_LR: 'R',
+          salary: 10000000,
+          wpa_2016: 1.48,
+          eligible_RP: true,
+          eligible_P: true,
+          projected_2017_IP: 61,
+          projected_2017_K: 80,
+          projected_2017_SV: 37,
+          projected_2017_ERA: 2.95,
+          projected_2017_WHIP: 1.16,
+          projected_2017_ER: 20,
+          projected_2017_HAllowed: 48,
+          projected_2017_BB: 23,
+          projected_2017_HRAllowed: 0,
+          projected_2017_G: 0,
+          projected_2017_W: 3,
+          projected_2017_L: 3,
+          created_at: new Date('2017-02-20 19:09:16 UTC'),
+          updated_at: new Date('2017-02-20 19:09:16 UTC')
+        },
+        {
+          id: 126,
+          first_name: 'John',
+          last_name: 'Lackey',
+          jersey_number: 41,
+          headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/6/6136c974_mlbam.jpg',
+          date_of_birth: '1978-10-23',
+          place_of_birth: 'Abilene, Texas',
+          team_id: 16,
+          bats_LR: 'R',
+          throws_LR: 'R',
+          salary: 507500,
+          wpa_2016: 1.03,
+          eligible_SP: true,
+          eligible_P: true,
+          projected_2017_IP: 180,
+          projected_2017_K: 158,
+          projected_2017_W: 11,
+          projected_2017_L: 9,
+          projected_2017_ERA: 3.60,
+          projected_2017_WHIP: 1.15,
+          projected_2017_ER: 72,
+          projected_2017_HAllowed: 160,
+          projected_2017_BB: 47,
+          projected_2017_HRAllowed: 0,
+          projected_2017_G: 0,
+          projected_2017_GS: 0,
+          projected_2017_CG: 0,
+          created_at: new Date('2017-02-20 19:15:16 UTC'),
+          updated_at: new Date('2017-02-20 19:15:16 UTC')
+        },
+        {
+          id: 127,
+          first_name: 'Danny',
+          last_name: 'Duffy',
+          jersey_number: 41,
+          headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/3/3ffc08be_mlbam.jpg',
+          date_of_birth: '1988-12-21',
+          place_of_birth: 'Goleta, California',
+          team_id: 4,
+          bats_LR: 'L',
+          throws_LR: 'L',
+          salary: 2425000,
+          wpa_2016: 2.34,
+          eligible_SP: true,
+          eligible_RP: true,
+          eligible_P: true,
+          projected_2017_IP: 182,
+          projected_2017_K: 167,
+          projected_2017_W: 10,
+          projected_2017_SV: 0,
+          projected_2017_ERA: 3.86,
+          projected_2017_WHIP: 1.21,
+          projected_2017_ER: 78,
+          projected_2017_HAllowed: 166,
+          projected_2017_BB: 54,
+          projected_2017_HRAllowed: 0,
+          projected_2017_G: 0,
+          projected_2017_GS: 0,
+          projected_2017_L: 10,
+          projected_2017_CG: 0,
+          created_at: new Date('2017-02-20 19:22:16 UTC'),
+          updated_at: new Date('2017-02-20 19:22:16 UTC')
+        },
+        {
+          id: 128,
+          first_name: 'Maikel',
+          last_name: 'Franco',
+          jersey_number: 7,
+          headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/8/8c9802d5_mlbam.jpg',
+          date_of_birth: '1992-08-26',
+          place_of_birth: 'Azua, Azua, Dominican Republic',
+          team_id: 24,
+          bats_LR: 'R',
+          throws_LR: 'R',
+          wpa_2016: 1.46,
+          eligible_3B: true,
+          eligible_util: true,
+          projected_2017_AB: 584,
+          projected_2017_R: 72,
+          projected_2017_HR: 25,
+          projected_2017_RBI: 90,
+          projected_2017_SB: 1,
+          projected_2017_AVG: 0.259,
+          projected_2017_OBP: 0.309,
+          projected_2017_H: 151,
+          projected_2017_2B: 0,
+          projected_2017_3B: 0,
+          projected_2017_walk: 39,
+          projected_2017_SO: 97,
+          projected_2017_SLG: 0.438,
+          projected_2017_OPS: 0.747,
+          created_at: new Date('2017-02-20 20:32:16 UTC'),
+          updated_at: new Date('2017-02-20 20:33:16 UTC')
+        },
+        {
+          id: 129,
+          first_name: 'Adam',
+          last_name: 'Duvall',
+          jersey_number: 23,
+          headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/b/bf833b74_mlbam.jpg',
+          date_of_birth: '1988-09-04',
+          place_of_birth: 'Louisville, Kentucky',
+          team_id: 17,
+          bats_LR: 'R',
+          throws_LR: 'R',
+          wpa_2016: 1.53,
+          eligible_OF: true,
+          eligible_util: true,
+          projected_2017_AB: 550,
+          projected_2017_R: 81,
+          projected_2017_HR: 33,
+          projected_2017_RBI: 98,
+          projected_2017_SB: 5,
+          projected_2017_AVG: 0.236,
+          projected_2017_OBP: 0.289,
+          projected_2017_H: 130,
+          projected_2017_2B: 0,
+          projected_2017_3B: 0,
+          projected_2017_walk: 37,
+          projected_2017_SO: 152,
+          projected_2017_SLG: 0.487,
+          projected_2017_OPS: 0.776,
+          created_at: new Date('2017-02-20 20:36:16 UTC'),
+          updated_at: new Date('2017-02-20 20:36:16 UTC')
+        },
+        {
+          id: 130,
+          first_name: 'Kole',
+          last_name: 'Calhoun',
+          nickname: 'Red Baron',
+          jersey_number: 56,
+          headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/c/cbdb6e9b_mlbam.jpg',
+          date_of_birth: '1987-10-14',
+          place_of_birth: 'Buckeye, Arizona',
+          team_id: 12,
+          bats_LR: 'L',
+          throws_LR: 'L',
+          salary: 537500,
+          wpa_2016: 1.66,
+          eligible_OF: true,
+          eligible_util: true,
+          projected_2017_AB: 588,
+          projected_2017_R: 86,
+          projected_2017_HR: 20,
+          projected_2017_RBI: 75,
+          projected_2017_SB: 3,
+          projected_2017_AVG: 0.265,
+          projected_2017_OBP: 0.325,
+          projected_2017_H: 156,
+          projected_2017_2B: 0,
+          projected_2017_3B: 0,
+          projected_2017_walk: 49,
+          projected_2017_SO: 118,
+          projected_2017_SLG: 0.432,
+          projected_2017_OPS: 0.757,
+          created_at: new Date('2017-02-20 20:41:16 UTC'),
+          updated_at: new Date('2017-02-20 20:41:16 UTC')
+        },
+        {
+          id: 131,
           first_name: '',
           last_name: '',
           nickname: '',
@@ -3919,8 +4199,41 @@ exports.seed = function(knex, Promise) {
           projected_2017_SO: '',
           projected_2017_SLG: '',
           projected_2017_OPS: '',
-          created_at: new Date('2017-02-20 18:41:16 UTC'),
-          updated_at: new Date('2016-02-20 18:41:16 UTC')
+          created_at: new Date('2017-02-20 19:41:16 UTC'),
+          updated_at: new Date('2017-02-20 19:41:16 UTC')
+        },
+        {
+          id: 132,
+          first_name: '',
+          last_name: '',
+          nickname: '',
+          jersey_number: '',
+          headshot_url: '',
+          date_of_birth: '-08-07',
+          place_of_birth: '',
+          team_id: '',
+          bats_LR: '',
+          throws_LR: '',
+          salary: '',
+          wpa_2016: '',
+          eligible_OF: true,
+          eligible_util: true,
+          projected_2017_AB: '',
+          projected_2017_R: '',
+          projected_2017_HR: '',
+          projected_2017_RBI: '',
+          projected_2017_SB: '',
+          projected_2017_AVG: '',
+          projected_2017_OBP: '',
+          projected_2017_H: '',
+          projected_2017_2B: '',
+          projected_2017_3B: '',
+          projected_2017_walk: '',
+          projected_2017_SO: '',
+          projected_2017_SLG: '',
+          projected_2017_OPS: '',
+          created_at: new Date('2017-02-20 19:41:16 UTC'),
+          updated_at: new Date('2017-02-20 19:41:16 UTC')
         }
       ]);
     });
