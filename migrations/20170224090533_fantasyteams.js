@@ -15,7 +15,7 @@ exports.up = function(knex, Promise) {
     table.integer('util_1').defaultTo(null).references('id').inTable('players').onDelete('CASCADE').index();
     table.integer('util_2').defaultTo(null).references('id').inTable('players').onDelete('CASCADE').index();
     table.integer('sp_1').defaultTo(null).references('id').inTable('players').onDelete('CASCADE').index();
-    table.integet('sp_2').defaultTo(null).references('id').inTable('players').onDelete('CASCADE').index();
+    table.integer('sp_2').defaultTo(null).references('id').inTable('players').onDelete('CASCADE').index();
     table.integer('rp_1').defaultTo(null).references('id').inTable('players').onDelete('CASCADE').index();
     table.integer('rp_2').defaultTo(null).references('id').inTable('players').onDelete('CASCADE').index();
     table.integer('p_1').defaultTo(null).references('id').inTable('players').onDelete('CASCADE').index();

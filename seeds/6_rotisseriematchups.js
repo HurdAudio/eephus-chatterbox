@@ -4,6 +4,7 @@ exports.seed = function(knex, Promise) {
   return knex('rotisseriematchups').del()
     .then(function () {
       // Inserts seed entries
+      // Maintains fantasy matchups in rotisserie format
       return knex('rotisseriematchups').insert([
         {
           id: 1,

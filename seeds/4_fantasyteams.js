@@ -4,6 +4,7 @@ exports.seed = function(knex, Promise) {
   return knex('fantasyteams').del()
     .then(function () {
       // Inserts seed entries
+      // User drafted fantasy teams
       return knex('fantasyteams').insert([
         {
           id: 1,

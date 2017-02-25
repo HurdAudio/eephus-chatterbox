@@ -4,6 +4,7 @@ exports.seed = function(knex, Promise) {
   return knex('headtoheadmatchups').del()
     .then(function () {
       // Inserts seed entries
+      // Maintains list of fantasy matchups in head-to-head format
       return knex('headtoheadmatchups').insert([
         {
           id: 1,

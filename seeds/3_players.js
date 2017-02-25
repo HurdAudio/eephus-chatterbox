@@ -4,6 +4,7 @@ exports.seed = function(knex, Promise) {
   return knex('players').del()
     .then(function () {
       // Inserts seed entries
+      // MLB players seeded below
       return knex('players').insert([
         {
           id: 1,
@@ -1861,7 +1862,7 @@ exports.seed = function(knex, Promise) {
           salary: 16500000,
           wpa_2016: 1.22,
           eligible_C: true,
-          eligble_1B: true,
+          eligible_1B: true,
           eligible_util: true,
           projected_2017_AB: 535,
           projected_2017_R: 76,
