@@ -2,7 +2,7 @@
   "name": "eephus-chatterbox",
   "version": "1.0.0",
   "description": "A conversational baseball application.",
-  "main": "index.js",
+  "main": "app/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,9 +17,19 @@
   },
   "homepage": "https://github.com/HurdAudio/eephus-chatterbox#readme",
   "dependencies": {
+    "body-parser": "^1.16.1",
     "chai": "^3.5.0",
+    "cheerio": "^0.22.0",
+    "cookie-session": "^2.0.0-beta.1",
     "express": "^4.14.1",
     "knex": "^0.12.7",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "purecss": "^0.6.2",
+    "request": "^2.79.0",
+    "request-promise-native": "^1.0.3",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "grunt-pure-grids": "^1.0.2"
   }
 }

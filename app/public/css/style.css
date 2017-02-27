@@ -1,0 +1,144 @@
+body {
+  background-color: #009f0d;
+}
+
+.pure-u-1-5 {
+  background-color: #009f0d;
+}
+
+#draftContainer {
+  background-color: #009f0d;
+}
+
+
+.bg {
+  background: url("../img/baseball-diamond-37200_1280.png")  no-repeat;
+  height: 1000px;
+  width: 100%;
+  text-align: center;
+  margin-top: 5em;
+}
+
+#hometeam {
+  background-color: #022E5E;
+  border: solid 8px #E8971D;
+  color: #DF7079;
+  font-family: 'Racing Sans One', cursive;
+
+}
+
+#awayTeam {
+  background-color: #062635;
+  border: solid 8px #DA4321;
+  color: #EEEBD8;
+  font-family: 'Racing Sans One', cursive;
+
+}
+
+.draftCard {
+  float:left;
+}
+
+.pure-u-1-5 {
+  float:left;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 1em;
+}
+
+#myModal {
+  display: none;
+  
+}
+
+.draftCard img {
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+}
+
+.CHC {
+  background-color: #002F6C;
+  border: solid 7px #C8102E;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  padding: 1em;
+  height: 8.5em;
+}
+
+.MIA {
+  background-color: #F9423B;
+  border: solid 7px #FCDE04;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  padding: 1em;
+  height: 8.5em;
+
+}
+
+.ATL {
+  background-color: #002855;
+  border: solid 7px #BA0C2F;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  padding: 1em;
+  height: 8.5em;
+
+}
+
+.BAL {
+  background-color: #FC4C00;
+  border: solid 7px #000000;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  padding: 1em;
+  height: 8.5em;
+
+}
+
+.STL {
+  background-color: #C41E3A;
+  border: solid 7px #0A2252;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  padding: 1em;
+  height: 8.5em;
+
+}
+
+#prev5 {
+  margin-left: 30em;
+  margin-top: 1.5em;
+  float: left;
+  font-family: 'Audiowide', cursive;
+}
+
+#next5 {
+    margin-right: 30em;
+    margin-top: 1.5em;
+    float: right;
+    font-family: 'Audiowide', cursive;
+}
+
+
+tr {
+  margin-left: 3em;
+}
+td {
+  width: 8em;
+  height: 8em;
+  border: none;
+}
+
+#buffer {
+  height: 55px;
+}
