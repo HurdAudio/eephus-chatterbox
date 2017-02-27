@@ -2240,7 +2240,7 @@ exports.seed = function(knex, Promise) {
           first_name: 'Kyle',
           last_name: 'Hendricks',
           nickname: 'The Professor',
-          jersey_number: 28,
+          jersey_number: 15,
           headshot_url: 'http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/a/a5f2f51a_mlbam.jpg',
           date_of_birth: '1989-12-07',
           place_of_birth: 'Newport Beach, California',

@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
       return knex('fantasyteams').insert([
         {
           id: 1,
-          team_name: "Eephus's Revengers",
+          team_name: "Eephus Revengers",
           owner: 1,
           catcher: 53,
           first_base: 11,
