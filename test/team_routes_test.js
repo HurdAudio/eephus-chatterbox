@@ -7,9 +7,8 @@ const { suite, test } = require('mocha');
 const request = require('supertest');
 const knex = require('../knex');
 const server = require('../app/server');
-const teams = require('../app/routes/teams');
+// const teams = require('../app/routes/teams');
 
-console.log(knex);
 
 suite('Client side should serve up index.html.', () => {
 
@@ -25,7 +24,7 @@ suite('Client side should serve up index.html.', () => {
 
 });
 
-suite('Part 3: Test routes for routes/teams.js', () => {
+suite('Test routes for routes/teams.js', () => {
 
   before((done) => {
   knex.migrate.latest()
@@ -780,7 +779,7 @@ suite('Part 3: Test routes for routes/teams.js', () => {
   test('GET /messages/:id should return the id, city, name, nickname, abbreviation, logo_url, throwback_logo_url, league, division, manager, general_manager, stadium_name, stadium_image_url, mascot_name, mascot_image_url, last_won_world_series, team_color_1. team_color_2, team_color_3, home_uniform_url, away_uniform_url, and alternate_uniform_url of a single team.', (done) => {
     /* eslint-disable max-len */
     request(server)
-      .get('/messages/14')
+      .get('/teams/14')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, {
@@ -814,14 +813,14 @@ suite('Part 3: Test routes for routes/teams.js', () => {
   test('PATCH /teams/:id should update a team and return the team that were updated.', (done) => {
   /* eslint-disable max-len */
   request(server)
-    .patch('/messages/13')
+    .patch('/teams/13')
     .set('Accept', 'application/json')
     .send({
       stadium_name:'Qualcomm Stadium',
     })
     .expect('Content-Type', /json/)
 
-    .expect(200, {
+    .expect(200, [{
       id: 13,
       city: 'Oakland',
       name: 'Athletics',
@@ -844,7 +843,7 @@ suite('Part 3: Test routes for routes/teams.js', () => {
       home_uniform_url: 'https://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_1939000/ff_1939164_xl.jpg&w=340',
       away_uniform_url: 'https://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_2331000/ff_2331182_full.jpg&w=340',
       alternate_uniform_url: 'http://www.majesticathletic.com/store/productimages/regular/17281_alternate_l.jpg',
-    }, done);
+    }], done);
 
     /* eslint-enable max-len */
   });
