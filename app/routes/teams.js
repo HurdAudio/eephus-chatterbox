@@ -11,6 +11,7 @@ router.get('/', (req, res, next) => {
   console.log('teams GET request route');
   knex('teams')
   .select('*')
+  .orderBy('id')
   .then((results) => {
     res.send(results);
   })
