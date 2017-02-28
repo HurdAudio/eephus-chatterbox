@@ -9,6 +9,7 @@ const teams = require('./routes/teams.js');
 const users = require('./routes/users.js');
 const players = require('./routes/players.js');
 const fantasyteams = require('./routes/fantasyteams.js');
+const headtoheadmatchups = require('./routes/headtoheadmatchups.js');
 
 // const messages = require('./routes/classifieds');
 const port = process.env.PORT || 3007;
@@ -23,6 +24,7 @@ app.use('/teams', teams);
 app.use('/users', users);
 app.use('/players', players);
 app.use('/fantasyteams', fantasyteams);
+app.use('/headtoheadmatchups', headtoheadmatchups);
 
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
