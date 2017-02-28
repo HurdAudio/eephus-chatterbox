@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const knex = require('knex');
 const app = express();
 const teams = require('./routes/teams.js');
+const users = require('./routes/users.js');
 
 // const messages = require('./routes/classifieds');
 const port = process.env.PORT || 3007;
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, '/../', 'node_modules')));
 
 // app.use('/classifieds',messages);
 app.use('/teams', teams);
+app.use('/users', users);
 
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});

@@ -776,7 +776,7 @@ suite('Test routes for routes/teams.js', () => {
       /* eslint-enable max-len */
   });
 
-  test('GET /messages/:id should return the id, city, name, nickname, abbreviation, logo_url, throwback_logo_url, league, division, manager, general_manager, stadium_name, stadium_image_url, mascot_name, mascot_image_url, last_won_world_series, team_color_1. team_color_2, team_color_3, home_uniform_url, away_uniform_url, and alternate_uniform_url of a single team.', (done) => {
+  test('GET /teams/:id should return the id, city, name, nickname, abbreviation, logo_url, throwback_logo_url, league, division, manager, general_manager, stadium_name, stadium_image_url, mascot_name, mascot_image_url, last_won_world_series, team_color_1. team_color_2, team_color_3, home_uniform_url, away_uniform_url, and alternate_uniform_url of a single team.', (done) => {
     /* eslint-disable max-len */
     request(server)
       .get('/teams/14')
