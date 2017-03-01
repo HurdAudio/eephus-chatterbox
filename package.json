@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/HurdAudio/eephus-chatterbox#readme",
   "dependencies": {
+    "angular-animate": "^1.6.2",
+    "angular-sanitize": "^1.6.0",
     "body-parser": "^1.16.1",
     "chai": "^3.5.0",
     "cheerio": "^0.22.0",

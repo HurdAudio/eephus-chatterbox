@@ -53,7 +53,7 @@ p {
 
 #myModal {
   display: none;
-  
+
 }
 
 .draftCard img {
@@ -141,4 +141,68 @@ td {
 
 #buffer {
   height: 55px;
+}
+
+.logo {
+  max-width:200px;
+  /*float:left;*/
+  position: relative;
+  /*padding-top: 25px;*/
+}
+
+.logo img{
+    position: relative;
+    max-width: 200px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.home-menu, .pure-menu {
+    /*padding-right: 2em;*/
+    background-color: #010101;
+    font-family: "Racing Sans One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+
+.home-menu .pure-menu, .pure-menu-heading, .footer-menu {
+    color: white;
+    font-weight: 300;
+    /*font-size: 120%;*/
+}
+
+.nav-link {
+  color: #b4ccc0;
+}
+
+.one {
+  font-family: "Racing Sans One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  font-style: italic;
+}
+ .title {
+   float:right;
+   margin-right: 7em;
+ }
+
+.pure-menu-list {
+  font-size: 24px;
+}
+
+#landingspot {
+  height: 1200px;
+  background: url("../img/park-19445_1920.jpg") no-repeat;
+}
+
+.footer-menu {
+    background-color: #010302;
+    padding: 0.4em;
+    padding-top: 1em;
+    font-family: "Racing Sans One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    /*position: fixed;*/
+    /*bottom: 0.4em;*/
+    width: 100%;
+    /*border-top: 1px solid rgba(223, 86, 9, 0.99)*/
 }

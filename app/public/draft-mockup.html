@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Eephus Chatterbox </title>
+    <link rel="icon" href="./img/40px-Baseball_(crop).jpg" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Open+Sans|Oswald|Racing+Sans+One|Righteous|Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <!--Pure responsive breakpoints -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- CSS NEEDED FOR THE IMPORTANT MESSAGE MODAL POPUP -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="modalsonly/css/bootstrap-3.2.0.min.css">
+
+    <!-- END CSS NEEDED FOR THE IMPORTANT MESSAGE MODAL POPUP -->
+
+
+  </head>
+  <body>
+
+    <!-- Modals -->
+    <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Do you want to save changes you made to document before closing?</p>
+                <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- End Modals -->
+    <container id="draftContainer">
+    <div class = "pure-g">
+      <div class="pure-u-1-5">
+        <div class="draftCard"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/a/a5f2f51a_mlbam.jpg">
+        </div>
+        <div class="CHC">
+          <p>28 Kyle Hendricks</p>
+          <p>Chicago Cubs</p>
+          <p>SP</p>
+          <p>  </p>
+
+        </div>
+      </div>
+      <div class="pure-u-1-5">
+        <div class="draftCard"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/7/709a21a2_mlbam.jpg">
+        </div>
+        <div class="MIA">
+          <p>9 Dee Gordon</p>
+          <p>Miami Marlins</p>
+          <p>2B</p>
+          <p>  </p>
+
+        </div>
+      </div>
+
+      <div class="pure-u-1-5">
+        <div class="draftCard"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/7/7e7c9f53_mlbam.jpg">
+        </div>
+        <div class="ATL">
+          <p>27 Matt Kemp</p>
+          <p>Atlanta Braves</p>
+          <p>2B</p>
+          <p>  </p>
+
+        </div>
+      </div>
+      <div class="pure-u-1-5">
+        <div class="draftCard"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/6/6b5be20a_mlbam.jpg">
+        </div>
+        <div class="BAL">
+          <p>10 Adam Jones</p>
+          <p>Baltimore Orioles</p>
+          <p>OF</p>
+          <p></p>
+        </div>
+
+      </div>
+      <div class="pure-u-1-5">
+        <div class="draftCard"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/5/592ea21e_mlbam.jpg">
+        </div>
+        <div class="STL">
+          <p>13 Matt Carpenter</p>
+          <p>St. Louis Cardinals</p>
+          <p>1B, 2B, 3B</p>
+        </div>
+
+      </div>
+
+
+    </div>
+    <a class="pure-button" id="prev5" href="#"><img src="./img/app-1646213_640.png" height="20px" width="90px"></a>
+    <a class="pure-button" id="next5" href="#"><img src="./img/app-1646214_640.png" height="20px" width="90px"></a>
+  </container>
+
+  <div class="bg">
+    <h1 id="hometeam">Orix Blue Wave</h1>
+    <table>
+    <tbody>
+      <tr>
+        <td id="team_1_logo_1"><img src="http://i289.photobucket.com/albums/ll222/justafan_OOTP_logos/MLB%20Shiney%20Circle%20Logo%20Set/Request%204/Orix_BlueWave_0056bc_ffa70d.png" height="90px" width="90px"></td>
+        <td></td>
+        <td id="team_1_OF1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/f/f3a0cc68_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_1_SP2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/b/bc1a4ce9_mlbam.jpg"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_1_OF2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/c/c61e922e_mlbam.jpg"></td>
+        <td></td>
+        <td id="team_1_RP1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/c/c8f863dc_mlbam.jpg"></td>
+        <td id="team_1_RP2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/9/955af95f_mlbam.jpg"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td id="team_1_3B"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/4/4009314f_mlbam.jpg"></td>
+        <td></td>
+        <td id="team_1_SS"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/4/45d62ce6_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_1_P1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/5/5efb6f1a_mlbam.jpg"></td>
+        <td id="team_1_P2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/9/95cae16c_mlbam.jpg"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_1_2B"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/9/98b629aa_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_1_P3"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/0/071e4544_mlbam.jpg"></td>
+        <td id="team_1_P4"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/e/ebf878fa_mlbam.jpg"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td id="team_1_SP1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/6/65381047_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_1_OF3"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/1/12154e57_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td id="team_1_utility_1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/7/73dd747b_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_1_1B"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/6/6b37a7f2_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+
+      <tr>
+        <td id="team_1_Catcher"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/7/72f6f665_mlbam.jpg"></td>
+        <td id="team_1_Utility_2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/9/9f4721ab_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td id="team_1_bench1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/3/33687c9b_mlbam.jpg"></td>
+        <td id="team_1_bench2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/8/8b4db8f5_mlbam.jpg"></td>
+        <td id="team_1_bench3"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/d/dc06acdb_mlbam.jpg"></td>
+        <td id="team_1_bench4"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/b/b7551d80_mlbam.jpg"></td>
+        <td id="team_1_bench5"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/f/fea2f131_mlbam.jpg"></td>
+        <td id="logo2"><img src="http://baseballguru.com/npb/bluewave.gif" height="90px" width="90px"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div id="buffer"></div>
+  <br>
+
+
+  </div>
+  <div class="bg">
+    <h1 id="awayTeam">Eephus Revengers</h1>
+    <table>
+    <tbody>
+      <tr>
+        <td id="away_logo_1"><img src="https://s-media-cache-ak0.pinimg.com/600x315/1e/ef/89/1eef898eedec89b0657799c719965ec0.jpg" height="90px" width="90px"></td>
+        <td></td>
+        <td id="team_2_OF1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/f/f322d40f_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_2_SP2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/b/b42605c8_mlbam.jpg"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_2_OF2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/7/7ba8f9ac_mlbam.jpg"></td>
+        <td></td>
+        <td id="team_2_RP1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/e/e7d0cac7_mlbam.jpg"></td>
+        <td id="team_2_RP2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/3/3d191eb7_mlbam.jpg"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td id="team_2_3B"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/1/1d358f93_mlbam.jpg"></td>
+        <td></td>
+        <td id="team_2_SS"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/a/a8298e85_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_2_P1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/c/cbb0cc9a_mlbam.jpg"></td>
+        <td id="team_2_P2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/b/be790f8a_mlbam.jpg"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_2_2B"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/f/f0e8fd62_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_2_P3"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/0/0d6b6af2_mlbam.jpg"></td>
+        <td id="team_2_P4"><img src="http://mlb.mlb.com/mlb/images/players/head_shot/621242.jpg" height="140px" width="90px"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td id="team_2_SP1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/0/0caa3053_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_2_OF3"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/1/13ab5ed2_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td id="team_2_Utility1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/3/3af4cc98_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="team_2_1B"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/1/1162de81_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td id="team_2_Catcher"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/2/2a82d8dc_mlbam.jpg"></td>
+        <td id="team_2_utility2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/b/bceca907_mlbam.jpg"></td>
+        <td></td>
+        <td></td>
+        <td id="team_2_bench1"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/a/ae57de14_mlbam.jpg"></td>
+        <td id="team_2_bench2"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/e/ea1e002d_mlbam.jpg"></td>
+        <td id="team_2_bench3"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/2/2c66b3f7_mlbam.jpg"></td>
+        <td id="team_2_bench4"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/3/37b9034d_mlbam.jpg"></td>
+        <td id="team_2_bench5"><img src="http://d3k2oh6evki4b7.cloudfront.net/req/201604090/images/headshots/8/87f6986b_mlbam.jpg"></td>
+        <td id="team_2_logo2"><img src="http://img.theepochtimes.com/n3/eet-content/uploads/2016/04/05/CBenderAP_0901010181.jpg" width="90" height="90"></td>
+
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- PLUGINS NEEDED FOR THE IMPORTANT MESSAGE MODAL POPUP -->
+
+    <!-- Latest jQuery (1.11.1) -->
+    <script src="modalsonly/js/jquery-1.11.1.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="modalsonly/js/bootstrap-3.2.0.min.js"></script>
+
+    <!-- jQuery Cookie -->
+    <script src="modalsonly/js/jquery.cookie-1.4.1.min.js"></script>
+
+    <!-- END PLUGINS NEEDED FOR THE IMPORTANT MESSAGE MODAL POPUP -->
+
+  </body>
+</html>
