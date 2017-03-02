@@ -10,6 +10,17 @@ body {
   background-color: #009f0d;
 }
 
+#balltext {
+  color: #E5D7AA;
+  padding-top: 0;
+  font-family: 'Racing Sans One', cursive;
+  font-size: 46px;
+
+}
+
+#textbox {
+  float:center;
+}
 
 .bg {
   background: url("../img/baseball-diamond-37200_1280.png")  no-repeat;
@@ -144,7 +155,7 @@ td {
 }
 
 .logo {
-  max-width:200px;
+  max-width:300px;
   /*float:left;*/
   position: relative;
   /*padding-top: 25px;*/
@@ -152,7 +163,7 @@ td {
 
 .logo img{
     position: relative;
-    max-width: 200px;
+    max-width: 300px;
     margin-top: 0px;
     padding-top: 0px;
 }
@@ -184,10 +195,18 @@ td {
  .title {
    float:right;
    margin-right: 7em;
+   font-size: 56px;
+   color: #E5D7AA;
  }
 
 .pure-menu-list {
   font-size: 24px;
+}
+
+#loginForms {
+  margin-top: 10em;
+  background-color: #010302;
+  opacity: 0.7;
 }
 
 #landingspot {
@@ -205,4 +224,175 @@ td {
     /*bottom: 0.4em;*/
     width: 100%;
     /*border-top: 1px solid rgba(223, 86, 9, 0.99)*/
+}
+
+#login {
+  display: none;
+}
+
+#newuser {
+  display: none;
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('http://css-tricks.com/examples/RoundButtons/fonts/fontello.eot');
+  src: url('http://css-tricks.com/examples/RoundButtons/fonts/fontello.eot?#iefix') format('embedded-opentype'),
+       url('http://css-tricks.com/examples/RoundButtons/fonts/fontello.woff') format('woff'),
+       url('http://css-tricks.com/examples/RoundButtons/fonts/fontello.ttf') format('truetype'),
+       url('http://css-tricks.com/examples/RoundButtons/fonts/fontello.svg#fontello') format('svg');
+  font-weight: normal; font-style: normal;
+}
+
+[class*="icon-"] {
+  font-family: 'fontello';
+  font-style: normal;
+  font-size: 3em;
+  speak: none;
+}
+
+.icon-home:after     { content: "\2302"; }
+.icon-cog:after      { content: "\2699"; }
+.icon-cw:after       { content: "\27f3"; }
+.icon-location:after { content: "\e724"; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#playball {
+  padding-top: 13em;
+  padding-left: 18em;
+}
+
+#landingspot a:link, .nav a:visited {
+  display: block;
+  text-decoration: none;
+  background-color: #51626A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#51626A), to(#9BACA6));
+  background-image: -webkit-linear-gradient(top, #51626A, #9BACA6);
+  background-image: -moz-linear-gradient(top, #51626A, #9BACA6);
+  background-image: -ms-linear-gradient(top, #51626A, #9BACA6);
+  background-image: -o-linear-gradient(top, #51626A, #9BACA6);
+  color: #DBC792;
+  margin: 36px;
+  width: 144px;
+  height: 144px;
+  position: relative;
+  text-align: center;
+  line-height: 144px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  border: solid 1px transparent;
+}
+
+#landingspot a:before {
+  content: "";
+  display: block;
+  background: #fff;
+  border-top: 2px solid #ddd;
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  bottom: -18px;
+  right: -18px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: inset 0px 8px 48px #ddd;
+}
+
+#landingspot a:active {
+  box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px #fff;
+}
+
+#landingspot a:hover {
+  text-decoration: none;
+  color: #555;
+  background: #596D64;
+}​
+
+#leftForm {
+  background-color: #9C9076;
+}
+
+form {
+  position: relative;
+  width: 250px;
+  height: 280px;
+  margin: 0 auto;
+  background: #91AFB4;
+  padding: 20px 22px;
+  border-radius: 10%;
+  border: 1px solid;
+  border-top-color: rgba(255,255,255,.4);
+  border-left-color: rgba(255,255,255,.4);
+  border-bottom-color: rgba(60,60,60,.4);
+  border-right-color: rgba(60,60,60,.4);
+}
+
+form input, form button {
+  width: 212px;
+  border: 1px solid;
+  border-bottom-color: rgba(255,255,255,.5);
+  border-right-color: rgba(60,60,60,.35);
+  border-top-color: rgba(60,60,60,.35);
+  border-left-color: rgba(80,80,80,.45);
+  background-color: rgba(0,0,0,.2);
+  background-repeat: no-repeat;
+  padding: 8px 24px 8px 10px;
+  font: bold .875em/1.25em "Audiowide", sans-serif;
+  letter-spacing: .075em;
+  font-size: 18px;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  margin-bottom: 19px;
+}
+
+form input:focus { background-color: rgba(0,0,0,.4); }
+
+::-webkit-input-placeholder { color: #ffffff; text-transform: uppercase; }
+::-moz-placeholder { color: #ffffff; text-transform: uppercase; }
+:-ms-input-placeholder { color: #ffffff; text-transform: uppercase; }
+
+form button[type=submit] {
+  width: 212px;
+  margin-bottom: 0;
+  color: #ffffff;
+  letter-spacing: .05em;
+  text-shadow: 0 1px 0 #133d3e;
+  text-transform: uppercase;
+  background: #070D0B;
+  border-top-color: #9fb5b5;
+  border-left-color: #608586;
+  border-bottom-color: #1b4849;
+  border-right-color: #1e4d4e;
+  cursor: pointer;
+}
+
+
+#currentaccount {
+  align-content: center;
+  border-right: solid black 4px;
+  background: #010302;
+}
+
+#newaccount {
+  align-content: center;
+  border-right: solid black 4px;
+  background: #010302;
+}
+
+#lefthandaccount img {
+  margin-top: 30px;
+  margin-left: 12em;
 }

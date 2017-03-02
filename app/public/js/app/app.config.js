@@ -21,6 +21,18 @@
         url: '/',
         parent: 'app',
         component: 'landing'
+      })
+      .state({
+        name: 'login',
+        url: '/login',
+        parent: 'app',
+        component: 'login'
+      })
+      .state({
+        name: 'forbidden',
+        url: '/forbidden',
+        parent: 'app',
+        component: 'forbidden'
       });
       // .state({
       //   name: 'userhome',
