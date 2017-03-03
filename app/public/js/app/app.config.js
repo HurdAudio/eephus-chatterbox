@@ -33,6 +33,24 @@
         url: '/forbidden',
         parent: 'app',
         component: 'forbidden'
+      })
+      .state({
+        name: 'useraccount',
+        url: '/useraccount',
+        parent: 'app',
+        component: 'useraccount'
+      })
+      .state({
+        name: 'draftlobby',
+        url: '/draftlobby',
+        parent: 'app',
+        component: 'draftlobby'
+      })
+      .state({
+        name: 'draft',
+        url: '/draft',
+        parent: 'app',
+        component: 'draft'
       });
       // .state({
       //   name: 'userhome',
