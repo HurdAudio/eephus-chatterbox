@@ -15,8 +15,63 @@
         </div>
       </div>
       <div class="pure-u-1-1" id="head-to-headLeagues">
+        <h3 id="h2h">Head-to-Head Leagues:</h3>
+        <main id="head-to-headLeagueContainer" ng-repeat="league in $ctrl.playerHeadToHeadLeagues">
+          <div class="leagueList">
+            <h3>--{{league.match_name}}--</h3>
+
+          </div>
+          <main id="head-to-headTeamNames" ng-repeat="team in $ctrl.playerH2HFantasyTeams">
+            <div class="leagueList">
+              <h3>team: {{team.team_name}}</h3>
+              <img ng-src="{{team.logo_1}}" height="200px" width="200px" class="media-object">
+            </div>
+          </main>
+          <div class="matchupButtons">
+              <button type="button">View League</button>
+              <button type="button">View Team</button>
+              <button type="button">Manage Team</button>
+
+          </div>
+        </main>
+
       </div>
       <div class="pure-u-1-1" id="rotisserieLeagues">
+        <h3 id="rotoLeagues">Rotisserie Leagues:</h3>
+        <main id="rotisserieLeagueContainer" ng-repeat="league in $ctrl.playerRotisserieLeagues">
+          <div class="leagueList">
+            <h3>--{{league.match_name}}--</h3>
+
+          </div>
+          <main id="rotisserieTeamNames" ng-repeat="team in $ctrl.playerRotoTeams">
+            <div class="leagueList">
+              <h3>team: {{team.team_name}}</h3>
+              <img ng-src="{{team.logo_1}}" height="200px" width="200px" class="media-object">
+            </div>
+          </main>
+          <div class="matchupButtons">
+              <button type="button">View League</button>
+              <button type="button">View Team</button>
+              <button type="button">Manage Team</button>
+
+          </div>
+        </main>
+      </div>
+      <div class="pure-u-1-1" id="initiateDraft">
+        <h3 id="letsdraft">Draft a new team!</h3>
+        <div class="matchupButtons">
+            <button type="button">Draft Lobby</button>
+
+
+        </div>
+
+      </div>
+      <div class="pure-u-1-1" id="adminBar">
+        <div class="matchupButtons">
+            <button id="adminIsGo" type="button">ADMIN</button>
+
+
+        </div>
       </div>
 
 

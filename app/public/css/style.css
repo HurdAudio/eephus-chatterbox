@@ -204,6 +204,36 @@ td {
   font-size: 24px;
 }
 
+.matchupButtons {
+  align-content: center;
+  text-align:center;
+}
+
+.matchupButtons button{
+  width: 212px;
+  border: 1px solid;
+  border-bottom-color: rgba(255,255,255,.5);
+  border-right-color: rgba(60,60,60,.35);
+  border-top-color: rgba(60,60,60,.35);
+  border-left-color: rgba(80,80,80,.45);
+  background-color: rgba(0,0,0,.2);
+  background-repeat: no-repeat;
+  padding: 8px 24px 8px 10px;
+  font: bold .875em/1.25em "Audiowide", sans-serif;
+  letter-spacing: .075em;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  margin-bottom: 19px;
+}
+
+.leagueList {
+  font-family: 'Righteous', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 1em;
+}
+
 #loginForms {
   margin-top: 10em;
   background-color: #010302;
@@ -446,6 +476,24 @@ form button[type=button] {
    border-radius: 15%;
  }
 
+ #initiateDraft {
+   margin-top: 0;
+   font: bold 1.8em/1.25em "Racing Sans One", sans-serif;
+   margin-left: 0px;
+   padding: 10px;
+   height: auto;
+   border-radius: 15%;
+ }
+
+ #adminBar {
+   margin-top: 0;
+   font: bold 1.8em/1.25em "Racing Sans One", sans-serif;
+   margin-left: 0px;
+   padding: 10px;
+   height: auto;
+   border-radius: 15%;
+ }
+
  #namebar img {
    margin-left: 5.5em;
    border-radius: 25%;
@@ -458,6 +506,18 @@ form button[type=button] {
    padding: 10px;
    height: auto;
    border-radius: 15%;
+ }
+
+ #h2h {
+   margin-left: 5em;
+ }
+
+ #rotoLeagues {
+   margin-left: 5em;
+ }
+
+ #letsdraft {
+   margin-left: 5em;
  }
 
  #rotisserieLeagues {
