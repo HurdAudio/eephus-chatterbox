@@ -23,8 +23,7 @@ body {
 }
 
 .bg {
-  background: url("../img/baseball-diamond-37200_1280.png")  no-repeat;
-  height: 1000px;
+  background: url("../img/baseball-diamond-37200_1280.png");
   width: 100%;
   text-align: center;
   margin-top: 5em;
@@ -204,26 +203,33 @@ td {
   font-size: 24px;
 }
 
+
 .matchupButtons {
   align-content: center;
   text-align:center;
 }
 
+#viewleagueButton {
+  margin-left: 9em;
+}
+
 .matchupButtons button{
-  width: 212px;
-  border: 1px solid;
-  border-bottom-color: rgba(255,255,255,.5);
-  border-right-color: rgba(60,60,60,.35);
-  border-top-color: rgba(60,60,60,.35);
-  border-left-color: rgba(80,80,80,.45);
-  background-color: rgba(0,0,0,.2);
-  background-repeat: no-repeat;
-  padding: 8px 24px 8px 10px;
+  border: none;
+  color: #97352F;
+  background-color: rgba(0,0,0,0);
   font: bold .875em/1.25em "Audiowide", sans-serif;
   letter-spacing: .075em;
-  font-size: 18px;
+  font-size: 24px;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
-  margin-bottom: 19px;
+}
+
+#viewleagueButton a button {
+  padding-bottom: 2em;
+}
+
+.matchupButtons button :hover {
+  color: #91AAB7;
+
 }
 
 .leagueList {
@@ -495,8 +501,12 @@ form button[type=button] {
  }
 
  #namebar img {
-   margin-left: 5.5em;
+   margin-left: 4.5em;
    border-radius: 25%;
+ }
+
+ #stadium {
+   margin-right: 4.5em;
  }
 
  #head-to-headLeagues {
@@ -528,3 +538,78 @@ form button[type=button] {
    height: auto;
    border-radius: 15%;
  }
+  #leagueNameBar {
+    margin-top: 0;
+    font: bold 1.8em/1.25em "Racing Sans One", sans-serif;
+    margin-left: 0px;
+    padding: 10px;
+    height: auto;
+    border-radius: 15%;
+    color: #E1D3A6;
+    background-color: #4F5D68;
+    border: solid #9F825A 11px;
+    text-align: center;
+    opacity: 0.9;
+  }
+
+  #leagueNameBar p {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 24px;
+  }
+
+  #h2hUserTeam {
+    margin-left: 2em;
+    margin-top: 0;
+    font: bold 1.8em/1.25em "Racing Sans One", sans-serif;
+    margin-left: 0px;
+    padding: 10px;
+    height: auto;
+    border-radius: 15%;
+    color: #E1D3A6;
+    background-color: #4F5D68;
+    border: solid #9F825A 11px;
+    text-align: center;
+    opacity: 0.9;
+    width: 49%;
+    height: auto;
+  }
+
+  #h2hEephusTeam {
+    margin-top: 0;
+    font: bold 1.8em/1.25em "Racing Sans One", sans-serif;
+    margin-left: 0px;
+    padding: 10px;
+    height: auto;
+    border-radius: 15%;
+    color: #E1D3A6;
+    background-color: #4F5D68;
+    border: solid #9F825A 11px;
+    text-align: center;
+    opacity: 0.9;
+    width: 49%;
+    height: auto;
+  }
+
+  .teamPlayersList {
+    text-align: left;
+  }
+
+  .teamPlayersList img {
+    margin-left: 6em;
+    margin-right: 2em;
+    position: relative;
+ }
+
+  .teamPlayersList p {
+    font-family: "Righteous", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    color: #FDFCF2;
+    text-align: left;
+  }
+
+  .playerData {
+    float:right;
+    font-family: "Righteous", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #FDFCF2;
+    margin-right: 1em;
+  }

@@ -51,6 +51,12 @@
         url: '/draft',
         parent: 'app',
         component: 'draft'
+      })
+      .state({
+        name: 'viewleague',
+        url: '/viewleague/:id',
+        parent: 'app',
+        component: 'viewleague'
       });
       // .state({
       //   name: 'userhome',

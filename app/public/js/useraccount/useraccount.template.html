@@ -11,7 +11,7 @@
           <img ng-src="{{$ctrl.team.throwback_logo_url}}" height="140px" class="media-object">
         </div>
         <div class="pure-u-1-3">
-          <img ng-src="{{$ctrl.team.stadium_image_url}}" height="200px" class="media-object">
+          <img id="stadium" ng-src="{{$ctrl.team.stadium_image_url}}" height="200px" class="media-object">
         </div>
       </div>
       <div class="pure-u-1-1" id="head-to-headLeagues">
@@ -27,8 +27,8 @@
               <img ng-src="{{team.logo_1}}" height="200px" width="200px" class="media-object">
             </div>
           </main>
-          <div class="matchupButtons">
-              <button type="button">View League</button>
+          <div id="viewleagueButton" class="matchupButtons">
+              <a ui-sref="viewleague({id: league.id})"><button type="button">View League</button></a>
               <button type="button">View Team</button>
               <button type="button">Manage Team</button>
 

@@ -1,0 +1,434 @@
+<div>
+  <div id="landingspot">
+    <container class="pure-u-1-1" id="h2hMatchup">
+      <div class="pure-u-1-1" id="leagueNameBar">
+        <p>Head-To-Head</p>
+        <h1>{{$ctrl.league.match_name}}</h1>
+      </div>
+      <div class="pure-u-1-2" id="h2hUserTeam">
+        <img ng-src="{{$ctrl.userTeam.logo_1}}" height="140px" class="media-object">
+        <h3>{{$ctrl.userTeam.team_name}}</h3>
+        <p>Managed by {{$ctrl.user.name}}</p>
+        <div class="teamPlayersList">
+          <span>
+              <p>Catcher:</p>
+              <img ng-src="{{$ctrl.userTeamCatcher.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamCatcher.jersey_number}} {{$ctrl.userTeamCatcher.first_name}} {{$ctrl.userTeamCatcher.last_name}}</h4>
+                <h4>{{$ctrl.userTeamCatcherTeam.city}} {{$ctrl.userTeamCatcherTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>First Base:</p>
+              <img ng-src="{{$ctrl.userTeam1B.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeam1B.jersey_number}} {{$ctrl.userTeam1B.first_name}} {{$ctrl.userTeam1B.last_name}}</h4>
+                <h4>{{$ctrl.userTeam1BTeam.city}} {{$ctrl.userTeam1BTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Second Base:</p>
+              <img ng-src="{{$ctrl.userTeam2B.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeam2B.jersey_number}} {{$ctrl.userTeam2B.first_name}} {{$ctrl.userTeam2B.last_name}}</h4>
+                <h4>{{$ctrl.userTeam2BTeam.city}} {{$ctrl.userTeam2BTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Third Base:</p>
+              <img ng-src="{{$ctrl.userTeam3B.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeam3B.jersey_number}} {{$ctrl.userTeam3B.first_name}} {{$ctrl.userTeam3B.last_name}}</h4>
+                <h4>{{$ctrl.userTeam3BTeam.city}} {{$ctrl.userTeam3BTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Shortstop:</p>
+              <img ng-src="{{$ctrl.userTeamSS.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamSS.jersey_number}} {{$ctrl.userTeamSS.first_name}} {{$ctrl.userTeamSS.last_name}}</h4>
+                <h4>{{$ctrl.userTeamSSTeam.city}} {{$ctrl.userTeamSSTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Outfielder:</p>
+              <img ng-src="{{$ctrl.userTeamOF1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamOF1.jersey_number}} {{$ctrl.userTeamOF1.first_name}} {{$ctrl.userTeamOF1.last_name}}</h4>
+                <h4>{{$ctrl.userTeamOF1Team.city}} {{$ctrl.userTeamOF1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Outfielder:</p>
+              <img ng-src="{{$ctrl.userTeamOF2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamOF2.jersey_number}} {{$ctrl.userTeamOF2.first_name}} {{$ctrl.userTeamOF2.last_name}}</h4>
+                <h4>{{$ctrl.userTeamOF2Team.city}} {{$ctrl.userTeamOF2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Outfielder:</p>
+              <img ng-src="{{$ctrl.userTeamOF3.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamOF3.jersey_number}} {{$ctrl.userTeamOF3.first_name}} {{$ctrl.userTeamOF3.last_name}}</h4>
+                <h4>{{$ctrl.userTeamOF3Team.city}} {{$ctrl.userTeamOF3Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Utility:</p>
+              <img ng-src="{{$ctrl.userTeamU1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamU1.jersey_number}} {{$ctrl.userTeamU1.first_name}} {{$ctrl.userTeamU1.last_name}}</h4>
+                <h4>{{$ctrl.userTeamU1Team.city}} {{$ctrl.userTeamU1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Utility:</p>
+              <img ng-src="{{$ctrl.userTeamU2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamU2.jersey_number}} {{$ctrl.userTeamU2.first_name}} {{$ctrl.userTeamU2.last_name}}</h4>
+                <h4>{{$ctrl.userTeamU2Team.city}} {{$ctrl.userTeamU2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Starting Pitcher 1:</p>
+              <img ng-src="{{$ctrl.userTeamSP1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamSP1.jersey_number}} {{$ctrl.userTeamSP1.first_name}} {{$ctrl.userTeamSP1.last_name}}</h4>
+                <h4>{{$ctrl.userTeamSP1Team.city}} {{$ctrl.userTeamSP1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Starting Pitcher 2:</p>
+              <img ng-src="{{$ctrl.userTeamSP2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamSP2.jersey_number}} {{$ctrl.userTeamSP2.first_name}} {{$ctrl.userTeamSP2.last_name}}</h4>
+                <h4>{{$ctrl.userTeamSP2Team.city}} {{$ctrl.userTeamSP2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Relief Pitcher 1:</p>
+              <img ng-src="{{$ctrl.userTeamRP1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamRP1.jersey_number}} {{$ctrl.userTeamRP1.first_name}} {{$ctrl.userTeamRP1.last_name}}</h4>
+                <h4>{{$ctrl.userTeamRP1Team.city}} {{$ctrl.userTeamRP1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Relief Pitcher 2:</p>
+              <img ng-src="{{$ctrl.userTeamRP2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamRP2.jersey_number}} {{$ctrl.userTeamRP2.first_name}} {{$ctrl.userTeamRP2.last_name}}</h4>
+                <h4>{{$ctrl.userTeamRP2Team.city}} {{$ctrl.userTeamRP2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Pitcher:</p>
+              <img ng-src="{{$ctrl.userTeamP1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamP1.jersey_number}} {{$ctrl.userTeamP1.first_name}} {{$ctrl.userTeamP1.last_name}}</h4>
+                <h4>{{$ctrl.userTeamP1Team.city}} {{$ctrl.userTeamP1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Pitcher:</p>
+              <img ng-src="{{$ctrl.userTeamP2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamP2.jersey_number}} {{$ctrl.userTeamP2.first_name}} {{$ctrl.userTeamP2.last_name}}</h4>
+                <h4>{{$ctrl.userTeamP2Team.city}} {{$ctrl.userTeamP2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Pitcher:</p>
+              <img ng-src="{{$ctrl.userTeamP3.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamP3.jersey_number}} {{$ctrl.userTeamP3.first_name}} {{$ctrl.userTeamP3.last_name}}</h4>
+                <h4>{{$ctrl.userTeamP3Team.city}} {{$ctrl.userTeamP3Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Pitcher:</p>
+              <img ng-src="{{$ctrl.userTeamP4.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamP4.jersey_number}} {{$ctrl.userTeamP4.first_name}} {{$ctrl.userTeamP4.last_name}}</h4>
+                <h4>{{$ctrl.userTeamP4Team.city}} {{$ctrl.userTeamP4Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.userTeamB1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamB1.jersey_number}} {{$ctrl.userTeamB1.first_name}} {{$ctrl.userTeamB1.last_name}}</h4>
+                <h4>{{$ctrl.userTeamB1Team.city}} {{$ctrl.userTeamB1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.userTeamB2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamB2.jersey_number}} {{$ctrl.userTeamB2.first_name}} {{$ctrl.userTeamB2.last_name}}</h4>
+                <h4>{{$ctrl.userTeamB2Team.city}} {{$ctrl.userTeamB2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.userTeamB3.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamB3.jersey_number}} {{$ctrl.userTeamB3.first_name}} {{$ctrl.userTeamB3.last_name}}</h4>
+                <h4>{{$ctrl.userTeamB3Team.city}} {{$ctrl.userTeamB3Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.userTeamB4.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamB4.jersey_number}} {{$ctrl.userTeamB4.first_name}} {{$ctrl.userTeamB4.last_name}}</h4>
+                <h4>{{$ctrl.userTeamB4Team.city}} {{$ctrl.userTeamB4Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.userTeamB5.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamB5.jersey_number}} {{$ctrl.userTeamB5.first_name}} {{$ctrl.userTeamB5.last_name}}</h4>
+                <h4>{{$ctrl.userTeamB5Team.city}} {{$ctrl.userTeamB5Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>DL:</p>
+              <img ng-src="{{$ctrl.userTeamDL1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamDL1.jersey_number}} {{$ctrl.userTeamDL1.first_name}} {{$ctrl.userTeamDL1.last_name}}</h4>
+                <h4>{{$ctrl.userTeamDL1Team.city}} {{$ctrl.userTeamDL1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>DL:</p>
+              <img ng-src="{{$ctrl.userTeamDL2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.userTeamDL2.jersey_number}} {{$ctrl.userTeamDL2.first_name}} {{$ctrl.userTeamDL2.last_name}}</h4>
+                <h4>{{$ctrl.userTeamDL2Team.city}} {{$ctrl.userTeamDL2Team.name}}</h4>
+              </div>
+          </span>
+
+
+        </div>
+        <img ng-src="{{$ctrl.userTeam.logo_2}}" height="140px" class="media-object">
+
+      </div>
+      <div class="pure-u-1-2" id="h2hEephusTeam">
+        <img ng-src="{{$ctrl.eephusTeam.logo_1}}" height="140px" class="media-object">
+        <h3>{{$ctrl.eephusTeam.team_name}}</h3>
+        <p>Managed by Eephus Chatterbox</p>
+        <div class="teamPlayersList">
+          <span>
+              <p>Catcher:</p>
+              <img ng-src="{{$ctrl.eephusTeamCatcher.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamCatcher.jersey_number}} {{$ctrl.eephusTeamCatcher.first_name}} {{$ctrl.eephusTeamCatcher.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamCatcherTeam.city}} {{$ctrl.eephusTeamCatcherTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>First Base:</p>
+              <img ng-src="{{$ctrl.eephusTeam1B.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeam1B.jersey_number}} {{$ctrl.eephusTeam1B.first_name}} {{$ctrl.eephusTeam1B.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeam1BTeam.city}} {{$ctrl.eephusTeam1BTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Second Base:</p>
+              <img ng-src="{{$ctrl.eephusTeam2B.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeam2B.jersey_number}} {{$ctrl.eephusTeam2B.first_name}} {{$ctrl.eephusTeam2B.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeam2BTeam.city}} {{$ctrl.eephusTeam2BTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Third Base:</p>
+              <img ng-src="{{$ctrl.eephusTeam3B.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeam3B.jersey_number}} {{$ctrl.eephusTeam3B.first_name}} {{$ctrl.eephusTeam3B.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeam3BTeam.city}} {{$ctrl.eephusTeam3BTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Shortstop:</p>
+              <img ng-src="{{$ctrl.eephusTeamSS.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamSS.jersey_number}} {{$ctrl.eephusTeamSS.first_name}} {{$ctrl.eephusTeamSS.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamSSTeam.city}} {{$ctrl.eephusTeamSSTeam.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Outfielder:</p>
+              <img ng-src="{{$ctrl.eephusTeamOF1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamOF1.jersey_number}} {{$ctrl.eephusTeamOF1.first_name}} {{$ctrl.eephusTeamOF1.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamOF1Team.city}} {{$ctrl.eephusTeamOF1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Outfielder:</p>
+              <img ng-src="{{$ctrl.eephusTeamOF2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamOF2.jersey_number}} {{$ctrl.eephusTeamOF2.first_name}} {{$ctrl.eephusTeamOF2.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamOF2Team.city}} {{$ctrl.eephusTeamOF2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Outfielder:</p>
+              <img ng-src="{{$ctrl.eephusTeamOF3.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamOF3.jersey_number}} {{$ctrl.eephusTeamOF3.first_name}} {{$ctrl.eephusTeamOF3.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamOF3Team.city}} {{$ctrl.eephusTeamOF3Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Utility:</p>
+              <img ng-src="{{$ctrl.eephusTeamU1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamU1.jersey_number}} {{$ctrl.eephusTeamU1.first_name}} {{$ctrl.eephusTeamU1.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamU1Team.city}} {{$ctrl.eephusTeamU1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Utility:</p>
+              <img ng-src="{{$ctrl.eephusTeamU2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamU2.jersey_number}} {{$ctrl.eephusTeamU2.first_name}} {{$ctrl.eephusTeamU2.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamU2Team.city}} {{$ctrl.eephusTeamU2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Starting Pitcher 1:</p>
+              <img ng-src="{{$ctrl.eephusTeamSP1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamSP1.jersey_number}} {{$ctrl.eephusTeamSP1.first_name}} {{$ctrl.eephusTeamSP1.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamSP1Team.city}} {{$ctrl.eephusTeamSP1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Starting Pitcher 2:</p>
+              <img ng-src="{{$ctrl.eephusTeamSP2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamSP2.jersey_number}} {{$ctrl.eephusTeamSP2.first_name}} {{$ctrl.eephusTeamSP2.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamSP2Team.city}} {{$ctrl.eephusTeamSP2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Relief Pitcher 1:</p>
+              <img ng-src="{{$ctrl.eephusTeamRP1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamRP1.jersey_number}} {{$ctrl.eephusTeamRP1.first_name}} {{$ctrl.eephusTeamRP1.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamRP1Team.city}} {{$ctrl.eephusTeamRP1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Relief Pitcher 2:</p>
+              <img ng-src="{{$ctrl.eephusTeamRP2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamRP2.jersey_number}} {{$ctrl.eephusTeamRP2.first_name}} {{$ctrl.eephusTeamRP2.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamRP2Team.city}} {{$ctrl.eephusTeamRP2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Pitcher:</p>
+              <img ng-src="{{$ctrl.eephusTeamP1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamP1.jersey_number}} {{$ctrl.eephusTeamP1.first_name}} {{$ctrl.eephusTeamP1.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamP1Team.city}} {{$ctrl.eephusTeamP1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Pitcher:</p>
+              <img ng-src="{{$ctrl.eephusTeamP2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamP2.jersey_number}} {{$ctrl.eephusTeamP2.first_name}} {{$ctrl.eephusTeamP2.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamP2Team.city}} {{$ctrl.eephusTeamP2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Pitcher:</p>
+              <img ng-src="{{$ctrl.eephusTeamP3.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamP3.jersey_number}} {{$ctrl.eephusTeamP3.first_name}} {{$ctrl.eephusTeamP3.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamP3Team.city}} {{$ctrl.eephusTeamP3Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Pitcher:</p>
+              <img ng-src="{{$ctrl.eephusTeamP4.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamP4.jersey_number}} {{$ctrl.eephusTeamP4.first_name}} {{$ctrl.eephusTeamP4.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamP4Team.city}} {{$ctrl.eephusTeamP4Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.eephusTeamB1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamB1.jersey_number}} {{$ctrl.eephusTeamB1.first_name}} {{$ctrl.eephusTeamB1.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamB1Team.city}} {{$ctrl.eephusTeamB1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.eephusTeamB2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamB2.jersey_number}} {{$ctrl.eephusTeamB2.first_name}} {{$ctrl.eephusTeamB2.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamB2Team.city}} {{$ctrl.eephusTeamB2Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.eephusTeamB3.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamB3.jersey_number}} {{$ctrl.eephusTeamB3.first_name}} {{$ctrl.eephusTeamB3.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamB3Team.city}} {{$ctrl.eephusTeamB3Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.eephusTeamB4.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamB4.jersey_number}} {{$ctrl.eephusTeamB4.first_name}} {{$ctrl.eephusTeamB4.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamB4Team.city}} {{$ctrl.eephusTeamB4Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>Bench:</p>
+              <img ng-src="{{$ctrl.eephusTeamB5.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamB5.jersey_number}} {{$ctrl.eephusTeamB5.first_name}} {{$ctrl.eephusTeamB5.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamB5Team.city}} {{$ctrl.eephusTeamB5Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>DL:</p>
+              <img ng-src="{{$ctrl.eephusTeamDL1.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamDL1.jersey_number}} {{$ctrl.eephusTeamDL1.first_name}} {{$ctrl.eephusTeamDL1.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamDL1Team.city}} {{$ctrl.eephusTeamDL1Team.name}}</h4>
+              </div>
+          </span>
+          <span>
+              <p>DL:</p>
+              <img ng-src="{{$ctrl.eephusTeamDL2.headshot_url}}" height="140px" class="media-object">
+              <div class="playerData">
+                <h4>{{$ctrl.eephusTeamDL2.jersey_number}} {{$ctrl.eephusTeamDL2.first_name}} {{$ctrl.eephusTeamDL2.last_name}}</h4>
+                <h4>{{$ctrl.eephusTeamDL2Team.city}} {{$ctrl.eephusTeamDL2Team.name}}</h4>
+              </div>
+          </span>
+
+
+        </div>
+        <img ng-src="{{$ctrl.eephusTeam.logo_2}}" height="140px" class="media-object">
+      </div>
+    </container>
+
+
+
+  </div>
+</div>
