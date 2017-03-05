@@ -25,14 +25,20 @@
             <div class="leagueList">
               <h3>team: {{team.team_name}}</h3>
               <img ng-src="{{team.logo_1}}" height="200px" width="200px" class="media-object">
+              <div id="viewteamButton" class="matchupButtons">
+                  <a ui-sref="viewteam({id: team.id})"><button type="button">Manage Team</button></a>
+              </div>
             </div>
           </main>
           <div id="viewleagueButton" class="matchupButtons">
               <a ui-sref="viewleague({id: league.id})"><button type="button">View League</button></a>
-              <button type="button">View Team</button>
-              <button type="button">Manage Team</button>
-
           </div>
+
+          <!-- <div id="viewteamButton" class="matchupButtons">
+
+              <button type="button"><a ui-sref="viewteam({id: team.id})">Manage Team</a></button>
+
+          </div> -->
         </main>
 
       </div>

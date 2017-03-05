@@ -212,7 +212,7 @@
     greeting += "... ";
 
     // Color Intro
-    randomLeagueNameIntro = Math.floor(Math.random()*34);
+    randomLeagueNameIntro = Math.floor(Math.random()*36);
     switch (randomLeagueNameIntro) {
       case(0):
         greeting += "... Keep an eye on catcher " + arrOfUserTeam[catcher].first_name + " " + arrOfUserTeam[catcher].last_name + " swinging a bat for the " + userTeamName + "... Eephus Chatterbox will counter with number " + arrOfEephusTeam[catcher].jersey_number + " of the " + arrOfEephusTeam[catcherTeam].city + " " + arrOfEephusTeam[catcherTeam].name + " catching behind the dish... " + arrOfEephusTeam[catcher].first_name + " " + arrOfEephusTeam[catcher].last_name + ". ";
@@ -303,7 +303,7 @@
         greeting += "Offensive stats will be raining down from second base as the " + eephusTeamName + " bring out the batting and base prowess of " + arrOfEephusTeam[secondBase].first_name + " " + arrOfEephusTeam[secondBase].last_name + " into this matchup.";
       break;
       case(20):
-        greeting += "He is more than a power bat from the corner for the " + eephusTeamName + ". He is a projected " + arrOfEephusTeam[thirdBase].projected_2017_HR + " home runs and " + arrOfEephusTeam[thirdBase].projected_2017_RBI + " runs driven in for the season." + arrOfEephusTeam[thirdBase].first_name + " " + arrOfEephusTeam[thirdBase].last_name + " is an offensive powerhouse.  I'll take it.";
+        greeting += "He is more than a power bat from the corner for the " + eephusTeamName + ". He is a projected " + arrOfEephusTeam[thirdBase].projected_2017_HR + " home runs and " + arrOfEephusTeam[thirdBase].projected_2017_RBI + " runs driven in for the season. " + arrOfEephusTeam[thirdBase].first_name + " " + arrOfEephusTeam[thirdBase].last_name + " is an offensive powerhouse.  I'll take it.";
         break;
       case(21):
         var nickname = '';
@@ -367,6 +367,18 @@
         break;
       case(33):
         greeting += "Call him a utility hitter if you like. Call him a designated hitter if you must. But you'll be calling your bullpen when " + arrOfEephusTeam[utility2].first_name + " " + arrOfEephusTeam[utility2].last_name + " drills pitches out to the bleachers for my " + eephusTeamName + " today.";
+        break;
+      case(34):
+        var obp = arrOfUserTeam[shortstop].projected_2017_OBP.toString();
+        obp = obp.slice(2);
+        greeting += "Oh what a shortstop these " + userTeamName + " have in the " + arrOfUserTeam[shortstopTeam].city + " " + arrOfUserTeam[shortstopTeam].name + " phenom known as " + arrOfUserTeam[shortstop].first_name + " " + arrOfUserTeam[shortstop].last_name + ". His projected " + obp + " on base percentage could certainly come in handy.";
+        break;
+      case (35):
+        var nname = arrOfEephusTeam[shortstop].nickname;
+        if (nname === null) {
+          nname = "the man"
+        }
+        greeting += "When you talk about shortstops, you need to talk about MY shortstop here at the " + eephusTeamName + ". We're talking " + arrOfEephusTeam[shortstop].first_name + " " + nname + " " + arrOfEephusTeam[shortstop].last_name + " of the " + arrOfEephusTeam[shortstopTeam].city + " " + arrOfEephusTeam[shortstopTeam].name + " and he can be a real menace on both sides of the diamond.";
         break;
       default:
         greeting += "... ";

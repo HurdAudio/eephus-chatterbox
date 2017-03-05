@@ -1,0 +1,138 @@
+<div>
+    <div class="pure-u-1-4"></div>
+    <div class="pure-u-2-4" id="hometeam">
+      <h1>{{$ctrl.userTeam.team_name}}</h1>
+    </div>
+    <div class="pure-u-1-4"></div>
+    <div class="bg">
+      <container class="pure-u-1-1" id="h2hteamview">
+
+        <table class="tbody">
+        <tbody>
+
+
+          <tr>
+            <td><img ng-src="{{$ctrl.userTeam.logo_1}}" height="90px" width="90px" class="media-object"></td>
+            <td><p>{{$ctrl.userTeamOF1.first_name}} {{$ctrl.userTeamOF1.last_name}} (LF) {{$ctrl.userTeamOF1Team.city}} {{$ctrl.userTeamOF1Team.name}}</p></td>
+            <td><img ng-src="{{$ctrl.userTeamOF1.headshot_url}}" class="media-object"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><h5>BULLPEN:</h5></td>
+            <td><img ng-src="{{$ctrl.userTeamSP2.headshot_url}}" class="media-object"></td>
+            <td><p>{{$ctrl.userTeamSP2.first_name}} {{$ctrl.userTeamSP2.last_name}} (SP2) {{$ctrl.userTeamSP2Team.city}} {{$ctrl.userTeamSP2Team.name}}</p></td>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><p>{{$ctrl.userTeamOF2.first_name}} {{$ctrl.userTeamOF2.last_name}} (CF) {{$ctrl.userTeamOF2Team.city}} {{$ctrl.userTeamOF2Team.name}}</p></td>
+            <td><img ng-src="{{$ctrl.userTeamOF2.headshot_url}}" class="media-object"></td>
+            <td><p>{{$ctrl.userTeamRP1.first_name}} {{$ctrl.userTeamRP1.last_name}} (RP1) {{$ctrl.userTeamRP1Team.city}} {{$ctrl.userTeamRP1Team.name}}</p></td>
+            <td><img ng-src="{{$ctrl.userTeamRP1.headshot_url}}" class="media-object"></td>
+            <td><img ng-src="{{$ctrl.userTeamRP2.headshot_url}}" class="media-object"></td>
+            <td><p>{{$ctrl.userTeamRP2.first_name}} {{$ctrl.userTeamRP2.last_name}} (RP2) {{$ctrl.userTeamRP2Team.city}} {{$ctrl.userTeamRP2Team.name}}</p></td>
+
+          </tr>
+          <tr>
+            <td><p>{{$ctrl.userTeam3B.first_name}} {{$ctrl.userTeam3B.last_name}} (3B) {{$ctrl.userTeam3BTeam.city}} {{$ctrl.userTeam3BTeam.name}}</p></td>
+            <td><img ng-src="{{$ctrl.userTeam3B.headshot_url}}" class="media-object"></td>
+            <td><p>{{$ctrl.userTeamSS.first_name}} {{$ctrl.userTeamSS.last_name}} (SS) {{$ctrl.userTeamSSTeam.city}} {{$ctrl.userTeamSSTeam.name}}</p></td>
+            <td><img ng-src="{{$ctrl.userTeamSS.headshot_url}}" class="media-object"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><p>{{$ctrl.userTeamP1.first_name}} {{$ctrl.userTeamP1.last_name}} (P1) {{$ctrl.userTeamP1Team.city}} {{$ctrl.userTeamP1Team.name}}</p></td>
+            <td><img ng-src="{{$ctrl.userTeamP1.headshot_url}}" class="media-object"></td>
+            <td><img ng-src="{{$ctrl.userTeamP2.headshot_url}}" class="media-object"></td>
+            <td><p>{{$ctrl.userTeamP2.first_name}} {{$ctrl.userTeamP2.last_name}} (P2) {{$ctrl.userTeamP2Team.city}} {{$ctrl.userTeamP2Team.name}}</p></td>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><img ng-src="{{$ctrl.userTeam2B.headshot_url}}" class="media-object"></td>
+            <td><p>{{$ctrl.userTeam2B.first_name}} {{$ctrl.userTeam2B.last_name}} (2B) {{$ctrl.userTeam2BTeam.city}} {{$ctrl.userTeam2BTeam.name}}</p></td>
+            <td></td>
+            <td><p>{{$ctrl.userTeamP3.first_name}} {{$ctrl.userTeamP3.last_name}} (P3) {{$ctrl.userTeamP3Team.city}} {{$ctrl.userTeamP3Team.name}}</p></td>
+            <td><img ng-src="{{$ctrl.userTeamP3.headshot_url}}" class="media-object"></td>
+            <td><img ng-src="{{$ctrl.userTeamP4.headshot_url}}" class="media-object"></td>
+            <td><p>{{$ctrl.userTeamP4.first_name}} {{$ctrl.userTeamP4.last_name}} (P4) {{$ctrl.userTeamP4Team.city}} {{$ctrl.userTeamP4Team.name}}</p></td>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td><p>{{$ctrl.userTeamSP1.first_name}} {{$ctrl.userTeamSP1.last_name}} (SP1) {{$ctrl.userTeamSP1Team.city}} {{$ctrl.userTeamSP1Team.name}}</p></td>
+            <td><img ng-src="{{$ctrl.userTeamSP1.headshot_url}}" class="media-object"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><p>{{$ctrl.userTeamOF3.first_name}} {{$ctrl.userTeamOF3.last_name}} (RF) {{$ctrl.userTeamOF3Team.city}} {{$ctrl.userTeamOF3Team.name}}</p></td>
+            <td><img ng-src="{{$ctrl.userTeamOF3.headshot_url}}" class="media-object"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+          </tr>
+          <tr>
+            <td><img ng-src="{{$ctrl.userTeamU1.headshot_url}}" class="media-object"></td>
+            <td><p>{{$ctrl.userTeamU1.first_name}} {{$ctrl.userTeamU1.last_name}} (Util1) {{$ctrl.userTeamU1Team.city}} {{$ctrl.userTeamU1Team.name}}</p></td>
+            <td></td>
+            <td></td>
+            <td><img ng-src="{{$ctrl.userTeam1B.headshot_url}}" class="media-object"></td>
+            <td><p>{{$ctrl.userTeam1B.first_name}} {{$ctrl.userTeam1B.last_name}} (1B) {{$ctrl.userTeam1BTeam.city}} {{$ctrl.userTeam1BTeam.name}}</p></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+          </tr>
+
+          <tr>
+            <td><img ng-src="{{$ctrl.userTeamCatcher.headshot_url}}" class="media-object"></td>
+            <td><img ng-src="{{$ctrl.userTeamU2.headshot_url}}" class="media-object"></td>
+            <td></td>
+            <td><h5>BENCH:</h5></td>
+            <td><img ng-src="{{$ctrl.userTeamB1.headshot_url}}" class="media-object"></td>
+            <td><img ng-src="{{$ctrl.userTeamB2.headshot_url}}" class="media-object"></td>
+            <td><img ng-src="{{$ctrl.userTeamB3.headshot_url}}" class="media-object"></td>
+            <td><img ng-src="{{$ctrl.userTeamB4.headshot_url}}" class="media-object"></td>
+            <td><img ng-src="{{$ctrl.userTeamB5.headshot_url}}" class="media-object"></td>
+            <td></td>
+            <td><img ng-src="{{$ctrl.userTeam.logo_2}}" height="90px" width="90px" class="media-object"></td>
+
+
+          </tr>
+          <tr>
+            <td><p>{{$ctrl.userTeamCatcher.first_name}} {{$ctrl.userTeamCatcher.last_name}} (C) {{$ctrl.userTeamCatcherTeam.city}} {{$ctrl.userTeamCatcherTeam.name}}</p></td>
+            <td><p>{{$ctrl.userTeamU2.first_name}} {{$ctrl.userTeamU2.last_name}} (Util2) {{$ctrl.userTeamU2Team.city}} {{$ctrl.userTeamU2Team.name}}</p></td>
+            <td></td>
+            <td></td>
+            <td><p>{{$ctrl.userTeamB1.first_name}} {{$ctrl.userTeamB1.last_name}} {{$ctrl.userTeamB1Positions.eligible}} {{$ctrl.userTeamB1Team.city}} {{$ctrl.userTeamB1Team.name}}</p></td>
+            <td><p>{{$ctrl.userTeamB2.first_name}} {{$ctrl.userTeamB2.last_name}} {{$ctrl.userTeamB2Positions.eligible}} {{$ctrl.userTeamB2Team.city}} {{$ctrl.userTeamB2Team.name}}</p></td>
+            <td><p>{{$ctrl.userTeamB3.first_name}} {{$ctrl.userTeamB3.last_name}} {{$ctrl.userTeamB3Positions.eligible}} {{$ctrl.userTeamB3Team.city}} {{$ctrl.userTeamB3Team.name}}</p></td>
+            <td><p>{{$ctrl.userTeamB4.first_name}} {{$ctrl.userTeamB4.last_name}} {{$ctrl.userTeamB4Positions.eligible}} {{$ctrl.userTeamB4Team.city}} {{$ctrl.userTeamB4Team.name}}</p></td>
+            <td><p>{{$ctrl.userTeamB5.first_name}} {{$ctrl.userTeamB5.last_name}} {{$ctrl.userTeamB5Positions.eligible}} {{$ctrl.userTeamB5Team.city}} {{$ctrl.userTeamB5Team.name}}</p></td>
+            <td></td>
+            <td></td>
+
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <div id="buffer"></div>
+      <br>
+      </container>
+
+
+
+  </div>
+</div>

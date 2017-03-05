@@ -23,10 +23,16 @@ body {
 }
 
 .bg {
-  background: url("../img/baseball-diamond-37200_1280.png");
+  background: url("../img/baseball-diamond-37200_1280.png") no-repeat;
   width: 100%;
   text-align: center;
   margin-top: 5em;
+  height:1400px;
+}
+
+table {
+  margin-top: 0;
+  font-family: 'Racing Sans One', sans-serif;
 }
 
 #hometeam {
@@ -34,8 +40,20 @@ body {
   border: solid 8px #E8971D;
   color: #DF7079;
   font-family: 'Racing Sans One', cursive;
-
+  font-size: 24px;
+  border-radius: 27%;
+  margin-top: 0;
+  padding-top: 0;
+  text-align:center;
+  heigth: 100px;
+  opacity: 1.0;
 }
+
+tr td img {
+  height: 100%;
+}
+
+
 
 #awayTeam {
   background-color: #062635;
@@ -144,9 +162,19 @@ tr {
   margin-left: 3em;
 }
 td {
+
   width: 8em;
   height: 8em;
   border: none;
+}
+
+td p {
+  font-family: 'Oswald', sans-serif;
+}
+
+td h5 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
 }
 
 #buffer {
@@ -213,6 +241,11 @@ td {
   margin-left: 9em;
 }
 
+#viewteamButton {
+  margin-left: 9em;
+}
+
+
 .matchupButtons button{
   border: none;
   color: #97352F;
@@ -248,7 +281,7 @@ td {
 
 #landingspot {
   height: 1200px;
-  background: url("../img/park-19445_1920.jpg") no-repeat;
+  background: url("../img/park-19445_1920.jpg") repeat-y;
 }
 
 .footer-menu {
