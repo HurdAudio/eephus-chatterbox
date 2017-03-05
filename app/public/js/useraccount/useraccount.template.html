@@ -21,18 +21,20 @@
             <h3>--{{league.match_name}}--</h3>
 
           </div>
-          <main id="head-to-headTeamNames" ng-repeat="team in $ctrl.playerH2HFantasyTeams">
+          <span id="head-to-headTeamNames" ng-repeat="team in $ctrl.playerH2HFantasyTeams">
             <div class="leagueList">
-              <h3>team: {{team.team_name}}</h3>
-              <img ng-src="{{team.logo_1}}" height="200px" width="200px" class="media-object">
-              <div id="viewteamButton" class="matchupButtons">
-                  <a ui-sref="viewteam({id: team.id})"><button type="button">Manage Team</button></a>
-              </div>
+
+                <div id="viewteamButton" class="matchupButtons">
+                  <h3>team: {{team.team_name}}</h3>
+                  <img ng-src="{{team.logo_1}}" height="200px" width="200px" class="media-object">
+                    <a ui-sref="viewteam({id: team.id})"><button type="button">Manage Team</button></a>
+                    <div id="viewleagueButton" class="matchupButtons">
+                      <a ui-sref="viewleague({id: league.id})"><button type="button">View League</button></a>
+                    </div>
+                  </div>
             </div>
-          </main>
-          <div id="viewleagueButton" class="matchupButtons">
-              <a ui-sref="viewleague({id: league.id})"><button type="button">View League</button></a>
-          </div>
+          </span>
+
 
           <!-- <div id="viewteamButton" class="matchupButtons">
 

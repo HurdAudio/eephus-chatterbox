@@ -197,6 +197,7 @@
           catcherOption.appendChild(catcherText);
           catcherText.textContent = "Catcher";
           catcherOption.setAttribute("type", "button");
+          catcherOption.setAttribute("class", "insertButtonAhoyMatey");
           catcherOption.addEventListener('click', ()=>{
             playerSwap(whichBench, 'catcher', invisiButton, parentElement);
           });
@@ -209,6 +210,7 @@
           firstBaseOption.appendChild(firstBaseText);
           firstBaseText.textContent = "First Base";
           firstBaseOption.setAttribute("type", "button");
+          firstBaseOption.setAttribute("class", "insertButtonAhoyMatey");
           firstBaseOption.addEventListener('click', ()=>{
             playerSwap(whichBench, 'first_base', invisiButton, parentElement);
           });
@@ -221,6 +223,7 @@
           secondBaseOption.appendChild(secondBaseText);
           secondBaseText.textContent = "Second Base";
           secondBaseOption.setAttribute("type", "button");
+          secondBaseOption.setAttribute("class", "insertButtonAhoyMatey");
           secondBaseOption.addEventListener('click', ()=>{
             playerSwap(whichBench, 'second_base', invisiButton, parentElement);
           });
@@ -233,6 +236,7 @@
           thirdBaseOption.appendChild(thirdBaseText);
           thirdBaseText.textContent = "Third Base";
           thirdBaseOption.setAttribute("type", "button");
+          thirdBaseOption.setAttribute("class", "insertButtonAhoyMatey");
           thirdBaseOption.addEventListener('click', ()=>{
             playerSwap(whichBench, 'third_base', invisiButton, parentElement);
           });
@@ -245,6 +249,7 @@
           shortstopOption.appendChild(shortstopText);
           shortstopText.textContent = "Shortstop";
           shortstopOption.setAttribute("type", "button");
+          shortstopOption.setAttribute("class", "insertButtonAhoyMatey");
           shortstopOption.addEventListener('click', ()=>{
             playerSwap(whichBench, 'short_stop', invisiButton, parentElement);
           });
@@ -269,14 +274,17 @@
           centerFieldText.textContent = "Center Field";
           rightFieldText.textContent = "Right Field";
           leftFieldOption.setAttribute("type", "button");
+          leftFieldOption.setAttribute("class", "insertButtonAhoyMatey");
           leftFieldOption.addEventListener('click', ()=>{
             playerSwap(whichBench, 'outfield_1', invisiButton, parentElement);
           });
           centerFieldOption.setAttribute("type", "button");
+          centerFieldOption.setAttribute("class", "insertButtonAhoyMatey");
           centerFieldOption.addEventListener('click', ()=>{
             playerSwap(whichBench, 'outfield_2', invisiButton, parentElement);
           });
           rightFieldOption.setAttribute("type", "button");
+          rightFieldOption.setAttribute("class", "insertButtonAhoyMatey");
           rightFieldOption.addEventListener('click', ()=>{
             playerSwap(whichBench, 'outfield_3', invisiButton, parentElement);
           });
@@ -295,10 +303,12 @@
           utility1Text.textContent = "Utility 1";
           utility2Text.textContent = "Utility 2";
           utility1Option.setAttribute("type", "button");
+          utility1Option.setAttribute("class", "insertButtonAhoyMatey");
           utility1Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'util_1', invisiButton, parentElement);
           });
           utility2Option.setAttribute("type", "button");
+          utility2Option.setAttribute("class", "insertButtonAhoyMatey");
           utility2Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'util_2', invisiButton, parentElement);
           });
@@ -341,26 +351,32 @@
           pitcher3Text.textContent = "Pitcher 3";
           pitcher4Text.textContent = "Pitcher 4";
           startingPitcher1Option.setAttribute("type", "button");
+          startingPitcher1Option.setAttribute("class", "insertButtonAhoyMatey");
           startingPitcher1Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'sp_1', invisiButton, parentElement);
           });
           startingPitcher2Option.setAttribute("type", "button");
+          startingPitcher2Option.setAttribute("class", "insertButtonAhoyMatey");
           startingPitcher2Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'sp_2', invisiButton, parentElement);
           });
           pitcher1Option.setAttribute("type", "button");
+          pitcher1Option.setAttribute("class", "insertButtonAhoyMatey");
           pitcher1Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_1', invisiButton, parentElement);
           });
           pitcher2Option.setAttribute("type", "button");
+          pitcher2Option.setAttribute("class", "insertButtonAhoyMatey");
           pitcher2Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_2', invisiButton, parentElement);
           });
           pitcher3Option.setAttribute("type", "button");
+          pitcher3Option.setAttribute("class", "insertButtonAhoyMatey");
           pitcher3Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_3', invisiButton, parentElement);
           });
           pitcher4Option.setAttribute("type", "button");
+          pitcher4Option.setAttribute("class", "insertButtonAhoyMatey");
           pitcher4Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_4', invisiButton, parentElement);
           });
@@ -403,26 +419,32 @@
           _pitcher3Text.textContent = "Pitcher 3";
           _pitcher4Text.textContent = "Pitcher 4";
           _reliefPitcher1Option.setAttribute("type", "button");
+          _reliefPitcher1Option.setAttribute("class", "insertButtonAhoyMatey");
           _reliefPitcher1Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'rp_1', invisiButton, parentElement);
           });
           _reliefPitcher2Option.setAttribute("type", "button");
+          _reliefPitcher2Option.setAttribute("class", "insertButtonAhoyMatey");
           _reliefPitcher2Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'rp_2', invisiButton, parentElement);
           });
           _pitcher1Option.setAttribute("type", "button");
+          _pitcher1Option.setAttribute("class", "insertButtonAhoyMatey");
           _pitcher1Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_1', invisiButton, parentElement);
           });
           _pitcher2Option.setAttribute("type", "button");
+          _pitcher2Option.setAttribute("class", "insertButtonAhoyMatey");
           _pitcher2Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_2', invisiButton, parentElement);
           });
           _pitcher3Option.setAttribute("type", "button");
+          _pitcher3Option.setAttribute("class", "insertButtonAhoyMatey");
           _pitcher3Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_3', invisiButton, parentElement);
           });
           _pitcher4Option.setAttribute("type", "button");
+          _pitcher4Option.setAttribute("class", "insertButtonAhoyMatey");
           _pitcher4Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_4', invisiButton, parentElement);
           });
@@ -477,34 +499,42 @@
           __pitcher3Text.textContent = "Pitcher 3";
           __pitcher4Text.textContent = "Pitcher 4";
           __startingPitcher1Option.setAttribute("type", "button");
+          __startingPitcher1Option.setAttribute("class", "insertButtonAhoyMatey");
           __startingPitcher1Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'sp_1', invisiButton, parentElement);
           });
           __startingPitcher2Option.setAttribute("type", "button");
+          __startingPitcher2Option.setAttribute("class", "insertButtonAhoyMatey");
           __startingPitcher2Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'sp_2', invisiButton, parentElement);
           });
           __reliefPitcher1Option.setAttribute("type", "button");
+          __reliefPitcher1Option.setAttribute("class", "insertButtonAhoyMatey");
           __reliefPitcher1Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'rp_1', invisiButton, parentElement);
           });
           __reliefPitcher2Option.setAttribute("type", "button");
+          __reliefPitcher2Option.setAttribute("class", "insertButtonAhoyMatey");
           __reliefPitcher2Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'rp_2', invisiButton, parentElement);
           });
           __pitcher1Option.setAttribute("type", "button");
+          __pitcher1Option.setAttribute("class", "insertButtonAhoyMatey");
           __pitcher1Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_1', invisiButton, parentElement);
           });
           __pitcher2Option.setAttribute("type", "button");
+          __pitcher2Option.setAttribute("class", "insertButtonAhoyMatey");
           __pitcher2Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_2', invisiButton, parentElement);
           });
           __pitcher3Option.setAttribute("type", "button");
+          __pitcher3Option.setAttribute("class", "insertButtonAhoyMatey");
           __pitcher3Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_3', invisiButton, parentElement);
           });
           __pitcher4Option.setAttribute("type", "button");
+          __pitcher4Option.setAttribute("class", "insertButtonAhoyMatey");
           __pitcher4Option.addEventListener('click', ()=>{
             playerSwap(whichBench, 'p_4', invisiButton, parentElement);
           });
