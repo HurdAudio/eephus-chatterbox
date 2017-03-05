@@ -62,6 +62,12 @@
 
 
 
+
+
+
+
+
+
   angular.module('app')
     .component('viewteam', {
       controller: ViewTeamController,
@@ -75,6 +81,432 @@
       const vm = this;
 
       vm.$onInit = onInit;
+      vm.bench1List = bench1List;
+      vm.bench2List = bench2List;
+      vm.bench3List = bench3List;
+      vm.bench4List = bench4List;
+      vm.bench5List = bench5List;
+      vm.playerSwap = playerSwap;
+      vm.generateDropdownMenu = generateDropdownMenu;
+
+      function playerSwap (bench, position, inserter, theParent) {
+        console.log("and here too");
+        var temp = vm.userTeam[position];
+        switch (bench) {
+          case('bench1'):
+            vm.userTeam[position] = vm.userTeam.bench_1;
+            vm.userTeam.bench_1 = temp;
+            break;
+          case('bench2'):
+            vm.userTeam[position] = vm.userTeam.bench_2;
+            vm.userTeam.bench_2 = temp;
+            break;
+          case('bench3'):
+            vm.userTeam[position] = vm.userTeam.bench_3;
+            vm.userTeam.bench_3 = temp;
+            break;
+          case('bench4'):
+            vm.userTeam[position] = vm.userTeam.bench_4;
+            vm.userTeam.bench_4 = temp;
+            break;
+          case('bench5'):
+            vm.userTeam[position] = vm.userTeam.bench_5;
+            vm.userTeam.bench_5 = temp;
+            break;
+          default:
+            console.log('working on it');
+        }
+        $http.patch(`/fantasyteams/${vm.userTeam.id}`, vm.userTeam)
+        .then((data)=>{
+          console.log(data.data);
+          onInit();
+          inserter.setAttribute("style", "display: inherit;");
+          if (theParent.hasChildNodes()) {
+            while (theParent.hasChildNodes()) {
+              theParent.removeChild(theParent.firstChild);
+            }
+          }
+        });
+
+
+
+      }
+
+      function generateDropdownMenu(player, parentElement, whichBench, invisiButton) {
+
+        //clear out any remaining elements
+        // do {
+        //   parentElement.removeChildNode(parentElement.lastChild);
+        // } while((parentElement.hasChildNodes()));
+
+
+        if (parentElement.hasChildNodes()) {
+          while (parentElement.hasChildNodes()) {
+            parentElement.removeChild(parentElement.firstChild);
+          }
+        }
+
+        if (player.eligible_C) {
+          var catcherOption = document.createElement('button');
+          parentElement.appendChild(catcherOption);
+          catcherOption.id = whichBench + "ToCatcher";
+          var catcherText = document.createElement('p');
+          catcherOption.appendChild(catcherText);
+          catcherText.textContent = "Catcher";
+          catcherOption.setAttribute("type", "button");
+          catcherOption.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'catcher', invisiButton, parentElement);
+          });
+        }
+        if (player.eligible_1B) {
+          var firstBaseOption = document.createElement('button');
+          parentElement.appendChild(firstBaseOption);
+          firstBaseOption.id = whichBench + "ToFirstBase";
+          var firstBaseText = document.createElement('p');
+          firstBaseOption.appendChild(firstBaseText);
+          firstBaseText.textContent = "First Base";
+          firstBaseOption.setAttribute("type", "button");
+          firstBaseOption.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'first_base', invisiButton, parentElement);
+          });
+        }
+        if (player.eligible_2B) {
+          var secondBaseOption = document.createElement('button');
+          parentElement.appendChild(secondBaseOption);
+          secondBaseOption.id = whichBench + "ToSecondBase";
+          var secondBaseText = document.createElement('p');
+          secondBaseOption.appendChild(secondBaseText);
+          secondBaseText.textContent = "Second Base";
+          secondBaseOption.setAttribute("type", "button");
+          secondBaseOption.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'second_base', invisiButton, parentElement);
+          });
+        }
+        if (player.eligible_3B) {
+          var thirdBaseOption = document.createElement('button');
+          parentElement.appendChild(thirdBaseOption);
+          thirdBaseOption.id = whichBench + "ToThirdBase";
+          var thirdBaseText = document.createElement('p');
+          thirdBaseOption.appendChild(thirdBaseText);
+          thirdBaseText.textContent = "Third Base";
+          thirdBaseOption.setAttribute("type", "button");
+          thirdBaseOption.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'third_base', invisiButton, parentElement);
+          });
+        }
+        if (player.eligible_SS) {
+          var shortstopOption = document.createElement('button');
+          parentElement.appendChild(shortstopOption);
+          shortstopOption.id = whichBench + "ToShortstop";
+          var shortstopText = document.createElement('p');
+          shortstopOption.appendChild(shortstopText);
+          shortstopText.textContent = "Shortstop";
+          shortstopOption.setAttribute("type", "button");
+          shortstopOption.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'short_stop', invisiButton, parentElement);
+          });
+        }
+        if (player.eligible_OF) {
+          var leftFieldOption = document.createElement('button');
+          var centerFieldOption = document.createElement('button');
+          var rightFieldOption = document.createElement('button');
+          parentElement.appendChild(leftFieldOption);
+          parentElement.appendChild(centerFieldOption);
+          parentElement.appendChild(rightFieldOption);
+          leftFieldOption.id = whichBench + "ToLeftField";
+          centerFieldOption.id = whichBench + "ToCenterField";
+          rightFieldOption.id = whichBench + "ToRightField";
+          var leftFieldText = document.createElement('p');
+          var centerFieldText = document.createElement('p');
+          var rightFieldText = document.createElement('p');
+          leftFieldOption.appendChild(leftFieldText);
+          centerFieldOption.appendChild(centerFieldText);
+          rightFieldOption.appendChild(rightFieldText);
+          leftFieldText.textContent = "Left Field";
+          centerFieldText.textContent = "Center Field";
+          rightFieldText.textContent = "Right Field";
+          leftFieldOption.setAttribute("type", "button");
+          leftFieldOption.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'outfield_1', invisiButton, parentElement);
+          });
+          centerFieldOption.setAttribute("type", "button");
+          centerFieldOption.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'outfield_2', invisiButton, parentElement);
+          });
+          rightFieldOption.setAttribute("type", "button");
+          rightFieldOption.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'outfield_3', invisiButton, parentElement);
+          });
+        }
+        if (player.eligible_util) {
+          var utility1Option = document.createElement('button');
+          var utility2Option = document.createElement('button');
+          parentElement.appendChild(utility1Option);
+          parentElement.appendChild(utility2Option);
+          utility1Option.id = whichBench + "ToUtility1";
+          utility2Option.id = whichBench + "ToUtility2";
+          var utility1Text = document.createElement('p');
+          var utility2Text = document.createElement('p');
+          utility1Option.appendChild(utility1Text);
+          utility2Option.appendChild(utility2Text);
+          utility1Text.textContent = "Utility 1";
+          utility2Text.textContent = "Utility 2";
+          utility1Option.setAttribute("type", "button");
+          utility1Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'util_1', invisiButton, parentElement);
+          });
+          utility2Option.setAttribute("type", "button");
+          utility2Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'util_2', invisiButton, parentElement);
+          });
+        }
+        if ((player.eligible_SP) && (!player.eligible_RP)) {
+          var startingPitcher1Option = document.createElement('button');
+          var startingPitcher2Option = document.createElement('button');
+          var pitcher1Option = document.createElement('button');
+          var pitcher2Option = document.createElement('button');
+          var pitcher3Option = document.createElement('button');
+          var pitcher4Option = document.createElement('button');
+          parentElement.appendChild(startingPitcher1Option);
+          parentElement.appendChild(startingPitcher2Option);
+          parentElement.appendChild(pitcher1Option);
+          parentElement.appendChild(pitcher2Option);
+          parentElement.appendChild(pitcher3Option);
+          parentElement.appendChild(pitcher4Option);
+          startingPitcher1Option.id = whichBench + "ToSP1";
+          startingPitcher2Option.id = whichBench + "ToSP2";
+          pitcher1Option.id = whichBench + "ToP1";
+          pitcher2Option.id = whichBench + "ToP2";
+          pitcher3Option.id = whichBench + "ToP3";
+          pitcher4Option.id = whichBench + "ToP4";
+          var startingPitcher1Text = document.createElement('p');
+          var startingPitcher2Text = document.createElement('p');
+          var pitcher1Text = document.createElement('p');
+          var pitcher2Text = document.createElement('p');
+          var pitcher3Text = document.createElement('p');
+          var pitcher4Text = document.createElement('p');
+          startingPitcher1Option.appendChild(startingPitcher1Text);
+          startingPitcher2Option.appendChild(startingPitcher2Text);
+          pitcher1Option.appendChild(pitcher1Text);
+          pitcher2Option.appendChild(pitcher2Text);
+          pitcher3Option.appendChild(pitcher3Text);
+          pitcher4Option.appendChild(pitcher4Text);
+          startingPitcher1Text.textContent = "Starting Pitcher 1";
+          startingPitcher2Text.textContent = "Starting Pitcher 2";
+          pitcher1Text.textContent = "Pitcher 1";
+          pitcher2Text.textContent = "Pitcher 2";
+          pitcher3Text.textContent = "Pitcher 3";
+          pitcher4Text.textContent = "Pitcher 4";
+          startingPitcher1Option.setAttribute("type", "button");
+          startingPitcher1Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'sp_1', invisiButton, parentElement);
+          });
+          startingPitcher2Option.setAttribute("type", "button");
+          startingPitcher2Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'sp_2', invisiButton, parentElement);
+          });
+          pitcher1Option.setAttribute("type", "button");
+          pitcher1Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_1', invisiButton, parentElement);
+          });
+          pitcher2Option.setAttribute("type", "button");
+          pitcher2Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_2', invisiButton, parentElement);
+          });
+          pitcher3Option.setAttribute("type", "button");
+          pitcher3Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_3', invisiButton, parentElement);
+          });
+          pitcher4Option.setAttribute("type", "button");
+          pitcher4Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_4', invisiButton, parentElement);
+          });
+        }
+        if ((!player.eligible_SP) && (player.eligible_RP)) {
+          var _reliefPitcher1Option = document.createElement('button');
+          var _reliefPitcher2Option = document.createElement('button');
+          var _pitcher1Option = document.createElement('button');
+          var _pitcher2Option = document.createElement('button');
+          var _pitcher3Option = document.createElement('button');
+          var _pitcher4Option = document.createElement('button');
+          parentElement.appendChild(_reliefPitcher1Option);
+          parentElement.appendChild(_reliefPitcher2Option);
+          parentElement.appendChild(_pitcher1Option);
+          parentElement.appendChild(_pitcher2Option);
+          parentElement.appendChild(_pitcher3Option);
+          parentElement.appendChild(_pitcher4Option);
+          _reliefPitcher1Option.id = whichBench + "ToRP1";
+          _reliefPitcher2Option.id = whichBench + "ToRP2";
+          _pitcher1Option.id = whichBench + "ToP1";
+          _pitcher2Option.id = whichBench + "ToP2";
+          _pitcher3Option.id = whichBench + "ToP3";
+          _pitcher4Option.id = whichBench + "ToP4";
+          var _reliefPitcher1Text = document.createElement('p');
+          var _reliefPitcher2Text = document.createElement('p');
+          var _pitcher1Text = document.createElement('p');
+          var _pitcher2Text = document.createElement('p');
+          var _pitcher3Text = document.createElement('p');
+          var _pitcher4Text = document.createElement('p');
+          _reliefPitcher1Option.appendChild(_reliefPitcher1Text);
+          _reliefPitcher2Option.appendChild(_reliefPitcher2Text);
+          _pitcher1Option.appendChild(_pitcher1Text);
+          _pitcher2Option.appendChild(_pitcher2Text);
+          _pitcher3Option.appendChild(_pitcher3Text);
+          _pitcher4Option.appendChild(_pitcher4Text);
+          _reliefPitcher1Text.textContent = "Relief Pitcher 1";
+          _reliefPitcher2Text.textContent = "Relief Pitcher 2";
+          _pitcher1Text.textContent = "Pitcher 1";
+          _pitcher2Text.textContent = "Pitcher 2";
+          _pitcher3Text.textContent = "Pitcher 3";
+          _pitcher4Text.textContent = "Pitcher 4";
+          _reliefPitcher1Option.setAttribute("type", "button");
+          _reliefPitcher1Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'rp_1', invisiButton, parentElement);
+          });
+          _reliefPitcher2Option.setAttribute("type", "button");
+          _reliefPitcher2Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'rp_2', invisiButton, parentElement);
+          });
+          _pitcher1Option.setAttribute("type", "button");
+          _pitcher1Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_1', invisiButton, parentElement);
+          });
+          _pitcher2Option.setAttribute("type", "button");
+          _pitcher2Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_2', invisiButton, parentElement);
+          });
+          _pitcher3Option.setAttribute("type", "button");
+          _pitcher3Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_3', invisiButton, parentElement);
+          });
+          _pitcher4Option.setAttribute("type", "button");
+          _pitcher4Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_4', invisiButton, parentElement);
+          });
+        }
+        if ((player.eligible_SP) && (player.eligible_RP)) {
+          var __startingPitcher1Option = document.createElement('button');
+          var __startingPitcher2Option = document.createElement('button');
+          var __reliefPitcher1Option = document.createElement('button');
+          var __reliefPitcher2Option = document.createElement('button');
+          var __pitcher1Option = document.createElement('button');
+          var __pitcher2Option = document.createElement('button');
+          var __pitcher3Option = document.createElement('button');
+          var __pitcher4Option = document.createElement('button');
+          parentElement.appendChild(__startingPitcher1Option);
+          parentElement.appendChild(__startingPitcher2Option);
+          parentElement.appendChild(__reliefPitcher1Option);
+          parentElement.appendChild(__reliefPitcher2Option);
+          parentElement.appendChild(__pitcher1Option);
+          parentElement.appendChild(__pitcher2Option);
+          parentElement.appendChild(__pitcher3Option);
+          parentElement.appendChild(__pitcher4Option);
+          __startingPitcher1Option.id = whichBench + "ToSP1";
+          __startingPitcher2Option.id = whichBench + "ToSP2";
+          __reliefPitcher1Option.id = whichBench + "ToRP1";
+          __reliefPitcher2Option.id = whichBench + "ToRP2";
+          __pitcher1Option.id = whichBench + "ToP1";
+          __pitcher2Option.id = whichBench + "ToP2";
+          __pitcher3Option.id = whichBench + "ToP3";
+          __pitcher4Option.id = whichBench + "ToP4";
+          var __startingPitcher1Text = document.createElement('p');
+          var __startingPitcher2Text = document.createElement('p');
+          var __reliefPitcher1Text = document.createElement('p');
+          var __reliefPitcher2Text = document.createElement('p');
+          var __pitcher1Text = document.createElement('p');
+          var __pitcher2Text = document.createElement('p');
+          var __pitcher3Text = document.createElement('p');
+          var __pitcher4Text = document.createElement('p');
+          __startingPitcher1Option.appendChild(__startingPitcher1Text);
+          __startingPitcher2Option.appendChild(__startingPitcher2Text);
+          __reliefPitcher1Option.appendChild(__reliefPitcher1Text);
+          __reliefPitcher2Option.appendChild(__reliefPitcher2Text);
+          __pitcher1Option.appendChild(__pitcher1Text);
+          __pitcher2Option.appendChild(__pitcher2Text);
+          __pitcher3Option.appendChild(__pitcher3Text);
+          __pitcher4Option.appendChild(__pitcher4Text);
+          __startingPitcher1Text.textContent = "Starting Pitcher 1";
+          __startingPitcher2Text.textContent = "Starting Pitcher 2";
+          __reliefPitcher1Text.textContent = "Relief Pitcher 1";
+          __reliefPitcher2Text.textContent = "Relief Pitcher 2";
+          __pitcher1Text.textContent = "Pitcher 1";
+          __pitcher2Text.textContent = "Pitcher 2";
+          __pitcher3Text.textContent = "Pitcher 3";
+          __pitcher4Text.textContent = "Pitcher 4";
+          __startingPitcher1Option.setAttribute("type", "button");
+          __startingPitcher1Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'sp_1', invisiButton, parentElement);
+          });
+          __startingPitcher2Option.setAttribute("type", "button");
+          __startingPitcher2Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'sp_2', invisiButton, parentElement);
+          });
+          __reliefPitcher1Option.setAttribute("type", "button");
+          __reliefPitcher1Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'rp_1', invisiButton, parentElement);
+          });
+          __reliefPitcher2Option.setAttribute("type", "button");
+          __reliefPitcher2Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'rp_2', invisiButton, parentElement);
+          });
+          __pitcher1Option.setAttribute("type", "button");
+          __pitcher1Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_1', invisiButton, parentElement);
+          });
+          __pitcher2Option.setAttribute("type", "button");
+          __pitcher2Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_2', invisiButton, parentElement);
+          });
+          __pitcher3Option.setAttribute("type", "button");
+          __pitcher3Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_3', invisiButton, parentElement);
+          });
+          __pitcher4Option.setAttribute("type", "button");
+          __pitcher4Option.addEventListener('click', ()=>{
+            playerSwap(whichBench, 'p_4', invisiButton, parentElement);
+          });
+        }
+      }
+
+      function bench1List() {
+        var bench1_dropdown = document.getElementById('dropdownBench1');
+        var bench1InsertButton = document.getElementById('bench1Inserter');
+        bench1InsertButton.setAttribute("style", "display: none;");
+        generateDropdownMenu(vm.userTeamB1, bench1_dropdown, "bench1", bench1InsertButton);
+
+      }
+
+      function bench2List() {
+        var bench2_dropdown = document.getElementById('dropdownBench2');
+        var bench2InsertButton = document.getElementById('bench2Inserter');
+        bench2InsertButton.setAttribute("style", "display: none;");
+        generateDropdownMenu(vm.userTeamB2, bench2_dropdown, "bench2", bench2InsertButton);
+
+      }
+
+      function bench3List() {
+        var bench3_dropdown = document.getElementById('dropdownBench3');
+        var bench3InsertButton = document.getElementById('bench3Inserter');
+        bench3InsertButton.setAttribute("style", "display: none;");
+        generateDropdownMenu(vm.userTeamB3, bench3_dropdown, "bench3", bench3InsertButton);
+
+      }
+
+      function bench4List() {
+        var bench4_dropdown = document.getElementById('dropdownBench4');
+        var bench4InsertButton = document.getElementById('bench4Inserter');
+        bench4InsertButton.setAttribute("style", "display: none;");
+        generateDropdownMenu(vm.userTeamB4, bench4_dropdown, "bench4", bench4InsertButton);
+
+      }
+
+      function bench5List() {
+        var bench5_dropdown = document.getElementById('dropdownBench5');
+        var bench5InsertButton = document.getElementById('bench5Inserter');
+        bench5InsertButton.setAttribute("style", "display: none;");
+        generateDropdownMenu(vm.userTeamB5, bench5_dropdown, "bench5", bench5InsertButton);
+
+      }
 
 
 
@@ -226,10 +658,11 @@
                                             .then(userTeamB5=>{
                                               vm.userTeamB5 = userTeamB5.data;
                                               $http.get(`/teams/${vm.userTeamB5.team_id}`)
-                                              .then(userTeamB5Team=>{
-                                                vm.userTeamB5Team = userTeamB5Team.data;
-                                                vm.userTeamB5Positions = determindPositionEligibility(vm.userTeamB5);
-                                              });
+      .then(userTeamB5Team=>{
+        vm.userTeamB5Team = userTeamB5Team.data;
+        vm.userTeamB5Positions = determindPositionEligibility(vm.userTeamB5);
+
+      });
                                             });
                                           });
                                         });
