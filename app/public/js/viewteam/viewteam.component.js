@@ -17,6 +17,37 @@
     speechSynthesis.speak(u);
   }
 
+  function talkSwap (bench, position) {
+    var swapStr = '';
+    var randomSet = Math.floor(Math.random()*7);
+
+    switch (randomSet) {
+      case(0):
+        swapStr += "Swapping " + bench.first_name + " " + bench.last_name + " for " + position.first_name + " " + position.last_name + ". ";
+        break;
+      case(1):
+        swapStr += "Number " + bench.jersey_number + " is going in for " + position.last_name + ". ";
+        break;
+      case(3):
+        swapStr += "And we have a substitution ... " + position.first_name + " " + position.last_name + " is coming out to make room for " + bench.first_name + " " + bench.last_name + ". ";
+        break;
+      case(4):
+        swapStr += "Making some moves here. It's " + bench.first_name + " " + bench.last_name + " taking the place of " + position.first_name + " " + position.last_name + ". ";
+        break;
+      case(5):
+        swapStr += "We have an active manager on our hands, people. " + bench.first_name + " " + bench.last_name + " will be entering the lineup, now.";
+        break;
+      case(6):
+        swapStr += position.first_name + " " + position.last_name + " will be coming out as " + bench.first_name + " " + bench.last_name + " is inserted into the action.";
+        break;
+      default:
+        swapStr += "...";
+    }
+
+
+    return (swapStr);
+  }
+
   function determindPositionEligibility (player) {
     let positions = {};
     let strPos = '(';
@@ -92,6 +123,8 @@
       function playerSwap (bench, position, inserter, theParent) {
         console.log("and here too");
         var temp = vm.userTeam[position];
+        var benchPlayerName = {};
+        var positionPlayerName = {};
         switch (bench) {
           case('bench1'):
             vm.userTeam[position] = vm.userTeam.bench_1;
@@ -126,11 +159,21 @@
               theParent.removeChild(theParent.firstChild);
             }
           }
-        });
+          $http.get(`/players/${vm.userTeam[position]}`)
+          .then(formerBench=>{
+            benchPlayerName = formerBench.data;
+            $http.get(`/players/${temp}`)
+            .then(formerPosition=>{
+              positionPlayerName = formerPosition.data;
+              spokenOutput(talkSwap(benchPlayerName, positionPlayerName));
+            });
+          });
+
+          });
+        }
 
 
 
-      }
 
       function generateDropdownMenu(player, parentElement, whichBench, invisiButton) {
 
