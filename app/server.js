@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const knex = require('knex');
+const request = require('request');
 const app = express();
 const teams = require('./routes/teams.js');
 const users = require('./routes/users.js');
@@ -21,12 +22,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')));
 
 // app.use('/classifieds',messages);
+
 app.use('/teams', teams);
 app.use('/users', users);
 app.use('/players', players);
 app.use('/fantasyteams', fantasyteams);
 app.use('/headtoheadmatchups', headtoheadmatchups);
 app.use('/rotisseriematchups', rotisseriematchups);
+app.get('/baseballipsum', (req, res) => {
+
+
+  //TODO: Do we need to get the useragent dynamically from the browser for the search string below? -- CDH
+
+  const newUrl = "http://baseballipsum.apphb.com/api/?paras=1";
+
+  return request(newUrl).pipe(res);
+});
 
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
