@@ -4,7 +4,10 @@
   "description": "A conversational baseball application.",
   "main": "app/server.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "knex": "knex",
+    "heroku-postbuild": "knex migtate:latest",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,9 @@
     "request": "^2.79.0",
     "request-promise-native": "^1.0.3",
     "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": "7.0.0"
   },
   "devDependencies": {
     "grunt-pure-grids": "^1.0.2"
