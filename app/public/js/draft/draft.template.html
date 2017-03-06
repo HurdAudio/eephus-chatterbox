@@ -1,4 +1,86 @@
 <div>
+  <div class="pure-u-1" id="newLeague">
+    <h2>New League: {{$ctrl.head2headLeague.match_name}}</h2>
+    <h2>{{$ctrl.eephus.name}} team name: {{$ctrl.eephusTeam.team_name}}</h2>
+    <h2>{{$ctrl.user.name}} team name: {{$ctrl.userTeam.team_name}}</h2>
+    <h3>Rename or continue.</h3>
+    <form>
+      <label for="team_name">Team Name</label>
+        <input name="team_name">
+      <button ng-click="$ctrl.updateUserTeam(team_name)">Play Ball!</button>
+
+    </form>
+
+  </div>
+
+  <container id="draftContainer">
+      <div class = "pure-u-1-1">
+        <div class="pure-u-1-5" id="playerCard1">
+          <div class="draftCard"><img ng-src="{{$ctrl.playerCard1.headshot_url}}" class="media-object">
+          </div>
+          <div class="CHC" id="playerCardNo1">
+            <p>{{$ctrl.playerCard1.jersey_number}} {{$ctrl.playerCard1.first_name}} {{$ctrl.playerCard1.last_name}}</p>
+            <p>{{$ctrl.playerCard1Team.city}} {{$ctrl.playerCard1Team.name}}</p>
+            <p>{{$ctrl.playerCard1.positions}}</p>
+            <p>  </p>
+
+          </div>
+        </div>
+        <div class="pure-u-1-5">
+          <div class="draftCard" id="PlayerCard2"><img ng-src="{{$ctrl.playerCard2.headshot_url}}" class="media-object">
+          </div>
+          <div class="MIA" id="playerCardNo2">
+            <p>{{$ctrl.playerCard2.jersey_number}} {{$ctrl.playerCard2.first_name}} {{$ctrl.playerCard2.last_name}}</p>
+            <p>{{$ctrl.playerCard2Team.city}} {{$ctrl.playerCard2Team.name}}</p>
+            <p>{{$ctrl.playerCard2.positions}}</p>
+            <p>  </p>
+
+          </div>
+        </div>
+
+        <div class="pure-u-1-5">
+          <div class="draftCard" id="PlayerCard3"><img ng-src="{{$ctrl.playerCard3.headshot_url}}" class="media-object">
+          </div>
+          <div class="ATL" id="PlayerCardNo3">
+            <p>{{$ctrl.playerCard3.jersey_number}} {{$ctrl.playerCard3.first_name}} {{$ctrl.playerCard3.last_name}}</p>
+            <p>{{$ctrl.playerCard3Team.city}} {{$ctrl.playerCard3Team.name}}</p>
+            <p>{{$ctrl.playerCard3.positions}}</p>
+            <p>  </p>
+
+          </div>
+        </div>
+        <div class="pure-u-1-5" id="PlayerCard4">
+          <div class="draftCard"><img ng-src="{{$ctrl.playerCard4.headshot_url}}" class="media-object">
+          </div>
+          <div class="BAL" id="PlayerCardNo4">
+            <p>{{$ctrl.playerCard4.jersey_number}} {{$ctrl.playerCard4.first_name}} {{$ctrl.playerCard4.last_name}}</p>
+            <p>{{$ctrl.playerCard4Team.city}} {{$ctrl.playerCard4Team.name}}</p>
+            <p>{{$ctrl.playerCard4.positions}}</p>
+            <p>  </p>
+          </div>
+
+        </div>
+        <div class="pure-u-1-5" id="PlayerCard5">
+          <div class="draftCard"><img ng-src="{{$ctrl.playerCard5.headshot_url}}" class="media-object">
+          </div>
+          <div class="BAL" id="playerCardNo5">
+            <p>{{$ctrl.playerCard5.jersey_number}} {{$ctrl.playerCard5.first_name}} {{$ctrl.playerCard5.last_name}}</p>
+            <p>{{$ctrl.playerCard5Team.city}} {{$ctrl.playerCard5Team.name}}</p>
+            <p>{{$ctrl.playerCard5.positions}}</p>
+            <p>  </p>
+          </div>
+
+        </div>
+
+
+        </div>
+
+
+      <a class="pure-button" id="prev5" href="#" ng-click="$ctrl.scrollLeft()"><img src="./img/app-1646213_640.png" height="20px" width="90px"></a>
+      <a class="pure-button" id="next5" href="#" ng-click="$ctrl.scrollRight()"><img src="./img/app-1646214_640.png" height="20px" width="90px"></a>
+    </container>
+
+
     <div class="pure-u-1-4"></div>
     <div class="pure-u-2-4" id="hometeam">
       <h1>{{$ctrl.userTeam.team_name}}</h1>
