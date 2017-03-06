@@ -2,7 +2,7 @@
   "name": "eephus-chatterbox",
   "version": "1.0.0",
   "description": "A conversational baseball application.",
-  "main": "./app/server.js",
+  "main": "app/server.js",
   "scripts": {
     "test": "mocha --recursive",
     "knex": "knex",
