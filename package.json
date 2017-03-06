@@ -7,7 +7,7 @@
     "test": "mocha --recursive",
     "knex": "knex",
     "heroku-postbuild": "knex migtate:latest",
-    "start": "nodemon server.js"
+    "start": "nodemon"
   },
   "repository": {
     "type": "git",
