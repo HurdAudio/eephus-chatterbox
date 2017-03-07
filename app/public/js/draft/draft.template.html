@@ -16,7 +16,7 @@
   <container id="draftContainer">
       <div class = "pure-u-1-1">
         <div class="pure-u-1-5" id="playerCard1">
-          <div class="draftCard"><img ng-src="{{$ctrl.playerCard1.headshot_url}}" class="media-object">
+          <div class="draftCard"><img ng-src="{{$ctrl.playerCard1.headshot_url}}" class="media-object" id="p1">
           </div>
           <div class="CHC" id="playerCardNo1">
             <p>{{$ctrl.playerCard1.jersey_number}} {{$ctrl.playerCard1.first_name}} {{$ctrl.playerCard1.last_name}}</p>
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="pure-u-1-5">
-          <div class="draftCard" id="PlayerCard2"><img ng-src="{{$ctrl.playerCard2.headshot_url}}" class="media-object">
+          <div class="draftCard" id="PlayerCard2"><img ng-src="{{$ctrl.playerCard2.headshot_url}}" class="media-object" id="p2">
           </div>
           <div class="MIA" id="playerCardNo2">
             <p>{{$ctrl.playerCard2.jersey_number}} {{$ctrl.playerCard2.first_name}} {{$ctrl.playerCard2.last_name}}</p>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="pure-u-1-5">
-          <div class="draftCard" id="PlayerCard3"><img ng-src="{{$ctrl.playerCard3.headshot_url}}" class="media-object">
+          <div class="draftCard" id="PlayerCard3"><img ng-src="{{$ctrl.playerCard3.headshot_url}}" class="media-object" id="p3">
           </div>
           <div class="ATL" id="PlayerCardNo3">
             <p>{{$ctrl.playerCard3.jersey_number}} {{$ctrl.playerCard3.first_name}} {{$ctrl.playerCard3.last_name}}</p>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="pure-u-1-5" id="PlayerCard4">
-          <div class="draftCard"><img ng-src="{{$ctrl.playerCard4.headshot_url}}" class="media-object">
+          <div class="draftCard"><img ng-src="{{$ctrl.playerCard4.headshot_url}}" class="media-object" id="p4">
           </div>
           <div class="BAL" id="PlayerCardNo4">
             <p>{{$ctrl.playerCard4.jersey_number}} {{$ctrl.playerCard4.first_name}} {{$ctrl.playerCard4.last_name}}</p>
@@ -61,7 +61,7 @@
 
         </div>
         <div class="pure-u-1-5" id="PlayerCard5">
-          <div class="draftCard"><img ng-src="{{$ctrl.playerCard5.headshot_url}}" class="media-object">
+          <div class="draftCard"><img ng-src="{{$ctrl.playerCard5.headshot_url}}" class="media-object" id="p5">
           </div>
           <div class="BAL" id="playerCardNo5">
             <p>{{$ctrl.playerCard5.jersey_number}} {{$ctrl.playerCard5.first_name}} {{$ctrl.playerCard5.last_name}}</p>
@@ -75,10 +75,34 @@
 
         </div>
 
+        <div class="pure-u-1" id="draftInfo">
+          <div class="pure-u-1-5" id="InfoCard">
+            <div class="draftCard"><img ng-src="{{$ctrl.playerCard6.headshot_url}}" class="media-object">
+            </div>
+            <div class="BAL" id="playerInfoCard">
+              <p>{{$ctrl.playerCard6.jersey_number}} {{$ctrl.playerCard6.first_name}} {{$ctrl.playerCard6.last_name}}</p>
+              <p>{{$ctrl.playerCard6Team.city}} {{$ctrl.playerCard6Team.name}}</p>
+              <p>{{$ctrl.playerCard6.positions}}</p>
+              <p>  </p>
+            </div>
+
+          </div>
+          <div class="pure-u-3-1" id="selectPlayerButtons">
+            <button id="playerInfoButton">INFO</button>
+            <button id="playerDraftButton" ng-click="$ctrl.draftPlayer()">DRAFT</button>
+            <button id="playerCancelButton" ng-click="$ctrl.cancelDraft()">CANCEL</button>
+          </div>
+
+
+
+        </div>
+
 
       <a class="pure-button" id="prev5" href="#" ng-click="$ctrl.scrollLeft()"><img src="./img/app-1646213_640.png" height="20px" width="90px"></a>
       <a class="pure-button" id="next5" href="#" ng-click="$ctrl.scrollRight()"><img src="./img/app-1646214_640.png" height="20px" width="90px"></a>
+
     </container>
+    <div class="pure-u-3-1" id="positionButtons"></div>
 
 
     <div class="pure-u-1-4"></div>

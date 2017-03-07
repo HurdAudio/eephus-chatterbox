@@ -109,6 +109,10 @@ tr td img {
   float:left;
 }
 
+.draftCard :hover {
+  cursor: pointer;
+}
+
 .pure-u-1-5 {
   float:left;
 }
@@ -132,6 +136,22 @@ p {
   border-radius: 30%;
 }
 
+#draftInfo {
+  display: none;
+  align-content: center;
+  font-family: 'Oswald', sans-serif;
+  margin-left: 27em;
+}
+
+#draftInfo button {
+  margin-top: 2em;
+  font-size: 42px;
+  border-radius: 19%;
+  color: #ffffff;
+  background-color: #47565B;
+  opacity: 0.6;
+}
+
 .CHC {
   background-color: #002F6C;
   border: solid 7px #C8102E;
@@ -141,6 +161,7 @@ p {
   padding: 1em;
   height: 10.5em;
   border-radius: 10%;
+  cursor: pointer;
 
 }
 
@@ -153,6 +174,8 @@ p {
   padding: 1em;
   height: 10.5em;
   border-radius: 10%;
+  cursor: pointer;
+
 
 }
 
@@ -165,6 +188,8 @@ p {
   padding: 1em;
   height: 10.5em;
   border-radius: 10%;
+  cursor: pointer;
+
 
 }
 
@@ -177,6 +202,8 @@ p {
   padding: 1em;
   height: 10.5em;
   border-radius: 10%;
+  cursor: pointer;
+
 
 }
 
@@ -189,6 +216,8 @@ p {
   padding: 1em;
   height: 10.5em;
   border-radius: 10%;
+  cursor: pointer;
+
 
 }
 
