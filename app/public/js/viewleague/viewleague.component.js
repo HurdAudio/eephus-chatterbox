@@ -408,7 +408,6 @@
 
 
       function onInit() {
-        console.log('league!');
         var userTeamArr = [];
         var eephusTeamArr = [];
         $http.get(`/headtoheadmatchups/${$stateParams.id}`)
@@ -419,10 +418,10 @@
             vm.user = user.data;
             var away = vm.league.away_team;
             var home = vm.league.home_team;
-            $http.get(`/fantasyteams/${away}`)
+            $http.get(`/fantasyteams/${away.id}`)
             .then(theAwayTeam=>{
               vm.away = theAwayTeam.data;
-              $http.get(`/fantasyteams/${home}`)
+              $http.get(`/fantasyteams/${home.id}`)
               .then(theHomeTeam=>{
                 vm.home = theHomeTeam.data;
                 var userTeam = determineUserTeam(vm.user, vm.away);

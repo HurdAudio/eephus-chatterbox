@@ -967,18 +967,18 @@
         var cointoss = (Math.floor(Math.random()*2));
 
 
-        if (cointoss === 0) {
+        // if (cointoss === 0) {
           userTurn = 0;
           eephusTurn = 1;
           spokenOutput(vm.userTeam.team_name + " get the first draft pick.");
           inputOn = true;
-        } else {
-          userTurn = 1;
-          eephusTurn = 0;
-          spokenOutput("Eephus Chatterbox will get the first draft pick.");
-          inputOn = false;
-          advanceDraft();
-        }
+        // } else {
+        //   userTurn = 1;
+        //   eephusTurn = 0;
+        //   spokenOutput("Eephus Chatterbox will get the first draft pick.");
+        //   inputOn = false;
+        //   advanceDraft();
+        // }
 
 
 
@@ -1947,6 +1947,15 @@
         }
       }
 
+      function setFantasyTeamIDsToLeague () {
+        vm.head2headLeague.away = vm.userTeam.id;
+        vm.head2headLeague.home = vm.eephusTeam.id;
+        $http.patch(`/headtoheadmatchups/${vm.head2headLeague.id}`, vm.head2headLeague)
+        .then(updatedIDs=>{
+          console.log('this should fix viewleague bug');
+        });
+      }
+
       function onInit() {
         $http.get('/baseballipsum')
         .then(ipsum=>{
@@ -1979,6 +1988,7 @@
                   $http.post('/fantasyteams', newUserTeam)
                   .then(userTeam=>{
                     vm.userTeam = userTeam.data[0];
+                    setFantasyTeamIDsToLeague();
                     runDraftSequence();
                     var draftContainer = document.getElementById('draftContainer');
                     draftContainer.addEventListener('click', (event)=>{

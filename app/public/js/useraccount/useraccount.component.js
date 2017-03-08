@@ -80,6 +80,7 @@
       vm.$onInit = onInit;
       vm.userLeagues = userLeagues;
 
+
       function userLeagues() {
 
       }
