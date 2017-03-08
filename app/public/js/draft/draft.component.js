@@ -6,6 +6,10 @@
   var playerRibbonSlots = [];
   var inputOn = true;
   var draftStagePlayer;
+  var draftIndex = 0;
+  var draftSequenceArr = [0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1 ];
+  var userTurn;
+  var eephusTurn;
 
   function spokenOutput (str) {
     var u = new SpeechSynthesisUtterance();
@@ -502,6 +506,483 @@
       vm.cancelDraft = cancelDraft;
       vm.draftPlayer = draftPlayer;
       vm.getPlayerInfo = getPlayerInfo;
+      vm.runDraftSequence = runDraftSequence;
+      vm.advanceDraft = advanceDraft;
+
+      function eephusSelectPlayer () {
+        var draftPlayer;
+        var selectorIndex = 0;
+        var playerFound = false;
+        var toPosition;
+
+        do {
+          if (playerArray[selectorIndex].eligible_C) {
+            if (vm.eephusTeam.catcher === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "catcher";
+            } else if (vm.eephusTeam.util_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_1";
+            } else if (vm.eephusTeam.util_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_2";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_1B)) {
+            if (vm.eephusTeam.first_base === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "first_base";
+            } else if (vm.eephusTeam.util_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_1";
+            } else if (vm.eephusTeam.util_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_2";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_2B)) {
+            if (vm.eephusTeam.second_base === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "second_base";
+            } else if (vm.eephusTeam.util_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_1";
+            } else if (vm.eephusTeam.util_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_2";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_3B)) {
+            if (vm.eephusTeam.third_base === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "third_base";
+            } else if (vm.eephusTeam.util_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_1";
+            } else if (vm.eephusTeam.util_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_2";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_SS)) {
+            if (vm.eephusTeam.short_stop === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "short_stop";
+            } else if (vm.eephusTeam.util_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_1";
+            } else if (vm.eephusTeam.util_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_2";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_OF)) {
+            if (vm.eephusTeam.outfield_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "outfield_1";
+            } else if (vm.eephusTeam.outfield_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "outfield_2";
+            } else if (vm.eephusTeam.outfield_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "outfield_3";
+            } else if (vm.eephusTeam.util_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_1";
+            } else if (vm.eephusTeam.util_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_2";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_util)) {
+            if (vm.eephusTeam.util_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_1";
+            } else if (vm.eephusTeam.util_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "util_2";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_SP)) {
+            if (vm.eephusTeam.sp_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "sp_1";
+            } else if (vm.eephusTeam.sp_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "sp_2";
+            } else if (vm.eephusTeam.p_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_1";
+            } else if (vm.eephusTeam.p_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_2";
+            } else if (vm.eephusTeam.p_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_3";
+            } else if (vm.eephusTeam.p_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_4";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_RP)) {
+            if (vm.eephusTeam.rp_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "rp_1";
+            } else if (vm.eephusTeam.rp_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "rp_2";
+            } else if (vm.eephusTeam.p_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_1";
+            } else if (vm.eephusTeam.p_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_2";
+            } else if (vm.eephusTeam.p_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_3";
+            } else if (vm.eephusTeam.p_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_4";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_P)) {
+            if (vm.eephusTeam.p_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_1";
+            } else if (vm.eephusTeam.p_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_2";
+            } else if (vm.eephusTeam.p_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_3";
+            } else if (vm.eephusTeam.p_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "p_4";
+            } else if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          if ((!playerFound) && (playerArray[selectorIndex].eligible_bench)) {
+            if (vm.eephusTeam.bench_1 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_1";
+            } else if (vm.eephusTeam.bench_2 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_2";
+            } else if (vm.eephusTeam.bench_3 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_3";
+            } else if (vm.eephusTeam.bench_4 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_4";
+            } else if (vm.eephusTeam.bench_5 === null) {
+              draftPlayer = playerArray[selectorIndex];
+              playerFound = true;
+              toPosition = "bench_5";
+            }
+          }
+          ++selectorIndex;
+          if (selectorIndex > playerArray.length) {
+            selectorIndex = 0;
+          }
+
+        } while (!playerFound);
+
+        playerArray.splice(playerArray.indexOf(draftPlayer), 1);
+        updatePlayerRibbonSlots('noFilter');
+        updateDraftBar();
+        vm.eephusTeam[toPosition] = draftPlayer.id;
+        $http.patch(`/fantasyteams/${vm.eephusTeam.id}`, vm.eephusTeam)
+        .then(updatedTeam=>{
+          updateField();
+          ++draftIndex;
+
+          advanceDraft();
+        });
+
+        return(draftPlayer);
+      }
+
+      function advanceDraft () {
+
+        var playerSelected;
+
+        if (draftSequenceArr[draftIndex] === userTurn) {
+          console.log("user pick");
+          inputOn = true;
+        } else {
+          console.log("eephus pick");
+          inputOn = false;
+          // AI draft functionality here.
+          playerSelected = eephusSelectPlayer();
+          $http.get(`/teams/${playerSelected.team_id}`)
+          .then(selectedTeam=>{
+            spokenOutput(playerSelected.first_name + " " + playerSelected.last_name + " of the " + selectedTeam.data.city + " " + selectedTeam.data.name + " is drafted by Eephus Chatterbox.");
+          });
+        }
+      }
+
+      function runDraftSequence () {
+
+        var cointoss = (Math.floor(Math.random()*2));
+
+
+        if (cointoss === 0) {
+          userTurn = 0;
+          eephusTurn = 1;
+          spokenOutput(vm.userTeam.team_name + " get the first draft pick.");
+          inputOn = true;
+        } else {
+          userTurn = 1;
+          eephusTurn = 0;
+          spokenOutput("Eephus Chatterbox will get the first draft pick.");
+          inputOn = false;
+          advanceDraft();
+        }
+
+
+
+      }
 
       function getPlayerInfo() {
         $http.get(`/teams/${vm.playerCard6.team_id}`)
@@ -1158,11 +1639,10 @@
       }
 
       function addPlayerToField (positionString, fieldTeam) {
-        console.log("we made it to this sticky logic spot");
-        console.log(playerArray.indexOf(vm.playerCard6));
         playerArray.splice(playerArray.indexOf(vm.playerCard6), 1);
         updatePlayerRibbonSlots('noFilter');
         updateDraftBar();
+
         switch (positionString) {
           case("Catcher"):
             fieldTeam.catcher = vm.playerCard6.id;
@@ -1171,7 +1651,6 @@
             fieldTeam.first_base = vm.playerCard6.id;
             break;
           case("Second Base"):
-          console.log("second base should be go");
             fieldTeam.second_base = vm.playerCard6.id;
             break;
           case("Third Base"):
@@ -1237,6 +1716,7 @@
           default:
             console.log("this condition should not be possible");
         }
+        spokenOutput(vm.playerCard6.first_name + " " + vm.playerCard6.last_name + " is drafted by " + fieldTeam.team_name + ". ");
         deleteButtons();
         var infoButton = document.getElementById('playerInfoButton');
         var draftButton = document.getElementById('playerDraftButton');
@@ -1246,9 +1726,10 @@
         cancelButton.setAttribute("style", "display: initial;");
         $http.patch(`/fantasyteams/${fieldTeam.id}`, fieldTeam)
         .then(updatedTeam=>{
-          console.log(updatedTeam);
           updateField();
           inputOn = true;
+          ++draftIndex;
+          advanceDraft();
         });
 
       }
@@ -1498,6 +1979,7 @@
                   $http.post('/fantasyteams', newUserTeam)
                   .then(userTeam=>{
                     vm.userTeam = userTeam.data[0];
+                    runDraftSequence();
                     var draftContainer = document.getElementById('draftContainer');
                     draftContainer.addEventListener('click', (event)=>{
                       var card = event.target;

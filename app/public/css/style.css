@@ -140,16 +140,26 @@ p {
   display: none;
   align-content: center;
   font-family: 'Oswald', sans-serif;
-  margin-left: 27em;
 }
 
 #draftInfo button {
   margin-top: 2em;
+  margin-left: 4em;
   font-size: 42px;
   border-radius: 19%;
   color: #ffffff;
   background-color: #47565B;
   opacity: 0.6;
+}
+
+#positionButtons button {
+  margin-top: 1em;
+  margin-left: 0;
+  font-size:36px;
+  border-radius: 19%;
+  color: #ffffff;
+  background-color: #47565B;
+  opacity: 0.5;
 }
 
 .CHC {
