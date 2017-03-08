@@ -74,6 +74,414 @@
     return(positionsAvail);
   }
 
+  function talkAboutHitter (hitter, hitterTeam) {
+    var responseString = "";
+    var randomInt = 0;
+
+    if (hitter.projected_2017_SB > 21) {
+      randomInt = (Math.floor(Math.random()*5));
+      switch(randomInt) {
+        case(0):
+          responseString += hitter.first_name + " " + hitter.last_name + " is all about the stolen bases. He's projected to snag a good " + hitter.projected_2017_SB + " bags in the year ahead. ";
+          break;
+        case(1):
+          var ops = hitter.projected_2017_OPS.toString();
+          ops = ops.slice(2);
+          responseString += "Speed is the name of the game with " + hitter.first_name + " " + hitter.last_name + " of the " + hitterTeam.city + " " + hitterTeam.name + ". He is projected to have a " + ops + "O P S in the campaign ahead. You can also expect him to steal around " + hitter.projected_2017_SB + " bases. ";
+          break;
+        case(2):
+          var name = "";
+          if (hitter.nickname !== null) {
+            name = hitter.nickname;
+          } else {
+            name = hitter.last_name;
+          }
+          responseString += name + " is a classic leadoff, contact hitter for the " + hitterTeam.city + " " + hitterTeam.name + ". When he reaches base he can be a real headache for the other team with his penchant for stealing bases. Look for him to score " + hitter.projected_2017_R + " runs over the course of a season. ";
+          break;
+        case(3):
+          responseString += "When you talk " + hitter.first_name + " " + hitter.last_name + "of the " + hitterTeam.city + " " + hitterTeam.name + " you're talking about grand theft base stealing. " + hitter.last_name + " brings a good " + hitter.projected_2017_SB + " stolen bases to a fantasy team. A key part of dominating this under-rated stat. ";
+          break;
+        case(4):
+          responseString += "If you want to rack up the stolen bags, " + hitter.first_name + " " + hitter.last_name + " is a good place to turn. He's a contact hitter who brings a lot of speed and disruption on the base paths. ";
+          break;
+        default:
+          responseString += "...";
+      }
+
+    } else {
+      randomInt = (Math.floor(Math.random()*9));
+      switch(randomInt) {
+        case(0):
+          var coolHand = "";
+          if (hitter.bats_LR === "R") {
+            coolHand = "right handed ";
+          } else if (hitter.bats_LR === "L") {
+            coolHand = "left handed ";
+          } else {
+            coolHand = "switch ";
+          }
+          responseString += "We are expecting a good " + hitter.projected_2017_AB + " at bats from " + hitter.first_name + " " + hitter.last_name + " this year. And those should produce around " + hitter.projected_2017_H + " hits for the " + coolHand + "hitter. ";
+          break;
+        case(1):
+          var sluggNick = "";
+          var sluggObp = hitter.projected_2017_OBP.toString();
+          sluggObp = sluggObp.slice(2);
+          if (hitter.nickname !== null) {
+            sluggNick = hitter.nickname;
+          } else {
+            sluggNick = hitter.first_name;
+          }
+          responseString += sluggNick + " brings a steady plate presence to any lineup. His projected " + sluggObp + " on base percentage is a nice compliment for any team. ";
+          break;
+        case(2):
+          var avg = hitter.projected_2017_AVG;
+          avg = avg.slice(2);
+          responseString += "We anticipate a " + avg + " batting average from " + hitter.first_name + " " + hitter.last_name + " in the season ahead. ";
+          break;
+        case(3):
+          responseString += "I see that you are considering " + hitter.first_name + " " + hitter.last_name + " of the " + hitterTeam.name + " for your lineup. He's probably good for " + hitter.projected_2017_H + " hits and " + hitter.projected_2017_RBI + " ribbies this year. ";
+          break;
+        case(4):
+          var hitAvg = hitter.projected_2017_AVG;
+          hitAvg = hitAvg.slice(2);
+          responseString += hitter.first_name + " " + hitter.last_name + " looks like a " + hitAvg + " hitter for the foreseeable season. ";
+          break;
+        case(5):
+          var handy = "";
+          if (hitter.bats_LR === 'R') {
+            handy = "right handed bat of the ";
+          } else if (hitter.bats_LR === "L") {
+            handy = "lefted handed bat of the ";
+          } else {
+            handy = "switch hitting bat of the ";
+          }
+          responseString += "We're looking at the " + handy + hitterTeam.city + " " + hitterTeam.name + ". We expect to see around " + hitter.projected_2017_RBI + " runs batted in from him this year. ";
+          break;
+        case(6):
+          responseString += "If you're looking for around " + hitter.projected_2017_H + " hits in " + hitter.projected_2017_AB + " at bats in your lineup, you have come to the right place with " + hitter.first_name + " " + hitter.last_name + ". ";
+          break;
+        case(7):
+          var slug = hitter.projected_2017_SLG;
+          slug = slug.slice(2);
+          var batHand = "";
+          if (hitter.bats_LR === "R") {
+            batHand = "right handed bat ";
+          } else if (hitter.bats_LR === "L") {
+            batHand = "left handed bat ";
+          } else {
+            batHand = "switch hitting bat ";
+          }
+          responseString += "The " + hitterTeam.city + " " + hitterTeam.name + " " + batHand + " is anticipated to deliver a " + slug + " slugging percentage this season. ";
+          break;
+        case(8):
+          responseString += hitter.first_name + " " + hitter.last_name + "of the " + hitterTeam.city + " " + hitterTeam.name + " is basically a " + hitter.projected_2017_RBI + " are bee eye kind of player at the plate. We also anticipate " + hitter.projected_2017_walk + " walks in there. ";
+          break;
+        default:
+          responseString += "...";
+      }
+    }
+    if (hitter.projected_2017_HR > 27) {
+      randomInt = (Math.floor(Math.random()*7));
+      switch(randomInt){
+        case(0):
+          responseString += hitter.first_name + " " + hitter.last_name + " is your classic power hitter for the " + hitterTeam.city + " " + hitterTeam.name + ". You can expect to see " + hitter.projected_2017_HR + " home runs and around " + hitter.projected_2017_RBI + " runs driven in from this slugger.";
+          break;
+        case(2):
+          var nick = "";
+          var handedness = "";
+          if (hitter.nickname !== null) {
+            nick = hitter.nickname;
+          } else {
+            nick = hitter.last_name;
+          }
+          if (hitter.bats_LR === "R") {
+            handedness = "right handed ";
+          } else if (hitter.bats_LR === "L") {
+            handedness = "left handed";
+          } else {
+            handedness = "switch hitting ";
+          }
+          responseString += nick + " brings a potent " + handedness + "bat to any lineup. Or at least the " + hitterTeam.name + "lineup over in " + hitterTeam.city + ". We expect him to muscle up a good " + hitter.projected_2017_HR + " home runs this year.";
+          break;
+        case(3):
+          var slg = hitter.projected_2017_SLG.toString();
+          slg = slg.slice(2);
+          responseString += "If you need a power bat, you could certainly do a lot worse than " + hitter.first_name + " " + hitter.last_name + " of the " + hitterTeam.city + " " + hitterTeam.name + ". We can expect " + hitter.projected_2017_HR + " home runs and a " + slg + " slugging percentage from him this year.";
+          break;
+        case(4):
+          responseString += "Here is a good option for adding some pop to your lineup. In the equasion home runs equals more Are Bee Eyes, " + hitter.first_name + " " + hitter.last_name + " is expected to produce on both counts: " + hitter.projected_2017_HR + " long balls and " + hitter.projected_2017_RBI + " runs batted for the power hitter.";
+          break;
+        case(5):
+          responseString += hitter.first_name + " " + hitter.last_name + " brings some pop to any lineup. He air mails long balls for the " + hitterTeam.name + " and he can do the same for your team as well.";
+          break;
+        case(6):
+          responseString += "It's not always many home runs  " + hitter.first_name + " " + hitter.last_name + " can drive out to the stands, but how majestic his blasts can be. The " + hitterTeam.name + " have certainly been enjoying his power. Look for " + hitter.projected_2017_HR + " bombs off his bat for the season.";
+          break;
+        default:
+          responseString += "...";
+      }
+    }
+
+    return (responseString);
+  }
+
+  function talkAboutPitcher (pitcher, pitcherTeam, userTeam) {
+    var responseString = "";
+    var randomInt = 0;
+
+    if (pitcher.eligible_SP) {
+      if (pitcher.projected_2017_K > 160) {
+        randomInt = (Math.floor(Math.random()*9));
+        switch(randomInt) {
+          case(0):
+            var throwArm = "";
+            if (pitcher.throws_LR === "R") {
+              throwArm = "right handed pitcher ";
+            } else {
+              throwArm = "southpaw pitcher ";
+            }
+            responseString += pitcher.first_name + " " + pitcher.last_name + " is your classic power pitcher. The " + throwArm + "for the " + pitcherTeam.city + " " + pitcherTeam.name + " is expected to fan " + pitcher.projected_2017_K + " hapless hitters.";
+            break;
+          case (1):
+            responseString += "You are looking at one strikeout machine here. We're expecting " + pitcher.projected_2017_K + " big Kays out of " + pitcher.first_name + " " + pitcher.last_name + " this season. That could certainly be an asset to the " + userTeam.team_name + ". ";
+            break;
+          case(2):
+            var earnedRunAverage = pitcher.projected_2017_ERA;
+            var eraArr = earnedRunAverage.split('.');
+            responseString += "You can look forward to a projected " + eraArr[0] + " " + eraArr[1] + " earned run average and an impressive " + pitcher.projected_2017_K + " strikeouts from " + pitcherTeam.city + " " + pitcherTeam.name + " " + pitcher.first_name + " " + pitcher.last_name + ". ";
+            break;
+          case(3):
+            var whip = pitcher.projected_2017_WHIP;
+            var whipArr = whip.split('.');
+            responseString += "Crack that whip and limit those baserunners. " + pitcher.first_name + " " + pitcher.last_name + " will be keeping the bags clear as he supports his expected " + whipArr[0] + " " + whipArr[1] + "whip ... that's walks plus hits over innings pitched ... with a healthy dose of swinging and missing. Expect to see " + pitcher.projected_2017_K + " strikeouts from him.";
+             break;
+            case(4):
+              responseString += "We're talking about strikeouts here as " + pitcher.first_name + " " + pitcher.last_name + "has been known to deal from the mound.";
+              break;
+            case(5):
+              var hp = "";
+              if (pitcher.throws_LR === "R") {
+                hp = "right handed starting pitcher ";
+              } else {
+                hp = "left handed starting pitcher ";
+              }
+              responseString += "If the swing and a miss is part of your game plan, you would be remiss not to consider the " + pitcher.projected_2017_K + " Kays we're looking forward to from " + hp + pitcher.first_name + " " + pitcher.last_name + " of the " + pitcherTeam.city + " " + pitcherTeam.name + ". ";
+              break;
+            case(6):
+              responseString += "Power pitching is what " + pitcher.first_name + " " + pitcher.last_name + "brings to the table. It's hard for the hitters to catch up to his heat.";
+              break;
+            case(7):
+              var pitcherNick = "";
+              var handedPitch = "";
+              if (pitcher.nickname !== null) {
+                pitcherNick = pitcher.nickname;
+              } else {
+                pitcherNick = pitcher.first_name + " " + pitcher.last_name;
+              }
+              if (pitcher.throws_LR === "R") {
+                handedPitch = "right handed ";
+              } else {
+                handedPitch = "left handed ";
+              }
+              responseString += "Look for " + pitcherNick + " to bring the heat as we are projecting " + pitcher.projected_2017_K + " strikeouts from the " + handedPitch + "starter from " + pitcherTeam.city + ". ";
+              break;
+            case(8):
+              responseString += pitcher.last_name + " brings frustration to the batters box as he packs a tremendous fastball.";
+              break;
+          default:
+            responseString += "...";
+        }
+      } else if (pitcher.projected_2017_WHIP < 1.09) {
+        randomInt = (Math.floor(Math.random()*3));
+        switch(randomInt) {
+          case(0):
+            var controlEra = pitcher.projected_2017_ERA;
+            var controlEraArr = controlEra.split('.');
+            responseString += pitcher.first_name + " " + pitcher.last_name + " brings a fine control from the mound as we expect to see a " + controlEraArr[0] + " " + controlEraArr[1] + " earned run average and a paucity of base runners this year. ";
+            break;
+          case(1):
+            responseString += "Hitters will want to try and get to " + pitcher.first_name + " " + pitcher.last_name  + " in the early frames because he can be tough when he hits his groove.";
+            break;
+          case(2):
+            var controlWhip = pitcher.projected_2017_WHIP;
+            var controlWhipArr = controlWhip.split('.');
+            responseString += pitcher.first_name + " " + pitcher.last_name + " is a study of control as he limits baserunners. We're expecting an outstanding " + controlWhipArr[0] + " " + controlWhipArr[1] + " WHIP - that's walks plus hits over innings pitched.";
+            break;
+          default:
+            responseString += "...";
+        }
+      } else if (pitcher.projected_2017_IP > 164) {
+        randomInt = (Math.floor(Math.random()*7));
+        switch(randomInt) {
+          case(0):
+            var pip = Math.floor(pitcher.projected_2017_IP);
+            responseString += pitcher.first_name + " " + pitcher.last_name + " is your classic workhorse of a pitcher. You'll see about " + pip + " of work from his arm over the season as he supports his " + pitcherTeam.city + " " +pitcherTeam.name + ". ";
+            break;
+          case(1):
+            responseString += "This could be a good pitching option for the " + userTeam.team_name + " down through the stretch of a long season. " + pitcher.first_name + " " + pitcher.last_name + " is as reliable as they come in baseball.";
+            break;
+          case(2):
+            var workhorseERA = pitcher.projected_2017_ERA;
+            var workhorseERAArr = workhorseERA.split('.');
+            responseString += "You're looking at an earned run average of around " + workhorseERAArr[0] + " " + workhorseERAArr[1] +" when you enlist the services of " + pitcher.first_name + " " + pitcher.last_name + ". ";
+            break;
+          case(3):
+            var durableHP = "";
+            if (pitcher.throws_LR === "R") {
+              durableHP = "right handed ";
+            } else {
+              durableHP = "left handed ";
+            }
+            responseString += "The " + pitcherTeam.city + " " + pitcherTeam.name + " have a proven arm in the " + durableHP + " pitcher from " + pitcher.place_of_birth + ". He'll eat up around " + pitcher.projected_2017_IP + " innings of work over the season and he'll do it at a major league level of performance.";
+            break;
+          case(4):
+            responseString += "Every balanced team in the majors needs a " + pitcher.first_name + " " + pitcher.last_name + " on their roster. He is a true workhorse for the " + pitcherTeam.name + ". ";
+            break;
+          case(5):
+            responseString += "One thing " + pitcher.first_name + " " + pitcher.last_name + " brings to the table is innings pitched, pure and simple. He'll keep the " + pitcherTeam.city + " " + pitcherTeam.name + " in a lot of ballgames over the season. ";
+            break;
+          case(6):
+            var horseArm = "";
+            if (pitcher.throws_LR === "R") {
+              horseArm = "right ";
+            } else {
+              horseArm = "left ";
+            }
+            responseString += "One thing that the " + userTeam.team_name + " can expect to rely upon over the long season is the " + horseArm + "arm of " + pitcher.first_name + " " + pitcher.last_name + ". He's expected to rack up " + pitcher.projected_2017_IP + " innings pitched over the months ahead.";
+            break;
+          default:
+            responseString += "...";
+        }
+      } else {
+        randomInt = (Math.floor(Math.random()*5));
+        switch(randomInt) {
+          case(0):
+            var genericHand = "";
+            if (pitcher.throws_LR === "R") {
+              genericHand = "righty ";
+            } else {
+              genericHand = "southpaw ";
+            }
+            var genericERA = pitcher.projected_2017_ERA;
+            var genericERAArr = genericERA.split('.');
+            responseString += "The " + pitcherTeam.city + " " + pitcherTeam.name + " have high hopes riding on this " + genericHand + "from " + pitcher.place_of_birth + ". And perhaps so do the " + userTeam.team_name + ". We can expect an earned run average of " + genericERAArr[0] + " " + genericERAArr[1] + " from him. ";
+            break;
+          case(1):
+            var genericWHIP = pitcher.projected_2017_WHIP;
+            var genericWHIPArr = genericWHIP.split('.');
+            responseString += "The " + pitcherTeam.city + " " + pitcherTeam.name + " will be watching that whip. More specifically, the anticipated " + genericWHIPArr[0] + " " + genericWHIPArr[1] + " walks plus hits per innings pitched of " + pitcher.first_name + " " + pitcher.last_name + ". ";
+            break;
+          case(2):
+            responseString += "I see you are shopping for a starting pitcher. One " + pitcher.first_name + " " + pitcher.last_name + " could fill the bill. You're looking at something around " + pitcher.projected_2017_W + " wins and " + pitcher.projected_2017_L + " losses with this guy.";
+            break;
+          case(3):
+            responseString += pitcher.first_name + " " + pitcher.last_name + " is expected to strike out " + pitcher.projected_2017_K + " batters on " + pitcher.projected_2017_IP + " innings of work for the " + pitcherTeam.city + pitcherTeam.name + ". ";
+            break;
+          case(4):
+            responseString += pitcher.first_name + " " + pitcher.last_name + " is a starting pitcher. But you knew that. You're at least as smart as the " + pitcherTeam.city + " " + pitcherTeam.name + ". ";
+            break;
+          default:
+            responseString += "...";
+        }
+      }
+    } else {
+      if (pitcher.projected_2017_SV > 16) {
+        randomInt = (Math.floor(Math.random()*11));
+        switch(randomInt) {
+          case(0):
+            responseString += "Every fantasy team needs to have its saves. And that means grabbing closers like " + pitcher.first_name + " " + pitcher.last_name + " of the " + pitcherTeam.city + " " + pitcherTeam.name + " who is expected to deliver a good " + pitcher.projected_2016_SV + " saves in the season.";
+            break;
+          case(1):
+            var saveHand = "";
+            if (pitcher.throws_LR === "R") {
+              saveHand = "Right handed ";
+            } else {
+              saveHand = "Left handed ";
+            }
+            responseString += saveHand + "closers are a must-have item for anyone's roster. And the " + userTeam.team_name + " are no exception. We anticipate " + pitcher.projected_2017_SV + " saves out of " + pitcher.first_name + " " + pitcher.last_name + " this year.";
+            break;
+          case(2):
+            responseString += "Just like me... they long to be... Closer to you. " + pitcher.first_name + " " + pitcher.last_name + " is all the closer you could want with his projected " + pitcher.projected_2017_SV + " saves and " + pitcher.projected_2017_K + " strikeouts along the way. ";
+            break;
+          case(3):
+            var closerHand = "";
+            if (pitcher.throws_LR === "R") {
+              closerHand = "right arm ";
+            } else {
+              closerHand = "left arm ";
+            }
+            responseString += pitcher.projected_2017_SV + " saves. That's what you can expect from the " + closerHand + " of " + pitcher.first_name + " " + pitcher.last_name + ". ";
+            break;
+          case(4):
+            responseString += "The " + userTeam.team_name + "look like they could use a few positive numbers in the saves column. Look no further than this " + pitcher.first_name + " " + pitcher.last_name + " of the " + pitcherTeam.city + " " + pitcherTeam.name + ". He's good for around " + pitcher.projected_2017_SV + " saves.";
+            break;
+          case(5):
+            responseString += "You want saves. " + pitcher.first_name + " " + pitcher.last_name + " has saves. That's the story I'm seeing here. You get " + pitcher.projected_2017_SV + " saves with one click of the draft button here.";
+            break;
+          case(6):
+            responseString += "When the " + pitcherTeam.city + " " + pitcherTeam.name + " need the door slammed they turn to this guy. Closer duties mean " + pitcher.projected_2017_SV + " saves for " + pitcher.first_name + " " + pitcher.last_name + " in the season. ";
+            break;
+          case(7):
+            var closerWHIP = pitcher.projected_2017_WHIP;
+            var closerWHIPArr = closerWHIP.split('.');
+            responseString += pitcher.projected_2017_SV + " saves and about " + closerWHIPArr[0] + " " + closerWHIPArr[1] + " baserunners per inning in pressure-packed situations are in store from " + pitcher.first_name + " " + pitcher.last_name + " of the " + pitcherTeam.city + " " + pitcherTeam.name + ". ";
+            break;
+          case(8):
+            var handSave = "";
+            if (pitcher.throws_LR === "R") {
+              handSave = "right ";
+            } else {
+              handSave = "left ";
+            }
+            responseString += " If you're thinking about acquiring a " + handSave + "pitcher who can deal in the late frames on a slender lead, then you're looking in the right place with " + pitcher.first_name + " " + pitcher.last_name + ". The closer for the " + pitcherTeam.city + " " + pitcherTeam.name + " is expected to produce " + pitcher.projected_2017_SV + " saves in the next campaign. ";
+            break;
+          case(9):
+            responseString += " The " + pitcherTeam.city + " " + pitcherTeam.name + " have got a live arm of a closer in the form of " + pitcher.first_name + " " + pitcher.last_name + " and his projected " + pitcher.projected_2017_SV + " saves.";
+            break;
+          case(10):
+            responseString += "We can anticipate a good " + pitcher.projected_2017_SV + " saves on " + pitcher.projected_2017_K + " strikeouts from " + pitcher.first_name + " " + pitcher.last_name + " of the " + pitcherTeam.city + " " + pitcherTeam.name + ". ";
+            break;
+          default:
+            responseString += "...";
+        }
+      } else {
+        randomInt = (Math.floor(Math.random()*4));
+        switch(randomInt) {
+          case(0):
+            var reliefHand = "";
+            if (pitcher.throws_LR === "R") {
+              reliefHand = "right handed ";
+            } else {
+              reliefHand = "southpaw ";
+            }
+            responseString += "Relief duties fall to this " + reliefHand + "pitcher of the " + pitcherTeam.city + " " + pitcherTeam.name + " bullpen. Look for around " + pitcher.projected_2017_IP + " innings of worke from " + pitcher.first_name + " " + pitcher.last_name + ". ";
+            break;
+          case(1):
+            var reliefHand2 = "";
+            if (pitcher.throws_LR === "R") {
+              reliefHand2 = "right handed ";
+            } else {
+              reliefHand2 = "left handed ";
+            }
+            responseString += pitcher.first_name + " " + pitcher.last_name + " is a decent " + reliefHand2 + " asset for the " + pitcherTeam.city + " " + pitcherTeam.name + " pitching staff. ";
+            break;
+          case(2):
+            var midWHIP = pitcher.projected_2017_WHIP;
+            var midWHIPArr = midWHIP.split('.');
+            responseString += "They say that relievers get no respect. But you can change that when you draft " + pitcher.first_name + " " + pitcher.last_name + " and his " + midWHIPArr[0] + " " + midWHIPArr[1] + " walkes plus hits per inning pitched.";
+            break;
+          case(3):
+            responseString += pitcher.first_name + " " + pitcher.last_name + " will bring you " + pitcher.projected_2017_K + " strikeouts from the bullpen.";
+            break;
+          default:
+            responseString += "...";
+        }
+      }
+    }
+
+    return (responseString);
+  }
+
   angular.module('app')
     .component('draft', {
       controller: DraftController,
@@ -93,6 +501,19 @@
       vm.setDraftStage = setDraftStage;
       vm.cancelDraft = cancelDraft;
       vm.draftPlayer = draftPlayer;
+      vm.getPlayerInfo = getPlayerInfo;
+
+      function getPlayerInfo() {
+        $http.get(`/teams/${vm.playerCard6.team_id}`)
+        .then(playerCard6Team=>{
+            var card6Team = playerCard6Team.data;
+            if (vm.playerCard6.eligible_util) {
+              spokenOutput(talkAboutHitter(vm.playerCard6, card6Team));
+            } else {
+              spokenOutput(talkAboutPitcher(vm.playerCard6, card6Team, vm.userTeam));
+            }
+        });
+      }
 
       function determinePositions(player, fieldTeam) {
         var positionArr = [];
@@ -131,7 +552,7 @@
             positionArr.push('Right Field');
           }
         }
-        if (positionPlayer) {
+        if (player.eligible_util) {
           if (fieldTeam.util_1 === null) {
             positionArr.push('Utility 1');
           }
@@ -721,6 +1142,7 @@
         updateRP1(vm.eephusTeam);
         updateRP2(vm.userTeam);
         updateRP2(vm.eephusTeam);
+        cancelDraft();
       }
 
       function deleteButtons () {
@@ -819,9 +1241,9 @@
         var infoButton = document.getElementById('playerInfoButton');
         var draftButton = document.getElementById('playerDraftButton');
         var cancelButton = document.getElementById('playerCancelButton');
-        infoButton.setAttribute("style", "display: inherit;");
-        draftButton.setAttribute("style", "display: inherit;");
-        cancelButton.setAttribute("style", "display: inherit;");
+        infoButton.setAttribute("style", "display: initial;");
+        draftButton.setAttribute("style", "display: initial;");
+        cancelButton.setAttribute("style", "display: initial;");
         $http.patch(`/fantasyteams/${fieldTeam.id}`, fieldTeam)
         .then(updatedTeam=>{
           console.log(updatedTeam);
@@ -877,7 +1299,7 @@
           var rightArrow = document.getElementById('next5');
           leftArrow.setAttribute("style", "display: none;");
           rightArrow.setAttribute("style", "display: none;");
-          stageLocation.setAttribute("style", "display: inherit;");
+          stageLocation.setAttribute("style", "display: initial;");
           vm.playerCard6 = player;
           vm.playerCard6Team = team;
           var stageCard = document.getElementById('playerInfoCard');
@@ -890,8 +1312,8 @@
         hideStage.setAttribute("style", "display: none;");
         var arrow1 = document.getElementById('prev5');
         var arrow2 = document.getElementById('next5');
-        arrow1.setAttribute("style", "display: inherit;");
-        arrow2.setAttribute("style", "display: inherit;");
+        arrow1.setAttribute("style", "display: initial;");
+        arrow2.setAttribute("style", "display: initial;");
         inputOn = true;
       }
 
@@ -1033,7 +1455,7 @@
         var dialogBox = document.getElementById('newLeague');
         var draftBar = document.getElementById('draftContainer');
         dialogBox.setAttribute("style", "display: none;");
-        draftBar.setAttribute("style", "display: inherit;");
+        draftBar.setAttribute("style", "display: initial;");
         beginDraftBar();
         if (teamName.length) {
           vm.userTeam.team_name = teamName;
