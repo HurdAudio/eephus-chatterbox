@@ -118,6 +118,28 @@
           case ("take me out"):
             spokenString += "You have a most lovely singing voice.";
             break;
+          case ("I love you"):
+            spokenString += "I love you too. Like I love a seventh inning stretch under the stars or an unassisted triple play turned in the top of the ninth inning.";
+            break;
+          case("You don't know me"):
+            spokenString += "True... perhaps if we spent more time together. Engaged in a little un-friendly head-to-head action and allowed me to school you in the ways of drafting big bats and even bigger power pitchers you would allow me inside that thick shell of yours. Just ask yourself... do you want to know me?";
+            break;
+          case("manage my team"):
+            spokenString += "Here you go, hotshot.";
+            $http.get('/fantasyteams/13')
+            .then(teamInfo=>{
+              $http.get(`/viewteam/${teamInfo.data.id}`)
+              .then((data) => {
+                $state.go('viewteam', {id: 13});
+              });
+            });
+            break;
+          case("draft a new team"):
+            $http.get('.draft')
+            .then (()=>{
+              $state.go('draft');
+            });
+            break;
           default:
             spokenString += "...";
             // recognition.start();
@@ -135,16 +157,19 @@
       };
 
       recognition.onnomatch = function() {
-        spokenOutput("I didn't recognise that color.");
+        console.log("I didn't recognise that color.");
       };
 
       recognition.onerror = function(event) {
-        spokenOutput('Error occurred in recognition: ' + event.error);
+        console.log('Error occurred in recognition: ' + event.error);
       };
 
       function onInit() {
-        console.log("we init");
         recognition.start();
+        var bodyOfPage = document.body;
+        bodyOfPage.addEventListener('click', ()=>{
+          recognition.start();
+        });
       }
 
     }

@@ -1,6 +1,23 @@
 (function() {
   'use strict';
 
+  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+  var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
+  var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+
+  var colors = [ 'eephus' , 'hello' , 'what is eephus', 'play ball', 'black', 'blue', 'brown', 'chocolate', 'coral', 'crimson', 'cyan', 'fuchsia', 'ghostwhite', 'gold', 'goldenrod', 'gray', 'green', 'indigo', 'ivory', 'khaki', 'lavender', 'lime', 'linen', 'magenta', 'maroon', 'moccasin', 'navy', 'olive', 'orange', 'orchid', 'peru', 'pink', 'plum', 'purple', 'red', 'salmon', 'sienna', 'silver', 'snow', 'tan', 'teal', 'thistle', 'tomato', 'turquoise', 'violet', 'white', 'yellow'];
+  var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;';
+
+
+  var recognition = new SpeechRecognition();
+  var speechRecognitionList = new SpeechGrammarList();
+  speechRecognitionList.addFromString(grammar, 1);
+  recognition.grammars = speechRecognitionList;
+  //recognition.continuous = false;
+  recognition.lang = 'en-US';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 3;
+
   var playerArray = [];
   var playerArrayIndex = 0;
   var playerRibbonSlots = [];
@@ -509,6 +526,239 @@
       vm.runDraftSequence = runDraftSequence;
       vm.advanceDraft = advanceDraft;
 
+      recognition.onresult = function(event) {
+        recognition.stop();
+        var last = event.results.length - 1;
+        var color = event.results[last][0].transcript;
+        var spokenString = "";
+
+        switch (color) {
+          case ("hello"):
+            spokenString += "Hello there, I am Eephus Chatterbox. A conversational baseball application.";
+            break;
+          case(vm.playerCard1.first_name + " " + vm.playerCard1.last_name):
+            if (inputOn) {
+              draftStagePlayer = vm.playerCard1;
+              setDraftStage(vm.playerCard1);
+            }
+            break;
+          case(vm.playerCard2.first_name + " " + vm.playerCard2.last_name):
+            if (inputOn) {
+              draftStagePlayer = vm.playerCard2;
+              setDraftStage(vm.playerCard2);
+            }
+            break;
+          case(vm.playerCard3.first_name + " " + vm.playerCard3.last_name):
+            if (inputOn) {
+              draftStagePlayer = vm.playerCard3;
+              setDraftStage(vm.playerCard3);
+            }
+            break;
+          case(vm.playerCard4.first_name + " " + vm.playerCard4.last_name):
+            if (inputOn) {
+              draftStagePlayer = vm.playerCard4;
+              setDraftStage(vm.playerCard4);
+            }
+            break;
+          case(vm.playerCard5.first_name + " " + vm.playerCard5.last_name):
+            if (inputOn) {
+              draftStagePlayer = vm.playerCard5;
+              setDraftStage(vm.playerCard5);
+            }
+            break;
+          case("next"):
+            var nextButton = document.getElementById('next5');
+            if (nextButton.getAttribute("display") !== "none") {
+              scrollRight();
+            }
+            break;
+          case("previous"):
+            var previousButton = document.getElementById('prev5');
+            if (previousButton.getAttribute("display") !== "none") {
+              scrollLeft();
+            }
+            break;
+          case("info"):
+            var infoButtonIs = document.getElementById('playerInfoButton');
+            if (infoButtonIs.getAttribute("display") !== "none") {
+              getPlayerInfo();
+            }
+            break;
+          case("draft"):
+            var draftButtonIs = document.getElementById('playerDraftButton');
+            if (draftButtonIs.getAttribute("display") !== "none") {
+              draftPlayer();
+            }
+            break;
+          case("cancel"):
+            var cancelButtonIs = document.getElementById('playerCancelButton');
+            if (cancelButtonIs.getAttribute("display") !== "none") {
+              cancelDraft();
+            }
+            break;
+          case("catcher"):
+            console.log("I heard catcher");
+            var catcherPositionButton = document.getElementById('Catcher');
+            console.log(catcherPositionButton);
+            if (catcherPositionButton !== null) {
+              addPlayerToField("Catcher", vm.userTeam);
+            }
+            break;
+          case("first base"):
+            var firstBasePositionButton = document.getElementById('First Base');
+            if (firstBasePositionButton !== null) {
+              addPlayerToField("First Base", vm.userTeam);
+            }
+            break;
+          case ("second base"):
+            var secondBasePositionButton = document.getElementById('Second Base');
+            if (secondBasePositionButton !== null) {
+              addPlayerToField("Second Base", vm.userTeam);
+            }
+            break;
+          case ("third base"):
+            var thirdBasePositionButton = document.getElementById('Third Base');
+            if (thirdBasePositionButton !== null) {
+              addPlayerToField("Third Base", vm.userTeam);
+            }
+            break;
+          case ("shortstop"):
+            var shortstopPositionButton = document.getElementById("Shortstop");
+            if (shortstopPositionButton !== null) {
+              addPlayerToField("Shortstop", vm.userTeam);
+            }
+            break;
+          case ("left field"):
+            var leftFieldPosition = document.getElementById("Left Field");
+            if (leftFieldPosition !== null) {
+              addPlayerToField("Left Field", vm.userTeam);
+            }
+            break;
+          case ("center field"):
+            var centerFieldPosition = document.getElementById("Center Field");
+            if (centerFieldPosition !== null) {
+              addPlayerToField("Center Field", vm.userTeam);
+            }
+            break;
+          case ("right field"):
+            var rightFieldPosition = document.getElementById("Right Field");
+            if (rightFieldPosition !== null) {
+              addPlayerToField("Right Field", vm.userTeam);
+            }
+            break;
+          case ("utility 1"):
+            var util1Position = document.getElementById("Utility 1");
+            if (util1Position !== null) {
+              addPlayerToField("Utility 1", vm.userTeam);
+            }
+            break;
+          case ("utility 2"):
+            var util2Position = document.getElementById("Utility 2");
+            if (util2Position !== null) {
+              addPlayerToField("Utility 2", vm.userTeam);
+            }
+            break;
+          case ("starting pitcher 1"):
+            var sp1Position = document.getElementById("Starting Pitcher 1");
+            if (sp1Position !== null) {
+              addPlayerToField("Starting Pitcher 1", vm.userTeam);
+            }
+            break;
+          case ("starting pitcher 2"):
+            var sp2Position = document.getElementById("Starting Pitcher 2");
+            if (sp2Position !== null) {
+              addPlayerToField("Starting Pitcher 2", vm.userTeam);
+            }
+            break;
+          case ("relief pitcher 1"):
+            var rp1Position = document.getElementById("Relief Pitcher 1");
+            if (rp1Position !== null) {
+              addPlayerToField("Relief Pitcher 1", vm.userTeam);
+            }
+            break;
+          case ("relief pitcher 2"):
+            var rp2Position = document.getElementById("Relief Pitcher 2");
+            if (rp2Position !== null) {
+              addPlayerToField("Relief Pitcher 2", vm.userTeam);
+            }
+            break;
+          case ("pitcher 1"):
+            var p1Position = document.getElementById("Pitcher 1");
+            if (p1Position !== null) {
+              addPlayerToField("Pitcher 1", vm.userTeam);
+            }
+            break;
+          case ("pitcher 2"):
+            var p2Position = document.getElementById("Pitcher 2");
+            if (p2Position !== null) {
+              addPlayerToField("Pitcher 2", vm.userTeam);
+            }
+            break;
+          case ("pitcher 3"):
+            var p3Position = document.getElementById("Pitcher 3");
+            if (p3Position !== null) {
+              addPlayerToField("Pitcher 3", vm.userTeam);
+            }
+            break;
+          case ("pitcher 4"):
+            var p4Position = document.getElementById("Pitcher 4");
+            if (p4Position !== null) {
+              addPlayerToField("Pitcher 4", vm.userTeam);
+            }
+            break;
+          case ("bench 1"):
+            var b1Position = document.getElementById("Bench 1");
+            if (b1Position !== null) {
+              addPlayerToField("Bench 1", vm.userTeam);
+            }
+            break;
+          case ("bench 2"):
+            var b2Position = document.getElementById("Bench 2");
+            if (b2Position !== null) {
+              addPlayerToField("Bench 2", vm.userTeam);
+            }
+            break;
+          case ("bench 3"):
+            var b3Position = document.getElementById("Bench 3");
+            if (b3Position !== null) {
+              addPlayerToField("Bench 3", vm.userTeam);
+            }
+            break;
+          case ("bench 4"):
+            var b4Position = document.getElementById("Bench 4");
+            if (b4Position !== null) {
+              addPlayerToField("Bench 4", vm.userTeam);
+            }
+            break;
+          case ("bench 5"):
+            var b5Position = document.getElementById("Bench 5");
+            if (b5Position !== null) {
+              addPlayerToField("Bench 5", vm.userTeam);
+            }
+            break;
+          default:
+            spokenString += "...";
+            // recognition.start();
+        }
+        spokenOutput(spokenString);
+
+
+        // spokenOutput('Result received: ' + color + '.');
+        // spokenOutput('Confidence: ' + event.results[0][0].confidence);
+      };
+
+      recognition.onspeechend = function() {
+        recognition.stop();
+      };
+
+      recognition.onnomatch = function() {
+        spokenOutput("I didn't recognise that color.");
+      };
+
+      recognition.onerror = function(event) {
+        console.log('Error occurred in recognition: ' + event.error);
+      };
+
       function eephusSelectPlayer () {
         var draftPlayer;
         var selectorIndex = 0;
@@ -967,18 +1217,18 @@
         var cointoss = (Math.floor(Math.random()*2));
 
 
-        // if (cointoss === 0) {
+        if (cointoss === 0) {
           userTurn = 0;
           eephusTurn = 1;
           spokenOutput(vm.userTeam.team_name + " get the first draft pick.");
           inputOn = true;
-        // } else {
-        //   userTurn = 1;
-        //   eephusTurn = 0;
-        //   spokenOutput("Eephus Chatterbox will get the first draft pick.");
-        //   inputOn = false;
-        //   advanceDraft();
-        // }
+        } else {
+          userTurn = 1;
+          eephusTurn = 0;
+          spokenOutput("Eephus Chatterbox will get the first draft pick.");
+          inputOn = false;
+          advanceDraft();
+        }
 
 
 
@@ -1748,6 +1998,7 @@
           buttonElement = document.createElement('button');
           parentElement.appendChild(buttonElement, fieldTeam);
           buttonElement.textContent = arrOfPositions[i];
+          buttonElement.setAttribute("id", arrOfPositions[i]);
           monitorClick(buttonElement, arrOfPositions[i], fieldTeam);
         }
       }
@@ -1847,6 +2098,8 @@
                     vm.playerCard5Team = playerCard5Team.data;
                     var fifthCard = document.getElementById('playerCardNo5');
                     fifthCard.setAttribute("style", "background-color: " + vm.playerCard5Team.team_color_2 + "; border: solid 7px " + vm.playerCard5Team.team_color_1 + "; color: " + vm.playerCard5Team.team_color_3 + ";");
+                    runDraftSequence();
+
                   });
                 });
               });
@@ -1935,6 +2188,7 @@
       function updateUserTeam (teamName) {
         var dialogBox = document.getElementById('newLeague');
         var draftBar = document.getElementById('draftContainer');
+
         dialogBox.setAttribute("style", "display: none;");
         draftBar.setAttribute("style", "display: initial;");
         beginDraftBar();
@@ -1989,7 +2243,11 @@
                   .then(userTeam=>{
                     vm.userTeam = userTeam.data[0];
                     setFantasyTeamIDsToLeague();
-                    runDraftSequence();
+                    // runDraftSequence();
+                    var bodyOfPage = document.body;
+                    bodyOfPage.addEventListener('click', ()=>{
+                      recognition.start();
+                    });
                     var draftContainer = document.getElementById('draftContainer');
                     draftContainer.addEventListener('click', (event)=>{
                       var card = event.target;
@@ -2024,6 +2282,7 @@
                         }
                       }
                     });
+
                   });
                 });
               });
